@@ -1,0 +1,509 @@
+.lnk{
+    color: #001C30;
+    font-family: jaldi;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 24px;
+    /* font-weight: bold; */
+   
+    
+
+}
+.links{
+    margin-top: 1rem;
+    
+}
+.left-lnk{
+   
+   /* justify-content: center; */
+    color: #001C30;
+    font-family: jaldi;
+   
+    text-decoration: none;
+    font-size: 32px;
+    /* padding-bottom: 0.5rem; */
+
+}
+.left-lnk :hover{
+    scale: 1.02;
+    transition: 500ms ease-in-out;
+}
+.left-lnk span{
+    display: flex;
+    flex-direction: row; 
+   align-items: center;
+  
+
+}
+.edit-wrraper{
+  
+    position: relative;
+   
+    height: 100vh;
+    border: none;
+}
+.edit-container{
+    padding: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+   
+}
+.edit-bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.edit-right{
+    display: flex;
+    flex-direction: column;
+   
+    background: #D9D9D9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width:610px;
+    height: 500px;
+    
+}
+.personal-info{
+    display: flex;
+    flex-direction: row;
+    /* padding-top: 1rem; */
+
+
+}
+.personal-details{
+    display: flex;
+   
+    flex-direction: column;
+}
+@font-face {
+    font-family: GoblinOne;
+    src: url(/public/GoblinOne-Regular.ttf);
+}
+@font-face {
+    font-family: GothicA1;
+    src: url(/public/GothicA1-Regular.ttf);
+}
+@font-face {
+    font-family: Jaldi;
+    src: url(/public/Jaldi-Regular.ttf);
+}
+.person-icon{
+   
+   
+   align-items: center;
+   justify-content: center;
+   width: 175px !important;
+   height: 153.02px !important;
+   
+}
+.profile-icon{
+  
+  margin-top: -1.3rem;
+  margin-left: -1rem;
+    font-size: 12.2rem !important;
+    color: rgb(149, 138, 138) !important;
+
+}
+.info{
+display: flex;
+flex-direction: column;   
+margin-top: -1rem;
+margin-left: 2rem;
+font-family: jaldi;
+font-size: 36px;
+  
+}
+.edit-title h3{
+    text-align: center;
+    margin-top: -1rem;
+    font-size: 48px;
+    
+    color: #001C30;
+    font-weight: bold;
+    font-family: Jaldi;
+}
+.addbtn{
+    width: 11rem;
+    place-items: center;
+    align-items: center;
+    padding: 0.2rem;
+    background: #2A26F6;
+    border-radius: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    font-family: jaldi;
+    margin-left: 1.5rem;
+}
+.addbtn:hover{
+    scale: 1.02;
+    transition: 500ms ease-in;
+    background: transparent;
+    cursor: pointer;
+}
+.edit-top{
+    color: #001C30;
+    font-size: 32px;
+    display: flex;flex-direction: column;
+    text-align: center;
+   
+    width: 912px;
+    height: 129px;
+    font-weight: bold;
+    font-family: Gothic A1;
+}
+.txt span{
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    margin-left: 2rem;
+    font-family: jaldi;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.addpro,.proContact{display: flex;
+    font-weight: bold;
+flex-direction: column;
+gap: 0.5rem;
+}
+.proContact{
+    margin-top: 1rem;
+
+
+}
+.in{
+    font-size:2.6rem !important;
+    font-weight: bolder !important;
+    margin-right: 0.7rem;
+   align-items: center;
+}
+.contact-link span{
+    display: flex;
+    flex-direction: row; 
+   align-items: center;
+  
+
+}
+.contact-icon{
+    font-size:2rem !important;
+    font-weight: bolder !important;
+    margin-right: 0.7rem;
+   align-items: center; 
+}
+.star{
+    color: orange !important;
+}
+.addpro{
+   display: flex;
+   flex-direction: row;
+    /* position: absolute; */
+    top: 36rem;
+    align-items: center;
+    padding-left: 4rem;
+   
+}
+.proContact{
+    margin-left: 3rem;
+   
+    
+}
+.contact-txt{
+    font-family: jaldi;
+    font-size: 24px;
+    font-weight: bold;
+    color: #001C30;
+    padding-left: 3rem;
+}
+.edit-left{
+   
+    display: flex;
+    flex-direction: column;
+   
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width:325px;
+    height: 500px;
+    
+    
+}
+.edit-left h4{
+    text-align: center;
+    font-size: 36px;
+    font-family: jaldi;
+    color: #425FBA;
+    margin-top: -1.2rem;
+    
+}
+.small{
+    width: 175px;
+
+    height: 4px;
+    color: #bdab9a;
+    margin-left: 2.3rem;
+
+}
+/* hr:hover{
+    background: blue;
+    scale: 1.02;
+    transition: 500ms ease-in;
+
+} */
+.pro-hori{
+ margin: 0 3rem 0 0.5rem;
+ /* margin-top: -0.1rem; */
+    width: 250px;
+    height: 5px;
+  background: #425FBA;
+  border-radius: 6px;
+  border: none;
+}
+
+
+/* @media all and (max-width:640px){
+
+    .edit-bottom{
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .edit-right{
+        width: 320px;
+       max-height: 310px;
+    }
+    .profile-icon{
+  
+       
+          font-size: 6rem !important;
+         
+      
+      }
+      .edit-title h3{
+        
+      
+        font-size: 30px;
+        margin-left: -3rem;
+     
+    }
+    .addpro{
+       
+         
+         margin-top: -2.5rem;
+       
+         margin-left: -7rem;
+        
+        
+     }
+    .txt span{
+        
+       
+        margin-left: 3rem;
+        
+        font-size: 14px;
+       
+    }
+    .info{
+      
+    margin-left: -5rem;
+    font-family: jaldi;
+      font-size: 20px;
+       
+    }
+    .addbtn{
+        width: 60px;
+       
+        
+        
+        
+        font-size: 8px;
+        
+      
+    }
+    .contact-txt{
+      
+        font-size: 14px;
+      
+        
+    }
+    .links{
+        margin-top: -2rem;
+        
+    }
+    .lnk{
+        
+        font-size: 14px;
+        
+       
+        
+    
+    }
+    
+    .contact-icon{
+        font-size:1rem !important;
+        
+    }
+    .edit-left{
+      
+        width:220px;
+        height:330px;
+        
+        
+    }
+    .edit-left h4{
+      
+        font-size: 26px;
+        
+        
+    }
+    .in{
+        font-size:1.4rem !important;
+       
+    }
+    .pro-horizontal {
+        
+           width: 150px;
+           height: 5px;
+        
+       }
+       .left-lnk{
+   
+       
+         
+         font-size: 20px;
+         
+     
+     }
+     hr{
+        width: 125px;
+        height: 2px;
+        
+    
+    }
+    .edit-top{
+       
+        font-size: 13px;
+        
+        
+        width: 500px;
+        height: 40px;
+       
+    }
+    .edit-wrraper{
+        padding: 4rem;
+       
+       
+        height: 100%;
+        
+    }
+    
+} */
+
+/* @media all and (min-width:640px ) and (max-width:960px){
+
+    .edit-bottom{
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .edit-right{
+        max-width: 850px;
+       max-height: 570px;
+    }
+    .profile-icon{
+  
+       
+          font-size: 11rem !important;
+         
+      
+      }
+      .edit-top{
+       
+        font-size: 25px;
+        
+        
+       
+    }
+      .edit-title h3{
+        
+      
+        font-size: 40px;
+        margin-left: 4rem;
+     
+    }
+    .addpro{
+       
+         
+         margin-top: -0.2rem;
+       
+         margin-left: -7rem;
+        
+        
+     }
+    .txt span{
+        
+      
+        margin-left: 3rem;
+        
+        font-size: 24px;
+       
+    }
+    .info{
+      
+    margin-left: 2rem;
+    font-family: jaldi;
+      font-size: 30px;
+        
+    }
+    .addbtn{
+        width: 100px;
+        height: 50px;
+       
+        
+        
+        
+        font-size: 18px;
+        
+      
+    }
+    .contact-txt{
+      
+        font-size: 24px;
+      
+        
+    }
+    .links{
+        margin-top: -2rem;
+        
+    }
+    .lnk{
+        
+        font-size: 26px;
+        
+       
+        
+    
+    }
+    
+    .contact-icon{
+        font-size:2rem !important;
+        
+    }
+    .edit-wrraper{
+        padding: 8rem;
+       
+       
+        height: 100%;
+        
+    }
+   
+} */

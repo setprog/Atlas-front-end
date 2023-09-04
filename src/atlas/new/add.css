@@ -1,0 +1,34 @@
+.container{
+   /* background: red; */
+    padding: 10rem;
+}
+.row
+{
+    width: 90rem;
+    height: 30rem;
+    margin-left: -15rem;
+    /* background: blue; */
+   
+}
+.btn
+{
+    margin-top: 2rem;
+    margin-right: 1rem;
+
+}
+.form-control{
+    height: 9.5rem;
+    width:10rem;
+}
+.form-label{
+    color: #425FBA;
+    font-size: 34px;
+    font-family: Jaldi;
+}
+@font-face {
+    font-family: Jaldi;
+    src: url(/public/Jaldi-Regular.ttf);
+}
+.hh{
+    gap: 3rem;
+}

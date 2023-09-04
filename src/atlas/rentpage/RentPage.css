@@ -1,0 +1,32 @@
+.rentpage-wrapper{
+    padding: 17rem;
+}
+.getwrapper{
+    padding: 7rem;
+    background: rgba(170, 178, 182, 0.719);
+    /* filter: blur(20px); */
+  
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    
+
+
+}
+.getcontainer{
+  border-radius: 12rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 35rem;
+  width: 80rem;
+    /* padding: 7rem; */
+    background: #425FBA;
+    position: absolute;
+    left: 10rem;
+    /* top: 25%;
+    right: 25%; */
+}

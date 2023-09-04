@@ -1,0 +1,129 @@
+.footer-container{
+    background: transparent;
+    width: 100%;
+    height:10rem;
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+ z-index: 888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact-icon{
+    font-size:2rem !important;
+    font-weight: bolder !important;
+    margin-right: 0.7rem;
+   align-items: center; 
+}
+.footer-top{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    
+}
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.footer-right span{
+    display: flex;
+    flex-direction: row; 
+   align-items: center;
+  
+
+}
+.footer-bottom {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: Itim;
+    font-size: 30px;
+    font-weight: light;
+    color: #001C30; 
+
+}
+.footer-bottom span{
+    display: flex;
+    flex-direction: row; 
+   align-items: center;
+  
+
+}
+
+.vertical{
+    margin-top: 1rem;
+     height: 150px;
+     width: 5px;
+     background: #FB4F14;
+     border-radius: 7px;
+    
+}
+.link{
+    color: #001C30;
+    font-family: jaldi;
+    font-size: 24px;
+    text-decoration: none;
+    
+}
+.footer-right .link{
+    color: #001C30;
+    font-family: jaldi;
+    font-size: 24px;
+    font-weight: bold; 
+}
+.in{
+    font-size: 1.2rem !important;
+    font-weight: bolder !important;
+    margin-right: 1rem;
+
+}
+@font-face {
+    font-family: Itim;
+    src: url(/public/Itim-Regular.ttf);
+}
+.copyright-icon{
+    font-size: 1.5rem !important;
+}
+
+/* @media only screen and (max-width:680px){
+   .link{
+       
+        font-size: 11px;
+         
+    }
+    .footer-right .link{
+      
+        font-size: 14px;
+        
+    }
+    .vertical{
+        
+         height: 100px;
+         width: 2.5px;
+         
+        
+    }
+    .footer-bottom {
+    
+        
+        font-size: 12px;
+       
+    
+    }
+   .copyright-icon{
+    font-size: 0.7rem !important;
+   }
+} */

@@ -1,0 +1,168 @@
+.nav-container{
+    background: transparent;
+    width: 100%;
+   
+    display: flex;
+   
+margin: 0;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 999;
+
+}
+.menu{
+    display: none;
+}
+@font-face {
+    font-family: GoblinOne;
+    src: url(/public/GoblinOne-Regular.ttf);
+}
+.left-nav h3{
+    color: #001C30;
+   
+    font-size: 36px;
+    font-family: GoblinOne;
+}
+.right-nav{
+    display: flex;
+    justify-content: space-around;
+  gap: 1.5rem;
+}
+@font-face {
+    font-family: Inter;
+    src: url(/public/Inter-VariableFont_slnt,wght.ttf);
+}
+.r-link{
+    color: #001C30;
+    margin-left: 3rem;
+    text-decoration: none;
+    font-size:24px ;
+    font-weight: bold;
+    font-family: Inter;
+}
+/* @media all and (max-width:640px ){
+    .right-nav{
+        display: none;
+
+        
+    }
+    .left-nav h3{
+        font-size: 14px;
+    }
+   
+  
+    .menu{
+        display: block;
+        color: black;
+    }
+    .uncl{
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  position: fixed;
+  top: 56px;
+  left: 13rem;
+  border-radius: 10px;
+  background: white;
+  height: max-content;
+  width: 8rem;
+  padding: 1rem;
+  transition: 700ms ease-in-out;
+
+    }
+    .nav-container{
+       background: rgb(143, 143, 205);
+        justify-content: space-around;
+    }
+
+} */
+
+/* @media all and (min-width:640px ) and (max-width:960px){
+    .right-nav{
+        display: none;
+
+        
+    }
+    .left-nav h3{
+        font-size: 34px;
+    }
+   
+  
+    .menu{
+        display: block;
+        color: black;
+        font-size: 34px;
+    }
+    .uncl{
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  position: fixed;
+  top: 56px;
+  left: 13rem;
+  border-radius: 10px;
+  background: white;
+  height: max-content;
+  width: 8rem;
+  padding: 1rem;
+  transition: 700ms ease-in-out;
+
+    }
+    .nav-container{
+       background: rgb(143, 143, 205);
+        justify-content: space-around;
+    }
+
+} */
+
+
+/* .menu{
+   display: none;
+  
+}
+
+.right-nav{
+   display: flex;
+   gap: 1.5rem;
+   
+}
+
+@media all and (max-width:640px){
+ .right-nav{
+   display: none;
+ }
+ .menu{
+   display: block;
+  color: blue;
+}
+
+       .uncl{
+           z-index: 999;
+           display: flex;
+           flex-direction: column;
+           gap: 1rem;
+     position: fixed;
+     top: 56px;
+     left: 13rem;
+     border-radius: 10px;
+     background: white;
+     height: max-content;
+     width: 8rem;
+     padding: 1rem;
+     transition: 700ms ease-in-out;
+       }
+       .nav-container{
+           justify-content: space-around;
+           background-color:#7e7e9a ;
+         
+
+       }
+   
+} */
+   
+
+   
