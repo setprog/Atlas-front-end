@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "./add.css"
- function EditUser() {
+ function EditInfo() {
   let navigate = useNavigate();
 
   const { id } = useParams();
@@ -24,6 +24,7 @@ import "./add.css"
   }, []);
 
   const onSubmit = async (e) => {
+    e.preventDefault();
     fetch('https://fakestoreapi.com/users/7',{
             method:"PUT",
             body:JSON.stringify(
@@ -66,7 +67,7 @@ import "./add.css"
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Edit User</h2>
+          <h2 className="text-center m-4">Edit Information</h2>
 
           <form onSubmit={(e) => onSubmit(e)}>
            
@@ -123,4 +124,4 @@ import "./add.css"
     </div>
   );
 }
-export default EditUser
+export default EditInfo

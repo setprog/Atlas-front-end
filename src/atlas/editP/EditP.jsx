@@ -75,7 +75,7 @@ function EditP() {
 
                 
                         <div className="proContact">
-                              <span className="contact-txt">contact</span>
+                              <span className="contact-txt">Contact</span>
                              <div className="contact-link">
                                   <Link  className="lnk"><span><BsTelephone className="contact-icon"/> <span>+2519563728</span></span></Link>
                                   <Link  className="lnk"><span><BiLogoGmail className="contact-icon"/> <span>someone@gmail.com</span></span></Link>
@@ -103,7 +103,7 @@ function EditP() {
                <Link  to="/booked" className="left-lnk"><span><LiaClipboardListSolid className="in"/> <span>My Booking</span></span></Link><hr className="small"></hr>
                {/* <Link  className="left-lnk"><span><BsBuildingCheck className="in"/> <span>Verification</span></span></Link><hr></hr>
                <Link  className="left-lnk"><span><FiSettings className="in"/> <span>Account Setting</span></span></Link><hr></hr> */}
-               <Link to="/user" className="left-lnk"><span><FiLogOut className="in"/> <span>Logout</span></span></Link>
+               <Link to="/" className="left-lnk"><span><FiLogOut className="in"/> <span>Logout</span></span></Link>
                </div>
                 
                 

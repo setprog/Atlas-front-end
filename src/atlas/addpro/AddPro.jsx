@@ -22,7 +22,7 @@ function AddPro(){
   return (
     <div className="container">
       <header className="header">
-        <h1>ATLAS</h1>
+        
       </header>
   
       <div className="grid-container">
@@ -80,7 +80,7 @@ function AddPro(){
           </div>
         </div>
       </div>
-  
+{/*   
       <footer className="footer">
   <div className="footer-content">
     <div className="contact-item">
@@ -105,7 +105,7 @@ function AddPro(){
 </footer>
         <footer className="footer1">
         <p>&copy; 2023 My Form. All rights reserved.</p>
-        </footer>
+        </footer> */}
         
     </div>
   );

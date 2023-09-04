@@ -65,7 +65,7 @@ function User() {
           <tbody >
             {users.map((user, index) => (
               <tr>
-                <th scope="row" key={index}>
+                <th  className="data" scope="row" key={index}>
                   {index + 1}
                 </th>
                 

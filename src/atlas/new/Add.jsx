@@ -56,7 +56,7 @@ export default function Add() {
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Register User</h2>
+          <h2 className="text-center m-4">Register Sub-Admin</h2>
 
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="hh">
@@ -99,7 +99,7 @@ export default function Add() {
                 onChange={(e) => onInputChange(e)}
               />
             </div>
-            <button type="submit" className="btn btn-outline-primary">
+            <button type="submit" className="btn btn-primary my-2">
               Submit
             </button>
             <Link className="btn btn-outline-danger mx-2" to="/user">
