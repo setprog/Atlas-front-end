@@ -4,6 +4,7 @@ import  { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import "./RentPage.css"
+import "../new/add.css"
 
 function RentPage() {
 const [product, setProduct] = useState({});

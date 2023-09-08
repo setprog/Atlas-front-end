@@ -4,12 +4,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-}.user-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    
 }
 .user-nav{
     display: flex;
@@ -31,16 +26,23 @@
 
     padding: 1.5rem;
 }
+.active-status{
+    color: blue;
+}
 .main-top{
-    background: #FFFFFF;
-    width:970px;
+    /* background: transparent; */
+    /* width:970px; */
+    width: 100vw;
     height: 400px;
+    padding-left: 4rem;
+    z-index: 999;
     /* border-radius: 13px; */
 }
 @font-face {
     font-family: Inter;
     src: url(/public/Inter-VariableFont_slnt,wght.ttf);
 }
+
 .main-top h3{
     font-family: Inter;
     font-size:40px;
@@ -60,7 +62,7 @@
 }
 .create-subAdmin{
     width: 110px;
-    /* height: 36px; */
+   
     color: white;
     font-size: 21px;
     font-weight: bold;
@@ -111,6 +113,75 @@ ol{
     margin-top: -0.1rem;
    
 }
+th{
+    font-size: x-large;
+    text-decoration: none;
+ 
+    font-weight: bold;
+     
+}
+
+.action-button{
+    max-width: 110px;
+   
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Inter;
+    text-align: center;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: #425FBA;
+    text-decoration: none;
+    margin-right: 2rem;
+    /* background: #425FBA;
+   color: white;
+    margin-right: 2rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-family: Inter;
+    font-weight: bold; */
+
+}
+.user-info{
+    margin-bottom: 0;
+  
+}
+.action-button:hover{
+    background: transparent;
+    color: black;
+    scale: 1.02;
+    transition: 500ms ease-in;
+}
+td{
+    text-decoration: none;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: large;
+}
+.action-button-delete{
+    background: red;
+    margin-right: 1rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 6px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Inter;
+    text-align: center;
+}
+.detail-view-hide{
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    background: #425FBA;
+    color: white;
+    border-radius: 6px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Inter;
+    text-align: center;   
+}
 
 .sub-container{
     padding: 0;
@@ -119,7 +190,8 @@ ol{
     font-size: 25px;
 }
 .main-bottom{
-    /* margin-top: 5rem; */
+    margin-top: 5rem;
+    margin-bottom: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,271 +220,6 @@ ol{
     text-align: center;
     font-family: Inter;
     font-size: 25px;
-    background: #C7CAF3;
-    font-weight: bold;
-    
-    color: rgb(43, 39, 39);
-    padding: 0.3rem 0.6rem;
-    margin-bottom: 0.5rem;
-}.admin-icon{
-    font-size: 1.3rem !important;
-    color: rgb(104, 101, 145);
-    /* margin-right: 0.5rem; */
-   
-    
-}
-
-.user-wrraper{
-    position: relative;
-   padding: 7rem;
-    height: 100vh;
-
-}
-
-.getcontainer{
-    width: 700px;
-    /* padding: 7rem; */
-    background: red;
-    position: absolute;
-    top: 25%;
-    right: 25%;
-}
-.getwrapper{
-    background: rgba(170, 178, 182, 0.719);
-    /* filter: blur(20px); */
-  
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-
-}
-
-
-/* @media all and (max-width:640px ){
-   
-    .main-top{
-        max-width: 365px;
-        max-height: 290px;
-    }
-    .main-top h3{
-       
-        font-size:20px;
-        
-    }
-    .user-wrraper{
-        position: relative;
-       padding: 1rem;
-        height: 100vh;
-    
-    }
-
-    .main-head{
-    
-    margin-left: -4rem;
-}
-.main-head>:nth-child(1){
-    font-size: 14px;
-   
-    margin-right: 1rem;
-}
-.main-head button{
-    width: 50px;
-   
-    font-size: 11px;
-    
-}
-
-
-ol{
-   font-size: 14px;
-   
-   padding-left: 2rem;
-}
-
-.main-list span{
-    display: flex;
-   flex-direction: row;
-   padding-left: 0.5rem;
-   font-size: 13px;
-  
-   gap: 4;
-  
-
-}
-.main-bottom{
-  
-    width: 258px;
-    height: 200px;
-
-}
-.main-bottom h3{
-    
-    margin-top: -1rem;
-    
-    font-size: 15px;
-  
-}
-.main-bottom button{
-    width: 240px;
-
-    
-    font-size: 15px;
-   
-    
-    
-}.admin-icon{
-    font-size: 1rem !important;
-    color: rgb(104, 101, 145);
-    
-   
-    
-}
-.user-wrraper{
-    position: relative;
-   padding: 7rem;
-    height: 100vh;
-
-}
-} */
-.user-nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
-    
-   
-    width: 100%;
-
-}
-.user-main{
-    width: 40rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-
-    padding: 1.5rem;
-}
-.main-top{
-    background: #FFFFFF;
-    width:970px;
-    height: 400px;
-    /* border-radius: 13px; */
-}
-@font-face {
-    font-family: Inter;
-    src: url(/public/Inter-VariableFont_slnt,wght.ttf);
-}
-.main-top h3{
-    font-family: Inter;
-    font-size:40px;
-    font-weight: bolder;
-    text-align: center;
-}
-.main-head{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding-left: 5rem;
-}
-.main-head>:nth-child(1){
-    font-size: 36px;
-    font-weight: bold;
-    margin-right: 3rem;
-}
-.create-subAdmin{
-    width: 170px;
-    /* height: 36px; */
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: Inter;
-    text-align: center;
-    padding: 0.2rem;
-    border-radius: 6px;
-    border: 1px solid transparent;
-    background: blue;
-    text-decoration: none;
-}
-.create-subAdmin:hover{
-    scale: 1.02;
-    transition: 500ms ease-in;
-    background: transparent;
-    cursor: pointer;
-    color: black;  
-}
-
-ol{
-   font-size: 32px;
-   font-weight: light; 
-   font-family: Inter;
-   padding-left: 4rem;
-}
-
-.main-list span{
-    display: flex;
-   flex-direction: row;
-   padding-left: 0.5rem;
-   font-size: 30px;
-   color: black;
-   font-family: Inter;
-   font-weight: light;
-   /* text-align: center; */
-   gap: 5rem;
-   margin-bottom: 0.5rem;
-
-}
-.data{
-    color: black;
-    font-weight: 800;
-    font-size:32px;
-    font-family: Jaldi;
-}
-.btn{
-    margin-top: -0.1rem;
-   
-}
-
-.sub-container{
-    padding: 0;
-}
-.header{
-    font-size: 25px;
-}
-.main-bottom{
-    /* margin-top: 5rem; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* gap: 0.5rem; */
-    background: #FFFFFF;
-    /* border-radius: 13px; */
-   
-    /* padding: 3rem; */
-    width: 658px;
-    height: 300px;
-
-}
-.main-bottom h3{
-    font-weight: light;
-    margin-top: -2rem;
-    color: #001C30;
-    font-size: 30px;
-    font-family: Inter;
-}
-.main-bottom button{
-    width: 525px;
-
-    /* border-radius: 10px; */
-    border: 1px solid gray;
-    text-align: center;
-    font-family: Inter;
-    font-size: 30px;
     background: #C7CAF3;
     font-weight: bold;
     
