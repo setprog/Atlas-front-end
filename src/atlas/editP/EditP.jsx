@@ -1,22 +1,34 @@
 import "./EditP.css"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {LiaDropbox} from "react-icons/lia"
 import {TfiMenuAlt} from "react-icons/tfi"
 import {LiaClipboardListSolid} from "react-icons/lia"
-import { Link } from "react-router-dom"
-
+import { Link, useParams } from "react-router-dom"
 import {IoPersonCircleSharp} from "react-icons/io5"
 import {FiLogOut} from "react-icons/fi"
-
-
 import {BsTelephone} from "react-icons/bs"
 import {BiLogoGmail} from "react-icons/bi"
 import {BsInstagram} from "react-icons/bs"
 import {AiFillStar} from "react-icons/ai"
 import Tnav from "../nav/Tnav"
-
+import axios from "axios"
 function EditP() {
-   
+    const [user, setUser] = useState({
+        phone: "",
+        username: "",
+        email: "",
+      });
+    
+      const { id } = useParams();
+    
+      useEffect(() => {
+        loadUser();
+      }, []);
+    
+      const loadUser = async () => {
+        const result = await axios.get(`https://fakestoreapi.com/users/${1}`);
+        setUser(result.data);
+      };
   return (<>
   
     
@@ -41,11 +53,11 @@ function EditP() {
                       </div>
                      <div className="personal-details">
                           <div className="edit-title">
-                             <h3>Edit Pofile</h3>
+                             <Link className="edit-link" to={`/editinfo/${1}`}><h3>Edit Profile</h3></Link>
                           </div>
                          <div className="info">
                 
-                             <span>Dagim Wondimu</span>
+                             <span> {user.username}</span>
                              <span>Joined at 8/4/2023 </span>
                               <span ><AiFillStar className="star"/><span>(0 Review)</span></span>
                          </div>
@@ -53,13 +65,7 @@ function EditP() {
                      
 
                     </div>
-               
-                
-                   
-                    
-                   
-                    
-
+            
                 
                              <div className="addpro">
                                 <div className="txt">
@@ -72,14 +78,13 @@ function EditP() {
 
                    
                             </div>
-
-                
+               
                         <div className="proContact">
                               <span className="contact-txt">Contact</span>
                              <div className="contact-link">
-                                  <Link  className="lnk"><span><BsTelephone className="contact-icon"/> <span>+2519563728</span></span></Link>
-                                  <Link  className="lnk"><span><BiLogoGmail className="contact-icon"/> <span>someone@gmail.com</span></span></Link>
-                                  <Link  className="lnk"><span><BsInstagram className="contact-icon"/> <span>ufsjdf</span></span></Link> 
+                                  <Link  className="lnk"><span><BsTelephone className="contact-icon"/> <span>{user.phone}</span></span></Link>
+                                  <Link  className="lnk"><span><BiLogoGmail className="contact-icon"/> <span>{user.email}</span></span></Link>
+                                  <Link  className="lnk"><span><BsInstagram className="contact-icon"/> <span>johnbee</span></span></Link> 
                              </div>
                
                             </div>
@@ -87,11 +92,8 @@ function EditP() {
                </div>
            
 
-
-
-
-
                <div className="edit-left">
+
                 <h4>Profile
                 <hr className="pro-hori"></hr>
                     
@@ -101,17 +103,12 @@ function EditP() {
                 <hr className="small"></hr>
                <Link to="/rent" className="left-lnk"><span><TfiMenuAlt className="in"/> <span>Rented property</span></span></Link><hr className="small"></hr>
                <Link  to="/booked" className="left-lnk"><span><LiaClipboardListSolid className="in"/> <span>My Booking</span></span></Link><hr className="small"></hr>
-               {/* <Link  className="left-lnk"><span><BsBuildingCheck className="in"/> <span>Verification</span></span></Link><hr></hr>
-               <Link  className="left-lnk"><span><FiSettings className="in"/> <span>Account Setting</span></span></Link><hr></hr> */}
-               <Link to="/" className="left-lnk"><span><FiLogOut className="in"/> <span>Logout</span></span></Link>
+               
+               <Link to="/signin" className="left-lnk"><span><FiLogOut className="in"/> <span>Logout</span></span></Link>
                </div>
                 
                 
-               </div>
-
-
-              
-              
+               </div>  
             </div>
            
         </div>
@@ -119,7 +116,7 @@ function EditP() {
     </div>
     
     
-    {/* <User/> */}
+    
   
   </>
     

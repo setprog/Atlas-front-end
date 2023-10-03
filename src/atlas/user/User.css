@@ -1,10 +1,70 @@
 .user-container{
     display: flex;
+    flex: 1;
+    /* background: blue; */
+    /* width: 5rem; */
+    margin-left: 20rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     
+}
+
+.user-card-container{display: none;}
+/* .table-wrapper {
+    max-width: 100%;}
+.table{
+   
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+.py-4{
+   
+    overflow-x: auto;
+} */
+
+.create-filteruser-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+.txt-header{
+    margin-left: -6rem;
+    color: #425FBA;
+}
+.txt{
+    display: flex;
+    flex-direction: column;
+    margin-left: -6rem;
+    font-size: 20px;
+    color: #425FBA;  
+}
+.username-filter-txt{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Jaldi;
+}
+
+.filter-username{
+    display: flex;
+    gap: 1rem;
+    /* margin-left: 20rem; */
+    align-items: center;
+    justify-content: center;
+}
+.radio_buttons{
+    display: flex;
+    flex-direction: column;
+    margin-left: -5rem;
 }
 .user-nav{
     display: flex;
@@ -17,7 +77,8 @@
 
 }
 .user-main{
-    width: 40rem;
+    
+    width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +93,8 @@
 .main-top{
     /* background: transparent; */
     /* width:970px; */
-    width: 100vw;
+    /* background: green; */
+    width: 80rem;
     height: 400px;
     padding-left: 4rem;
     z-index: 999;
@@ -190,7 +252,7 @@ td{
     font-size: 25px;
 }
 .main-bottom{
-    margin-top: 5rem;
+    margin-top: 9rem;
     margin-bottom: 15rem;
     display: flex;
     flex-direction: column;
@@ -203,7 +265,7 @@ td{
     /* padding: 3rem; */
     width: 658px;
     height: 270px;
-
+    margin-left: 30rem;
 }
 .main-bottom h3{
     font-weight: light;
@@ -226,6 +288,7 @@ td{
     color: rgb(43, 39, 39);
     padding: 0.3rem 0.6rem;
     margin-bottom: 0.5rem;
+    
 }.admin-icon{
     font-size: 1.3rem !important;
     color: rgb(104, 101, 145);
@@ -349,3 +412,120 @@ ol{
 
 }
 } */
+.sidebar {
+    padding: 2rem;
+    flex: 1;
+    width: -50%;
+    position: fixed;
+    height: 100%;
+    border-right: 2px solid #e5e5e5;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .active-page {
+    background-color: black;
+    color: white;
+  }
+  
+  .logo-container {
+    margin-bottom: 4rem;
+  }
+  
+  .logo-container h1 {
+    margin-top: 1.3rem;
+  }
+  .user-card{
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+   
+   
+      .main-bottom{display: none;}
+    
+   .py-4{
+display: none;
+   }
+   
+.land-card-wrapper{
+   
+    margin-left: 16rem;
+    margin-top: 2rem;
+    
+}
+.land-card-container{
+  
+   margin-left: -14rem;
+     /* border: 2px solid rgb(219, 206, 206); */
+     /* padding: 20px; */
+     cursor: pointer;
+
+     background: white;
+     border-radius: 1rem;
+    max-height: 15rem;
+     width: 20rem;
+ 
+    
+}
+.s{
+    display: none;
+}
+.user-card{
+    margin-left: 11rem;
+}
+dl, ol, ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    gap: 3rem;
+}
+.action-button {
+    max-width: 50px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Inter;
+    text-align: center;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: #425FBA;
+    text-decoration: none;
+    
+}
+.action-button-delete {
+    background: red;
+    margin-right: 1rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 6px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Inter;
+    text-align: center;
+}
+
+.action-button-delete {
+    background: red;
+    margin-right: 1rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 6px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Inter;
+    text-align: center;
+}
+.action-button-delete {
+    background: red;
+    margin-right: 1rem;
+    padding: 0.2rem ;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Inter;
+    text-align: center;
+}
+
+    }
