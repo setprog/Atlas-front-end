@@ -11,7 +11,7 @@ function User() {
   const [users, setUsers] = useState([]);
   const [statusFilter, setStatusFilter] = useState('all');
   const [roleFilter, setRoleFilter] = useState('all');
-
+  const [loading, setLoading] = useState(true);
 
   
   const handleStatusFilterChange = (e) => {
@@ -27,12 +27,11 @@ function User() {
   const filteredSubadmins = users.filter((user) => {
     const statusMatch =
       statusFilter === 'all' || user.status === statusFilter;
-    const usernameMatch = user.username
-      .toLowerCase()
-      .startsWith(usernameFilter.toLowerCase());
+      const usernameMatch =
+      usernameFilter === '' || user.username.toLowerCase().startsWith(usernameFilter.toLowerCase());
       const roleMatch =
       roleFilter === 'all' || user.position === roleFilter;
-    return statusMatch && usernameMatch && roleMatch;
+    return statusMatch || usernameMatch || roleMatch;
   });
   // const [users, setUsers] = useState([]);
 
@@ -59,11 +58,12 @@ let navigate=useNavigate
     loadUsers();
   }, []);
 
-  const loadUsers = async () => {
+  const loadUsers =async() => {
     const result ='https://fakestoreapi.com/users';
-    axios.get(result)
+    await axios.get(result)
     .then(response => {
       setUsers(response.data);
+      setLoading(false);
     })
     .catch(error => {
       console.error(error);
@@ -90,7 +90,9 @@ let navigate=useNavigate
   // loadUsers();
   // }
  
-
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   const deleteUser = async (id) => {
     fetch(`https://fakestoreapi.com/users/${id}`,{
             method:"DELETE"
@@ -364,10 +366,10 @@ let navigate=useNavigate
         <div>
         {Array.from({ length: totalPages }, (_, index) => index + 1).map(
           (page) => (
-            <button
+            <button 
               key={page}
               onClick={() => handlePageChange(page)}
-              className={currentPage === page ? 'active-page' : ''}
+              className={currentPage === page ? 'active-page' : 'page_number'}
               disabled={currentPage === page}
             >
               {page}
