@@ -14,7 +14,7 @@
     border-radius: 12rem;
     margin: 0 3rem 0 3rem;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .Rented-card-wrapper{
@@ -65,4 +65,43 @@
     font-size: large;
     font-weight: bolder;
  }
+ .loading {
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
+ @media (max-width:640px){
+    .Rented-map{
+   
+        border-radius: 12rem;
+        margin: 0 3rem 0 3rem;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    } 
+ }
+ @media (min-width:640px) and (max-width:991px){
+    .Rented-map{
+   
+        border-radius: 12rem;
+        margin: 0 3rem 0 3rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    } 
+    .Rented-card-container{
+  
+        margin: 30px;
+         border: 2px solid rgb(219, 206, 206);
+         padding: 20px;
+         cursor: pointer;
+      
+         background: white;
+         border-radius: 5rem;
+         height: 20rem;
+         min-width: 18rem;
+     
+        
+    } 
+ }

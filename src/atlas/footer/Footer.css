@@ -100,31 +100,31 @@
 }
 
 @media only screen and (max-width:640px){
-   .link{
+    .link{
+        
+         font-size: 11px;
+          
+     }
+     .footer-right .link{
        
-        font-size: 11px;
+         font-size: 14px;
          
-    }
-    .footer-right .link{
-      
-        font-size: 14px;
-        
-    }
-    .vertical{
-        
-         height: 100px;
-         width: 2.5px;
+     }
+     .vertical{
          
+          height: 100px;
+          width: 2.5px;
+          
+         
+     }
+     .footer-bottom {
+     
+         
+         font-size: 12px;
         
+     
+     }
+    .copyright-icon{
+     font-size: 0.7rem !important;
     }
-    .footer-bottom {
-    
-        
-        font-size: 12px;
-       
-    
-    }
-   .copyright-icon{
-    font-size: 0.7rem !important;
-   }
-}
+ }

@@ -3,7 +3,7 @@ import "./User.css"
 import React, { useState,useEffect } from 'react'
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-
+import {  CircleLoader } from 'react-spinners';
 
 function User() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,7 +31,7 @@ function User() {
       usernameFilter === '' || user.username.toLowerCase().startsWith(usernameFilter.toLowerCase());
       const roleMatch =
       roleFilter === 'all' || user.position === roleFilter;
-    return statusMatch || usernameMatch || roleMatch;
+    return statusMatch && usernameMatch && roleMatch;
   });
   // const [users, setUsers] = useState([]);
 
@@ -91,7 +91,10 @@ let navigate=useNavigate
   // }
  
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...<span>
+      <CircleLoader color="blue" size={100}/></span>
+    
+    </div>;
   }
   const deleteUser = async (id) => {
     fetch(`https://fakestoreapi.com/users/${id}`,{

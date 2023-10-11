@@ -1,12 +1,12 @@
 import "./Booked.css"
 import React from 'react'
 import  { useEffect, useState } from 'react'
-
+import { CircleLoader } from "react-spinners";
 import axios from 'axios';
 function Booked() {
 
     const [product, setProduct] = useState([]);
-
+    const [loading, setLoading] = useState(true);
  
 
   useEffect(() => {
@@ -16,7 +16,13 @@ function Booked() {
   const loadUsers = async () => {
     const result = await axios.get('https://fakestoreapi.com/users');
     setProduct(result.data);
+    setLoading(false);
   };
+  if (loading) {
+    return <div className="loading">Loading...<span>
+      <CircleLoader color="blue" size={100}/></span>
+    
+    </div>;}
   return (
     <div className='booked-wrapper'>
     <div className="booked-container">

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-
+import { CircleLoader } from 'react-spinners';
 import axios from 'axios';
 import "./LandLord.css"
 function LandLord() {
     const [product, setProduct] = useState([]);
-
+    const [loading, setLoading] = useState(true);
  
 
   useEffect(() => {
@@ -14,7 +14,14 @@ function LandLord() {
   const loadUsers = async () => {
     const result = await axios.get('https://fakestoreapi.com/users');
     setProduct(result.data);
+    setLoading(false);
   };
+  if (loading) {
+    return <div className="loading">Loading...<span>
+      <CircleLoader color="blue" size={100}/></span>
+    
+    </div>;
+  }
   return (
     <div className='land-wrapper'>
     <div className="land-container">

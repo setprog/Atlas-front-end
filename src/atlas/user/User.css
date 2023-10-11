@@ -241,6 +241,13 @@ td{
     scale: 1.02;
     transition: 500ms ease-in;
 }
+.loading {
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 .detail-view-hide{
     margin-top: 1rem;
     border: 1px solid transparent;
@@ -458,8 +465,188 @@ ol{
   .user-card{
     display: none;
   }
-
   @media (max-width: 640px) {
+   
+   
+    .main-bottom{display: none;}
+  
+ .py-4{
+display: none;
+ }
+ 
+.land-card-wrapper{
+ 
+  margin-left: 16rem;
+  margin-top: 2rem;
+  
+}
+.land-card-container{
+
+ margin-left: -14rem;
+   /* border: 2px solid rgb(219, 206, 206); */
+   /* padding: 20px; */
+   cursor: pointer;
+
+   background: white;
+   border-radius: 1rem;
+  max-height: 15rem;
+   width: 20rem;
+
+  
+}
+.s{
+  display: none;
+}
+.user-card{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.1rem;
+  margin-left: 1rem;
+}
+dl, ol, ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  gap: 3rem;
+}
+.action-button {
+  max-width: 50px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: #425FBA;
+  text-decoration: none;
+  
+}
+/* .action-button-delete {
+  background: red;
+  margin-right: 1rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 6px;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center;
+}
+
+.action-button-delete {
+  background: red;
+  margin-right: 1rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 6px;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center;
+} */
+.action-button-delete {
+  background: red;
+  margin-right: 1rem;
+  padding: 0.2rem ;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center;
+}
+
+  }
+  @media (min-width:640px) and (max-width:991px){
+   
+   
+    .main-bottom{display: none;}
+  
+ .py-4{
+display: none;
+ }
+ 
+.land-card-wrapper{
+ 
+  margin-left: 16rem;
+  margin-top: 2rem;
+  
+}
+.land-card-container{
+
+ margin-left: -14rem;
+   /* border: 2px solid rgb(219, 206, 206); */
+   /* padding: 20px; */
+   cursor: pointer;
+
+   background: white;
+   border-radius: 1rem;
+  max-height: 15rem;
+   width: 20rem;
+
+  
+}
+.s{
+  display: none;
+}
+.user-card{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.1rem;
+  margin-left: 1rem;
+}
+dl, ol, ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  gap: 3rem;
+}
+.action-button {
+  max-width: 50px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: #425FBA;
+  text-decoration: none;
+  
+}
+/* .action-button-delete {
+  background: red;
+  margin-right: 1rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 6px;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center;
+}
+
+.action-button-delete {
+  background: red;
+  margin-right: 1rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 6px;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center;
+} */
+.action-button-delete {
+  background: red;
+  margin-right: 1rem;
+  padding: 0.2rem ;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center; 
+  }
+}
+  /* @media (max-width: 640px) {
    
    
       .main-bottom{display: none;}
@@ -477,8 +664,7 @@ display: none;
 .land-card-container{
   
    margin-left: -14rem;
-     /* border: 2px solid rgb(219, 206, 206); */
-     /* padding: 20px; */
+    
      cursor: pointer;
 
      background: white;
@@ -514,16 +700,7 @@ dl, ol, ul {
     text-decoration: none;
     
 }
-/* .action-button-delete {
-    background: red;
-    margin-right: 1rem;
-    padding: 0.2rem 1rem 0.2rem 1rem;
-    border-radius: 6px;
-    font-size: 21px;
-    font-weight: bold;
-    font-family: Inter;
-    text-align: center;
-} */
+
 
 .action-button-delete {
     background: red;
@@ -535,15 +712,6 @@ dl, ol, ul {
     font-family: Inter;
     text-align: center;
 }
-/* .action-button-delete {
-    background: red;
-    margin-right: 1rem;
-    padding: 0.2rem ;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: Inter;
-    text-align: center;
-} */
 
-    }
+
+    } */
