@@ -1,0 +1,10 @@
+.dash-container{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    flex: 2;
+}
+.right{
+    flex: 4;
+}
