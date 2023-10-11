@@ -1,22 +1,24 @@
-body{
-  margin: 0;
-  padding: 0;
-  background:  #F5F5F5;;
+body {
+    margin: 0;
+    padding: 0;
+    background: #F5F5F5;
+    ;
 }
 
-.App{
-  position: relative;
-  overflow-x: clip;
+.App {
+    position: relative;
+    overflow-x: clip;
 }
-.gradient{
-  position: absolute;
-  /* z-index: -1; */
-  margin-left: -209;
-  margin-top: -71;
-  height: 218.64px;
-  width: 444.47px;
-  border-radius: 888px;
-  background: #2A26F6;
-  flex: 1;
-  filter:blur(200px);
+
+.gradient {
+    position: absolute;
+    /* z-index: -1; */
+    margin-left: -209;
+    margin-top: -71;
+    height: 218.64px;
+    width: 444.47px;
+    border-radius: 888px;
+    background: #2A26F6;
+    flex: 1;
+    filter: blur(200px);
 }

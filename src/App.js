@@ -15,6 +15,9 @@ import Rented from "./atlas/rented/Rented";
 import Booked from "./atlas/booked/Booked";
 import AddPro from "./atlas/addpro/AddPro";
 import ViewUser from "./atlas/new/ViewSubAdmin";
+import Appcateg from "./atlas/Category/Appcateg"
+import Apphome from "./atlas/Home-page/Apphome"
+import Appspecific from "./atlas/SpecificPro/Appspecific";
 function App() {
  
   
@@ -22,7 +25,7 @@ function App() {
     <div className="App">
       <div className="gradient"></div>
        
-       <Router>
+       {/* <Router>
        
       
         <Routes>
@@ -49,9 +52,9 @@ function App() {
               <UserNav/> <Booked/></> }></Route>
         </Routes>
         <Footer/>
-       </Router>
+       </Router> */}
       
-      
+      <Apphome />
    
       
     </div>

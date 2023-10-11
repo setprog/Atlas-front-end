@@ -1,0 +1,290 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: #F0F4F3;
+    color: #001C30;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 100px;
+    font-size: 46px;
+    margin-top: 20px;
+}
+
+.menu {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a:hover {
+    color: #B6AAAA;
+    font-weight: bolder;
+}
+
+a :hover {
+    color: #B6AAAA;
+}
+
+.menu h6 {
+    margin-top: 30px;
+    padding-right: 70px;
+    font-size: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #001C30;
+}
+
+.sign a {
+    text-decoration: none;
+}
+
+button {
+    height: 40px;
+    width: 120px;
+    margin: 40px;
+    margin-right: 100px;
+    border-radius: 15px;
+    margin-right: 20px;
+    background-color: #425FBA;
+    border-color: #F0F4F3;
+    display: flex;
+    flex-direction: row;
+}
+
+#but p {
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+#i {
+    height: 40px;
+    width: 120px;
+    background-color: white;
+}
+
+.sign img {
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+}
+
+.footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+#gg {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+}
+
+#gg a {
+    margin-top: 10px;
+}
+
+#gg a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #001C30;
+}
+
+.vertical {
+    border-left: 4px solid #425FBA;
+    height: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.contact {
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    margin-top: -20px;
+}
+
+#contact h5 {
+    margin-top: 0px;
+}
+
+#contact img {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 30px;
+    margin-top: 0;
+}
+
+#con {
+    display: flex;
+    flex-direction: raw;
+}
+
+.contact h6 {
+    font-size: 15px;
+}
+
+.copyright {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#mai {
+    display: flex;
+    flex-direction: column;
+}
+
+#cust_Rev {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    height: 50px;
+    font-size: 10px;
+    margin-left: 330px;
+}
+
+#maii {
+    width: 75%;
+    height: 30%;
+    background-color: white;
+    margin: auto;
+    border-radius: 30px;
+}
+
+#main {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    border-radius: 30px;
+    margin-top: -30px;
+}
+
+#mm {
+    width: 65%;
+    height: 100%;
+    margin: 10px;
+    border-radius: 30px;
+    margin-left: -100px;
+}
+
+#mm img {
+    border-radius: 30px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+#nn {
+    width: 40%;
+    background-color: #D9D9D9;
+    margin-left: 2%;
+    margin: 10px;
+    border-radius: 30px;
+    margin-top: -40px;
+}
+
+#ddd {
+    width: 50%;
+}
+
+#calender {
+    display: flex;
+    justify-content: space-around;
+}
+
+#nn h1 {
+    margin-top: 50px;
+    margin-left: 15%;
+}
+
+#nn h2 {
+    margin-left: 30px;
+}
+
+#nn h3 {
+    margin-left: 30px;
+}
+
+#calender h5 {
+    margin: 20px;
+}
+
+#nn button {
+    background-color: #425FBA;
+    color: white;
+    width: 150px;
+    border-color: none;
+    font-size: large;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+button h3 {
+    margin-top: 4px;
+}
+
+#cust_Rev img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#form {
+    width: 92%;
+    height: 230px;
+    background-color: #E4E4E4;
+    margin: auto;
+    border-radius: 30px;
+}
+
+#revv {
+    float: left;
+    display: flex;
+    flex-direction: row;
+}
