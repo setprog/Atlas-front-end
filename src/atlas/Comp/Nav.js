@@ -4,15 +4,32 @@ import Dashboard from './dashboard.png';
 
 function Nav() {
   return (
-   <div >
+    <div className="sidebar">
     <span className="acc-in">
-    <img id="acc-img" src={Dashboard} alt="bcsdcvi" />
-     <Link to="/dash">Dashboard</Link>
-     </span>
+      <img id="acc-img" src={Dashboard} />
+      <p id="acc-p">
+        <Link to="/dash">Dashboard</Link>
+      </p>
+    </span>
+    <span className="acc-in">
+      <img id="acc-img" src={Dashboard} />
+      <p id="acc-p">
         <Link to="/user">Sub-Admin</Link>
+      </p>
+    </span>
+    <span className="acc-in">
+      <img id="acc-img" src={Dashboard} />
+      <p id="acc-p">
         <Link to="/renter">Renter</Link>
+      </p>
+    </span>
+    <span className="acc-in">
+      <img id="acc-img" src={Dashboard} />
+      <p id="acc-p">
         <Link to="/Owner">Owner</Link>
-   </div>
+      </p>
+    </span>
+    </div>
   
   );
 }

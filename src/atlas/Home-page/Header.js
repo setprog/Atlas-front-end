@@ -20,7 +20,7 @@ export default function Header(){
             </div>
               <div className="sign">
                 <button id="i" onClick={handleClickOpen}>Sign in</button>
-                <button id="ii">Admin</button>
+               <Link to="/dash"> <button id="ii">Admin</button></Link>
                 <div>
         {popup?
             <div className='mainnnn'>

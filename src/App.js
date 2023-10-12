@@ -80,11 +80,11 @@ function App() {
               <Route exact path="/booked" element={<>
               <UserNav/> <Booked/></> }></Route>
               
-
-               <Route path='/dash' element={<Home/>}></Route>
-      <Route path='/about' element={<About/>}></Route>
-      <Route path='/renter' element={<Renter/>}></Route> 
-      <Route path='/Owner' element={<Owner/>}></Route>
+   <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
+      <Route path='about' element={<><Nav/><About/></>}></Route>
+      <Route path='renter' element={<><Nav/><Renter/></>}></Route> 
+      <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
+          
     
     
         </Routes>
@@ -93,9 +93,7 @@ function App() {
     
      
      
-
     
-     
   
     
    

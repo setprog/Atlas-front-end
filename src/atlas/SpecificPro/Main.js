@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import st from './stt.png'
+import { Link } from "react-router-dom";
 export default function Main(props){
 
     return(
@@ -85,7 +86,8 @@ export default function Main(props){
   <div><h5>Start Date</h5> <input type="date" ></input></div> 
   <div><h5>End Date</h5> <input type="date"></input></div> 
 </div>
-<button><h3>Rent me</h3></button></div>
+<Link to="/rentpage">
+<button><h3>Rent me</h3></button></Link></div>
         </div>
         </div>
         </div>
