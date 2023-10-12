@@ -21,6 +21,7 @@ import Header from "./Header";
 import Main from './Main';
 import Categ from './Categ';
 import Footer from './Footer';
+
 export default function App() {
   return (
     <div>
@@ -29,7 +30,7 @@ export default function App() {
       quant="4"
       categ="Car"
     />
-   {/*  <>
+    <>
       <Swiper
         slidesPerView={3}
         centeredSlides={false}
@@ -56,7 +57,7 @@ export default function App() {
         <SwiperSlide>
         <Categ  
        profile=" Dagi.W"
-       image={car}
+       image={mar}
        model="Tucson"
        price="$200"
        location="Harer"
@@ -163,8 +164,8 @@ export default function App() {
         </SwiperSlide>
         </div>
       </Swiper>
-    </> */}
-    <Footer />
+    </>
+   
     </div>
   );
 }

@@ -4,10 +4,17 @@ import Report from "./Report";
 import Table from "./Table";
 import owner2  from './owner2.png'
 import gmail from './gmail.png'
+import Nav from "./Nav"
+
+
+
 function Home() {
   return (
     <div>
-      <div className="gr"></div>
+      
+      <div className="gr">
+        <Nav  />
+      </div>
 
       <div className="grid-con">
         <div className="box box0">

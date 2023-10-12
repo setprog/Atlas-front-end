@@ -5,6 +5,7 @@ import eve from "./event_equ.jpg"
 import cl from "./clothe.jpg"
 import machine from "./ma.jpg"
 import ele from "./cam.jpg"
+import { Link } from "react-router-dom";
 
 export default function Main2(){
     return(
@@ -24,10 +25,10 @@ for a specific event or project,but you don’t want to purchase them outright.T
     </div>
    
     <div id="ddd">
-    <a href=" ">
+    <Link to="/appcat">
     <img id="vh" src={vh} alt="Vehicle pic" />
         <h5>Vehicle</h5>
-    </a>
+    </Link>
         
     </div>
     <div id="ddd">

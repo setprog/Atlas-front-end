@@ -10,9 +10,9 @@ export default function Main(props){
 
     return(
       <div id="maii"> 
-       <div id="cust_Rev">
+       {/* <div id="cust_Rev">
         <h1>Customer Reviews</h1><img src={st} alt="star"/><img src={st} alt="star"/>
-        <img src={st} alt="star"/><img src={st} alt="star"/></div> 
+        <img src={st} alt="star"/><img src={st} alt="star"/></div>  */}
         <div id="main">
        
         

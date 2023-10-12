@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Nav from './Nav'
 function Owner() {
   return (
-    <div>Owner</div>
+    <div>
+      <Nav/>
+      Owner</div>
   )
 }
 
