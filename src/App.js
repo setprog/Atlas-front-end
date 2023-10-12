@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <div className="gradient"></div>
        
-       {/* <Router>
+       <Router>
        
       
         <Routes>
@@ -52,9 +52,9 @@ function App() {
               <UserNav/> <Booked/></> }></Route>
         </Routes>
         <Footer/>
-       </Router> */}
+       </Router>
       
-      <Apphome />
+    
    
       
     </div>
