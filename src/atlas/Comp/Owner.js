@@ -1,18 +1,6 @@
-// <<<<<<< HEAD
-// import React from 'react'
-// import Nav from './Nav'
-// function Owner() {
-//   return (
-//     <div>
-//       <Nav/>
-//       Owner</div>
-//   )
-// }
-// =======
 import React,{useState} from "react";
 
-export default function Renter(){
-// >>>>>>> 5e84ca26923b6d445981970503db81a900a3239f
+export default function Owner(){
 
         const [bookings, setBookings] = useState([
             { id: 1, email: 'JohnDoe.@gmail.com', subject: 'Sofa',status:"Done", date: '2023-09-30', amount: "$500" },
@@ -119,3 +107,5 @@ export default function Renter(){
             </div>
     )
 }
+
+export default Owner
