@@ -20,7 +20,7 @@ function Appspecific() {
   return (
     <div>
 <Header />
-    {/* <Main 
+    <Main 
     pri='$200'
     bra='Mercedes'
     mod='S Class Limousine'
@@ -35,8 +35,8 @@ function Appspecific() {
     jj={jjj}
     kk={kkk}
     ll={lll}
-     /> */}
-    <Footer />
+     />
+   
     </div>
   );
 }

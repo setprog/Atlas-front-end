@@ -6,13 +6,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import st from './stt.png'
+import { Link } from "react-router-dom";
 export default function Main(props){
 
     return(
       <div id="maii"> 
-       <div id="cust_Rev">
+       {/* <div id="cust_Rev">
         <h1>Customer Reviews</h1><img src={st} alt="star"/><img src={st} alt="star"/>
-        <img src={st} alt="star"/><img src={st} alt="star"/></div> 
+        <img src={st} alt="star"/><img src={st} alt="star"/></div>  */}
         <div id="main">
        
         
@@ -85,7 +86,8 @@ export default function Main(props){
   <div><h5>Start Date</h5> <input type="date" ></input></div> 
   <div><h5>End Date</h5> <input type="date"></input></div> 
 </div>
-<button><h3>Rent me</h3></button></div>
+<Link to="/rentpage">
+<button><h3>Rent me</h3></button></Link></div>
         </div>
         </div>
         </div>

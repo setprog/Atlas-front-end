@@ -1,18 +1,35 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
-import Dashboard from './dashboard.png'
+import Dashboard from './dashboard.png';
 
 function Nav() {
   return (
-   <div >
+    <div className="sidebar">
     <span className="acc-in">
-    <img id="acc-img" src={Dashboard} />
-     <Link to="/">Dashboard</Link>
-     </span>
-        <Link to="/about">Sub-Admin</Link>
+      <img id="acc-img" src={Dashboard} />
+      <p id="acc-p">
+        <Link to="/dash">Dashboard</Link>
+      </p>
+    </span>
+    <span className="acc-in">
+      <img id="acc-img" src={Dashboard} />
+      <p id="acc-p">
+        <Link to="/user">Sub-Admin</Link>
+      </p>
+    </span>
+    <span className="acc-in">
+      <img id="acc-img" src={Dashboard} />
+      <p id="acc-p">
         <Link to="/renter">Renter</Link>
+      </p>
+    </span>
+    <span className="acc-in">
+      <img id="acc-img" src={Dashboard} />
+      <p id="acc-p">
         <Link to="/Owner">Owner</Link>
-   </div>
+      </p>
+    </span>
+    </div>
   
   );
 }

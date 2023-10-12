@@ -1,5 +1,5 @@
 import React, {useState}from 'react'
-import profile from './Photos/profile.png'
+import profile from './profile.png'
 
 function Navbar() {
   
