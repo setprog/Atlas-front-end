@@ -70,6 +70,7 @@ const handleCancel = () => {
 return (
   <div className='rentpage-wrapper'>
     <h2>Rent Page</h2>
+    <div className="rentPageBox">
     <p>Product: {product.title}</p>
     <p>Price: {product.price}</p>
     <p>Category: {product.category}</p>
@@ -88,8 +89,10 @@ return (
       Location:
       <input type="text" name="location" value={additionalDetails.location} onChange={handleInputChange} />
     </label>
+    </div>
+    
 
-    <button onClick={handleRentClick}>Rent Me</button>
+    <button className='rentMeButton' onClick={handleRentClick}>Rent Me</button>
 
     {popConfirmation && (
       <div className="getwrapper">
@@ -102,9 +105,11 @@ return (
           <p>Start Date: {additionalDetails.startDate}</p>
           <p>End Date: {additionalDetails.endDate}</p>
           <p>Location: {additionalDetails.location}</p>
-
-          <button onClick={handleConfirm}>Confirm</button>
-          <button onClick={handleCancel}>Cancel</button>
+<div className="confirmBtn">
+<button className='confirm' onClick={handleConfirm}>Confirm</button>
+          <button className='confirm'onClick={handleCancel}>Cancel</button>
+</div>
+          
         </div>
       </div>
     )}
