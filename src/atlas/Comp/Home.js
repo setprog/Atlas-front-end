@@ -61,7 +61,7 @@ function Home() {
               nums="65%"
 
         /> </div>
-        <div className="box box9">Recently</div>
+        <div className="box box9"><p id="recently">Recent Bookings</p></div>
         <div className="box box8"><Table/></div>
       
       </div>
