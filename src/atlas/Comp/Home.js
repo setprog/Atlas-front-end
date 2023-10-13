@@ -17,12 +17,12 @@ function Home() {
       </div>
 
       <div className="grid-con">
-        <div className="box box0">
+        <div className="boxb box0b">
           <h3 id="dash">Dashboard</h3>
         </div>
       </div>
       <div className="grid-conatianer">
-        <div className="box box2">
+        <div className="boxb box2b">
         <Sidebar
                 names="Total Owner"
                 num="50"
@@ -31,7 +31,7 @@ function Home() {
                 foot1="This Month-"
               />
         </div>
-        <div className="box box3">
+        <div className="boxb box3b">
         <Sidebar
                 names="Total User"
                 num="30"
@@ -40,7 +40,7 @@ function Home() {
                 foot1="This Month-"
               />
         </div>
-        <div className="box box4">
+        <div className="boxb box4b" id="bo">
         <Sidebar
                 names="Total List"
                 num="100"
@@ -49,27 +49,27 @@ function Home() {
                 foot1="This Month-"
               />
         </div>
-        <div className="box box5">
+        <div className="boxb box5b">
         <Report
               img={gmail}
               nums="65%"
 
         />
         </div>
-        <div className="box box6">
+        <div className="boxb box6b">
         <Report
               img={gmail}
               nums="65%"
 
         />
         </div>
-        <div className="box box7"> <Report
+        <div className="boxb box7b" id="bo"> <Report
               img={gmail}
               nums="65%"
 
         /> </div>
-        <div className="box box9"><p id="recently">Recent Bookings</p></div>
-        <div className="box box8"><Table/></div>
+        <div className="boxb box9b"><p id="recently">Recent Bookings</p></div>
+        <div className="boxb box8b"><Table/></div>
       
       </div>
     </div>

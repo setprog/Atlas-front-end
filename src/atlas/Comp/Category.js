@@ -10,43 +10,43 @@ function Category() {
     <div className='category'>
     <div className="mmain_2">
  
- <div className="dd">
+ <div className="ddb">
  
-    <div id="ddd">
+    <div id="dddb">
     <a href=" ">
-        <img id="ma" src={machine} alt="machinery pic" />
+        <img id="mab" src={machine} alt="machinery pic" />
         <h5>Machinery</h5>
         </a>
     </div>
    
-    <div id="ddd">
+    <div id="dddb">
     {/* <Link to="/appcat"> */}
-    <img id="vh" src={car} alt="Vehicle pic" />
+    <img id="vhb" src={car} alt="Vehicle pic" />
         <h5>Vehicle</h5>
     {/* </Link> */}
         
     </div>
-    <div id="ddd">
+    <div id="dddb">
     <a href=" ">
         <img src={camera} alt="Electronics pic" />
         <h5>Electronics</h5>
         </a>
     </div>
-    <div id="dddd">
+    <div id="ddddb">
     <a href=" ">
         <img src={clothes} alt="Clothes pic" />
         <h5>Clothes</h5>
         </a>
     </div>
-    <div id="dddd">
+    <div id="ddddb">
     <a href=" ">
-        <img id="vhh" src={decore} alt="Event Equipment" />
+        <img id="vhhb" src={decore} alt="Event Equipment" />
         <h5>Event Equipment</h5>
         </a>
     </div>
-    <div id="dddd">
+    <div id="ddddb">
     <a href=" ">
-        <img src={home} id="vhhh" alt="Houses pic" />
+        <img src={home} id="vhhhb" alt="Houses pic" />
         <h5>Houses</h5>
         </a>
     </div>
