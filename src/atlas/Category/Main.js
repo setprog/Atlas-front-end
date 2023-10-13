@@ -6,7 +6,7 @@ import React from "react";
            <h3>Showing {props.quant} results for {props.categ}</h3>
            <div className="inp">
             <input type="text" id="cat" placeholder="sort by"></input>
-            <input type="text" id="cat" placeholder="Choose category"></input>
+            <input type="text" id="cat" placeholder="filter by"></input>
            </div>
         </div>
         

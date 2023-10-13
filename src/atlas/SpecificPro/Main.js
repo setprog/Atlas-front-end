@@ -22,6 +22,8 @@ export default function Main(props){
      const [ phot , setphot] = useState([])
      useEffect (()=>{
       fetch('https://dog.ceo/api/breeds/image/random')
+      // https://dog.ceo/api/breeds/image/random/3
+
             .then(res=>res.json())
             .then(data=>setphot(data))
             .then(json=>console.log(json))
@@ -50,44 +52,20 @@ export default function Main(props){
         className="mySwiper"
       >
   
-        <SwiperSlide>
-          <img  src={phot.message} alt="rr" />
+  {/* {phot.map((image, index) => (
+        <SwiperSlide key={index}>
+          <img src={image.message} alt="cvjhj" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img  src={phot.message} alt="rr" />
+         ))} */}
+         <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img  src={phot.message} alt="rr" />
+        <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
         </SwiperSlide>
-         {/* <SwiperSlide>
-          <img   src={phot.message} alt="rr" />
+        <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
         </SwiperSlide>
-     
-        <SwiperSlide>
-          <img src={phot.message} alt="rr" />
-        </SwiperSlide> */}
-       
-        {/*<SwiperSlide>
-          <img   src={props.ff} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.gg} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={props.hh} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img  src={props.ii} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.jj} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.kk} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={props.ll} alt="rr" />
-        </SwiperSlide> */}
       </Swiper>
     </>
     
