@@ -25,7 +25,7 @@ import Home from "./atlas/Comp/Home"
 import Renter from "./atlas/Comp/Renter"
 import Owner  from "./atlas/Comp/Owner"
 import About from "./atlas/Comp/About"
-
+import Edit_info from "./atlas/editP/Edit_Info";
 function App() {
  
   
@@ -40,6 +40,8 @@ function App() {
        
                <Route exact path='/' element={ <>
                 <Apphome/></>}  ></Route>
+                <Route exact path='/editp' element={ <>
+                <EditP/></>}  ></Route>
 
                <Route exact path='/rentpage' element={<>
               <UserNav/> <RentPage/></> }></Route>
@@ -66,6 +68,7 @@ function App() {
               <UserNav/> <ViewUser/></> }></Route>
 
               <Route exact path="/edituser/:id" element={<> <UserNav/> <EditUser /></>} />
+              <Route exact path="/editinfo/:id" element={<> <UserNav/> <Edit_info/></>} />
 
               <Route exact path='/user' element={ <>
             <UserNav/>  <User/></>} >  </Route>
@@ -89,9 +92,9 @@ function App() {
     
         </Routes>
         <Footer/>
-       </Router> */}
+       </Router> 
       
-      <Apphome />
+      
    
       
     </div>

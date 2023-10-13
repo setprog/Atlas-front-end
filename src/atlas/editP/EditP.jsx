@@ -73,7 +73,7 @@ function EditP() {
                                     <span>your property for list</span></span>
                                 </div>
                                <div><Link to="/addpro">
-                                  <button   className="addbtn">Add Product</button></Link>
+                                  <button   className="addproductbtn">Add Product</button></Link>
                                 </div>
 
                    
@@ -92,9 +92,9 @@ function EditP() {
                </div>
            
 
-               <div className="edit-left">
+               <div className="profile-edit-left">
 
-                <h4>Profile
+                <h4 className="profile-text">Profile
                 <hr className="pro-hori"></hr>
                     
                 </h4>
