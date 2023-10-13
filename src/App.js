@@ -27,6 +27,7 @@ import Owner  from "./atlas/Comp/Owner"
 import About from "./atlas/Comp/About"
 import Edit_info from "./atlas/editP/Edit_Info";
 import Sign_in_up from "./atlas/Sign_in_up"
+import Category from "./atlas/Comp/Category";
 function App() {
  
   
@@ -91,6 +92,7 @@ function App() {
       <Route path='about' element={<><Nav/><About/></>}></Route>
       <Route path='renter' element={<><Nav/><Renter/></>}></Route> 
       <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
+      <Route path='Category' element={<><Nav/><Category/></>}></Route>
           
     
     
