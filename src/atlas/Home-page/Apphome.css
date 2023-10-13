@@ -53,10 +53,10 @@ a :hover {
     color: #B6AAAA;
 }
 
-.sign {
+.home_sign {
     display: flex;
     flex-direction: row;
-    margin-right: 100px;
+    margin-right: 50px;
     margin-top: -10px;
 }
 
@@ -64,9 +64,10 @@ button {
     height: 30px;
     width: 80px;
     border-radius: 15px;
+    text-decoration: none;
 }
 
-#i {
+#home_i {
     margin-left: 30px;
     background-color: #425FBA;
     color: white;
@@ -94,29 +95,30 @@ button {
     font-size: 64px;
 }
 
-.search-box img {
+.ssearch-box img {
     width: 40px;
     margin-left: 10px;
     cursor: pointer;
 }
 
-.search-box input::placeholder {
-    font-size: 1rem;
+.ssearch-box input::placeholder {
+    font-size: 30px;
     font-weight: 500;
     color: #425FBA;
 }
 
-.search-bar {
+.ssearch-bar {
     display: flex;
     background-color: white;
     align-items: center;
     width: 700px;
     height: 70px;
     margin: auto;
+    margin-top: 20px;
     border-radius: 50px;
 }
 
-.dropdown {
+.ddropdown {
     position: relative;
     width: 30%;
     height: 100%;
@@ -128,12 +130,12 @@ button {
     display: flex;
 }
 
-.dropdown img {
+.ddropdown img {
     width: 20px;
     margin-left: 50px;
 }
 
-.dropdown-text {
+.ddropdown-text {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,17 +174,24 @@ button {
     color: #425FBA
 }
 
-.search-box {
+.ssearch-box {
     display: flex;
     align-items: center;
     padding-right: 1 rem;
     width: 90%;
-    height: 70px;
+    height: 100px;
     color: #D9D9D9;
     margin-left: -150px;
 }
 
-.search-box input {
+#ssearch-input {
+    height: 70px;
+    width: 400px;
+    background-color: white;
+    border: none;
+}
+
+.ssearch-box input {
     padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
@@ -218,14 +227,18 @@ hr {
     background-color: #425FBA;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.main_2 p {
-    width: 85%;
-    margin-left: 8%;
+.mmain_2 p {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
 }
 
-.main_2 p3 {
+.mmain_2 p3 {
     margin: 10%;
     font-size: 35px;
     color: #425FBA;

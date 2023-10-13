@@ -21,20 +21,20 @@ function Appspecific() {
     <div>
 <Header />
     <Main 
-    pri='$200'
-    bra='Mercedes'
-    mod='S Class Limousine'
-    loc='Addis Ababa'
-    aa={aaa}
-    bb={bbb}
-    dd={ddd}
-    ff={fff}
-    gg={ggg}
-    hh={hhh}
-    ii={iii}
-    jj={jjj}
-    kk={kkk}
-    ll={lll}
+    // pri='$200'
+    // bra='Mercedes'
+    // mod='S Class Limousine'
+    // loc='Addis Ababa'
+    // aa={aaa}
+    // bb={bbb}
+    // dd={ddd}
+    // ff={fff}
+    // gg={ggg}
+    // hh={hhh}
+    // ii={iii}
+    // jj={jjj}
+    // kk={kkk}
+    // ll={lll}
      />
    
     </div>

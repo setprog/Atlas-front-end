@@ -53,9 +53,9 @@ export default function Main(){
         <div className="main">
     <h1> The sharing economy is the 
                future of rentals.</h1>
-               <div className="search-bar" >
-       <div className="dropdown">
-        <div id="drop-text" className="dropdown-text">
+               <div className="ssearch-bar" >
+       <div className="ddropdown">
+        <div id="drop-text" className="ddropdown-text">
         <span id="span">Category<img id="icon" src={search} alt=" search icon" /></span>
         </div>
         <ul id="list" className="dropdown-list">
@@ -68,8 +68,8 @@ export default function Main(){
        </ul>
        </div>
         
-        <div className="search-box">
-     <input type="text" id="search-input" placeholder="search anything..."></input>
+        <div className="ssearch-box">
+     <input type="text" id="ssearch-input" placeholder="search anything..."></input>
      <img src={ser} alt="search"></img>
         </div>
                </div>

@@ -25,7 +25,7 @@ import Home from "./atlas/Comp/Home"
 import Renter from "./atlas/Comp/Renter"
 import Owner  from "./atlas/Comp/Owner"
 import About from "./atlas/Comp/About"
-
+import Sign_in_up from "./atlas/Sign_in_up";
 function App() {
  
   
@@ -43,6 +43,9 @@ function App() {
 
                <Route exact path='/rentpage' element={<>
               <UserNav/> <RentPage/></> }></Route>
+
+              <Route exact path='/signin' element={<>
+               <Sign_in_up/></> }></Route>
 
               <Route exact path='/spec' element={<>
               <Appspecific/></> }></Route>
@@ -95,7 +98,7 @@ function App() {
      
     
   
-    
+ 
    
       
     </div>
