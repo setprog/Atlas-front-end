@@ -281,7 +281,7 @@ let navigate=useNavigate
                     Edit
                   </Link>
                   <button
-                    className="action-button-delete"
+                    className="sub-admin-action-button-delete"
                     onClick={(e) => deleteUser(user.id)}
                   >
                     Delete
@@ -366,13 +366,13 @@ let navigate=useNavigate
 
 </div>
        
-        <div>
+        <div className="page-container">
         {Array.from({ length: totalPages }, (_, index) => index + 1).map(
           (page) => (
             <button 
               key={page}
               onClick={() => handlePageChange(page)}
-              className={currentPage === page ? 'active-page' : 'page_number'}
+              className={currentPage === page ? 'active-page' : 'pagenumber'}
               disabled={currentPage === page}
             >
               {page}

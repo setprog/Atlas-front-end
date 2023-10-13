@@ -5,10 +5,11 @@ import eve from "./event_equ.jpg"
 import cl from "./clothe.jpg"
 import machine from "./ma.jpg"
 import ele from "./cam.jpg"
+import { Link } from "react-router-dom";
 
 export default function Main2(){
     return(
-        <div className="main_2">
+        <div className="mmain_2">
             <p>Welcome to our online rental system,where we are dedicated to helping you live to the 
 fullest without the burden of ownership.We understand that sometimes you need items 
 for a specific event or project,but you don’t want to purchase them outright.That’s where
@@ -24,10 +25,10 @@ for a specific event or project,but you don’t want to purchase them outright.T
     </div>
    
     <div id="ddd">
-    <a href=" ">
+    <Link to="/appcat">
     <img id="vh" src={vh} alt="Vehicle pic" />
         <h5>Vehicle</h5>
-    </a>
+    </Link>
         
     </div>
     <div id="ddd">
