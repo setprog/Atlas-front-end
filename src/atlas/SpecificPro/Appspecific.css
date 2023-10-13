@@ -178,6 +178,7 @@ button {
 #mai {
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 #cust_Rev {
@@ -191,7 +192,7 @@ button {
 
 #maii {
     width: 75%;
-    height: 20%;
+    max-height: 20%;
     background-color: white;
     margin: auto;
     border-radius: 30px;
@@ -208,7 +209,7 @@ button {
 
 #mm {
     width: 64%;
-    height: 100%;
+    max-height: 80%;
     margin: 10px;
     border-radius: 30px;
     margin-left: -50px;
@@ -218,10 +219,9 @@ button {
     border-radius: 30px;
     max-width: 90%;
     max-height: 80%;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-left: -650px;
-    background-color: black;
-    margin-top: 50px;
+    background-color: white;
 }
 
 #nn {
