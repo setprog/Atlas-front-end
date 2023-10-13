@@ -5,9 +5,9 @@ import {AiOutlineClose} from "react-icons/ai"
 import {HashLink as Link} from "react-router-hash-link"
 function Tnav() {
   // const [activeNav, setActiveNav]=useState("#home")
-  const [clicked,setClicked]= useState(false)
+  const [mclicked,setMclicked]= useState(false)
   const clickHandler=()=>{
-    setClicked(!clicked)
+    setMclicked(!mclicked)
     
   }
 
@@ -21,7 +21,7 @@ function Tnav() {
             <h3>ATLAS</h3>
         </div>
         <div className="right">
-        <div className={clicked? "uncl" :"right-nav"}>
+        <div className={mclicked? "uncl" :"right-nav"}>
 {/* <Link   onClick={()=>setActiveNav("#home")}smooth to={'#home'} className={activeNav === "#home" ? "active":"anch"}>Home</Link>
 <Link   onClick={()=>setActiveNav("#main")} smooth to={'#main'}  className={activeNav === "#main" ? "active":"anch"}>Residencies</Link>
 <Link   onClick={()=>setActiveNav("#value")} smooth to={'#value'} className={activeNav === "#value" ? "active":"anch"}>Our Value</Link>
@@ -34,10 +34,10 @@ function Tnav() {
             <Link smooth to="/search" className="r-link"  >About us</Link>
 
 </div>
-<div className="menu"
+<div className="Pmenu"
 onClick={clickHandler} >
 
-{clicked? <AiOutlineClose />:<AiOutlineMenu />}
+{mclicked? <AiOutlineClose />:<AiOutlineMenu />}
 </div>
 
 
