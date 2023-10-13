@@ -3,7 +3,7 @@ import React from "react"
 import { Link } from 'react-router-dom';
 export default function Categ(props){
     return(
-       <div className="ll"> 
+       <div className="lll"> 
        <a href=" "><div className="categ">
             <h4 id="pro">{props.profile}</h4>
            <Link to='/spec'> <img src={props.image} alt="pic"/></Link>

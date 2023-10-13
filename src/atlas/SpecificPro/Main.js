@@ -9,9 +9,9 @@ import st from './stt.png'
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
+
 export default function Main(props){
-  const [images, setImages] = useState([]);
+ 
      const [ result , setresult] = useState([])
      useEffect (()=>{
       fetch('https://fakestoreapi.com/products/1')
@@ -19,20 +19,13 @@ export default function Main(props){
             .then(data=>setresult(data))
             .then(json=>console.log(json))
      })
-     useEffect(() => {
-      // Fetch images from the fake API
-      const fetchImages = async () => {
-        try {
-          const response = await axios.get('https://dog.ceo/api/breeds/image/random');
-          setImages(response.data);
-        } catch (error) {
-          console.error('Error fetching images:', error);
-        }
-      };
-  
-      fetchImages();
-    }, []);
-  
+     const [ phot , setphot] = useState([])
+     useEffect (()=>{
+      fetch('https://dog.ceo/api/breeds/image/random')
+            .then(res=>res.json())
+            .then(data=>setphot(data))
+            .then(json=>console.log(json))
+     })
     return(
       <div id="maii"> 
        {/* <div id="cust_Rev">
@@ -56,27 +49,25 @@ export default function Main(props){
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-     {Array.isArray(images) ? (
-        images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img src={image.message} alt="dd" />
-          </SwiperSlide>
-        ))
-      ) : (
-        <div>Loading images...</div>
-      )}
-        {/* <SwiperSlide>
-          <img  src={props.aa} alt="rr" />
+  
+        <SwiperSlide>
+          <img  src={phot.message} alt="rr" />
         </SwiperSlide>
         <SwiperSlide>
-          <img   src={props.bb} alt="rr" />
+          <img  src={phot.message} alt="rr" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img  src={phot.message} alt="rr" />
+        </SwiperSlide>
+         {/* <SwiperSlide>
+          <img   src={phot.message} alt="rr" />
         </SwiperSlide>
      
         <SwiperSlide>
-          <img src={props.dd} alt="rr" />
-        </SwiperSlide>
+          <img src={phot.message} alt="rr" />
+        </SwiperSlide> */}
        
-        <SwiperSlide>
+        {/*<SwiperSlide>
           <img   src={props.ff} alt="rr" />
         </SwiperSlide>
         <SwiperSlide>
@@ -110,7 +101,7 @@ export default function Main(props){
 
     <h3>Location : {result.category}</h3>
     <h3>Price : {result.price}</h3>
-    <div id="form">
+    <div id="ffform">
     <h2>Please specify Rental Dates</h2> 
     <div id="calender">
    
