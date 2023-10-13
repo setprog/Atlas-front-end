@@ -189,6 +189,7 @@ button {
     width: 400px;
     background-color: white;
     border: none;
+    margin-left: 150px;
 }
 
 .ssearch-box input {
