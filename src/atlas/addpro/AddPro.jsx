@@ -91,34 +91,38 @@ function AddPro(){
               </label>
             </div>
             <div className="divs">
-            <label>Product:
-              <input type="text" style={{ height: '30px' }} value={product} name="product" onChange={(e) => onInputChange(e)} required />
-              </label>
+            <div className="div"><label>Product:</label></div> 
+            <div className="div"><input type="text" style={{ height: '30px' }} value={product} name="product" onChange={(e) => onInputChange(e)} required /></div>
+           
             </div>
             <div className="divs">
-            <label>Model:
-            <input type="number" style={{ height: '30px' }} name="quantity" value={quantity} onChange={(e) => onInputChange(e)} required />
-            </label>
+           <div className="div"><label>Model:</label></div> 
+            <div className="div"><input type="number" style={{ height: '30px' }} name="quantity" value={quantity} onChange={(e) => onInputChange(e)} required /></div>
+            
             </div>
             <div className="divs">
-            <label>Price:
-            <input type="number" style={{ height: '30px' }}  name="price" value={price} onChange={(e) => onInputChange(e)} required />
-            </label>
+            <div className="div"><label>Price:</label></div> 
+            <div className="div"><input type="number" style={{ height: '30px' }}  name="price" value={price} onChange={(e) => onInputChange(e)} required /></div>
+              
+            
             </div>
             <div className="divs">
-              <label>Start Date:
-              <input type="date" style={{ height: '30px' }} name="startdate" value={startdate} onChange={(e) => onInputChange(e)} required />
-              </label>
+
+            <div className="div"><label>Start Date:</label></div> 
+            <div className="div"><input type="date" style={{ height: '30px' }} name="startdate" value={startdate} onChange={(e) => onInputChange(e)} required /></div>
+              
             </div>
             <div className="divs">
-              <label>End Date:
-              <input type="date" style={{ height: '30px' }} name="enddate" value={enddate} onChange={(e) => onInputChange(e)} required />
-              </label>
+
+            <div className="div"><label>End Date:</label></div> 
+            <div className="div"><input type="date" style={{ height: '30px' }} name="enddate" value={enddate} onChange={(e) => onInputChange(e)} required /></div>
+              
+             
             </div>
             <div className="divs">
-              <label>Location:
-              <input type="text" style={{ height: '30px' }} name="location" value={location} onChange={(e) => onInputChange(e)} required />
-              </label>
+            <div className="div"><label>Location:</label></div> 
+            <div className="div"><input type="text" style={{ height: '30px' }} name="location" value={location} onChange={(e) => onInputChange(e)} required /></div>
+              
             </div>
             <div className="divs">
               <button className="add-pro-submit-btn" type='submit'>

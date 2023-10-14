@@ -36,10 +36,18 @@
 
 .divs{
   align-items: center;
-  margin-bottom: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+  
+  
+  gap: 3rem;
+  /* background: red; */
+
 }
 label {
-  display:inline-block;
+  display:block;
   
 }
 /* .image-input{
@@ -47,7 +55,7 @@ label {
 
   background: red;
 } */
-input[type="text"],
+/* input[type="text"],
 input[type="number"],
 input[type="date"]
  {
@@ -58,7 +66,7 @@ input[type="date"]
   border: 1px solid #ccc;
   border-radius: 10px;
   background: #8a1c1c;
-}
+} */
 .addpro-container{
   align-items: center;
   justify-content: center;
@@ -82,19 +90,20 @@ input[type="date"]
   width: 50rem; 
 }
 .detail-info-container{
-  
+ padding: 7rem 29rem 6rem 7rem;
   margin-left: 2rem;
   font-size: 23px;
   font-family: Inter;
-  background: red;
-  align-items: center;
+  /* background: red; */
+
   justify-content: center;
-  padding: -11rem;
+  /* padding: -11rem; */
   border-radius: 2rem;
   border: 3px solid grey;
   margin-top: 1rem;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  
   width: 50rem;
   
 }
