@@ -90,7 +90,7 @@ input[type="date"]
   width: 50rem; 
 }
 .detail-info-container{
- padding: 7rem 29rem 6rem 7rem;
+ /* padding: 7rem 29rem 6rem 7rem; */
   margin-left: 2rem;
   font-size: 23px;
   font-family: Inter;
