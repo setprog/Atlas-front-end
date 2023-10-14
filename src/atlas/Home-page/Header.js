@@ -20,7 +20,7 @@ export default function Header(){
             </div>
               <div className="home_sign">
                <Link to="/signin"> <button id="home_i" onClick={handleClickOpen}>Sign in</button></Link>
-               <Link to="/dash"> <button id="ii">Admin</button></Link>
+               <Link to="/adminsignin"> <button id="ii">Admin</button></Link>
                 <div>
         {popup?
             <div className='mainnnn'>

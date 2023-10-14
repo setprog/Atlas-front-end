@@ -1,6 +1,6 @@
 import React from 'react'
 import './admin-signin.css';
-
+import { Link } from 'react-router-dom';
 
 
 function Admin_signin(){
@@ -14,7 +14,7 @@ function Admin_signin(){
 <input type='email' placeholder='Email'  required/>
 <input type='password' placeholder='Password' required/>
 <a href='#'>Forgot your password?</a>
-<button type="click">Sigin In</button>
+<Link to="/dash"><button type="click">Sigin In</button></Link>
 </form>
             
          

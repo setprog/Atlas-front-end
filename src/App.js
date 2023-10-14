@@ -26,8 +26,10 @@ import Renter from "./atlas/Comp/Renter"
 import Owner  from "./atlas/Comp/Owner"
 import About from "./atlas/Comp/About"
 import Edit_info from "./atlas/editP/Edit_Info";
-import Sign_in_up from "./atlas/Sign_in_up"
+import Sign_in_up from "./atlas/sign in-up/Sign_in_up"
+import Admin_signin from "./atlas/sign in-up/Admin_signin"
 import Category from "./atlas/Comp/Category";
+
 function App() {
  
   
@@ -35,7 +37,7 @@ function App() {
     <div className="App">
       <div className="gradient"></div>
        
-       <Router>
+        <Router>
        
       
         <Routes>
@@ -44,7 +46,7 @@ function App() {
                 <Apphome/></>}  ></Route>
                 <Route exact path='/editp' element={ <>
                 <EditP/></>}  ></Route>
-
+               <Route exact path="/adminsignin" element={ <> <Admin_signin /></>} ></Route>
                <Route exact path='/rentpage' element={<>
               <UserNav/> <RentPage/></> }></Route>
 
