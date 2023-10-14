@@ -18,14 +18,25 @@ export default function Main(props){
             .then(res=>res.json())
             .then(data=>setresult(data))
             .then(json=>console.log(json))
-     })
+     },[])
      const [ phot , setphot] = useState([])
      useEffect (()=>{
-      fetch('https://dog.ceo/api/breeds/image/random')
+      fetch('https://dog.ceo/api/breeds/image/random/3')
+      // https://dog.ceo/api/breeds/image/random/3
+
+            .then(res=>res.json())
+            .then(data=>{setphot(data.message)
+            console.log("data", data);})
+            .then(json=>console.log(json))
+     },[])
+    const shownextimage = () => {
+            fetch('https://dog.ceo/api/breeds/image/random')
+      // https://dog.ceo/api/breeds/image/random/3
+
             .then(res=>res.json())
             .then(data=>setphot(data))
             .then(json=>console.log(json))
-     })
+    }
     return(
       <div id="maii"> 
        {/* <div id="cust_Rev">
@@ -40,53 +51,29 @@ export default function Main(props){
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        
-        loop={true}
+        loop
         pagination={{
           clickable: true,
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        // onSlideChange={shownextimage}
       >
   
-        <SwiperSlide>
-          <img  src={phot.message} alt="rr" />
+  {phot?.map((image, index) => (
+        <SwiperSlide key={index}>
+          <img className="Fetched_image" src={image} alt="cvjhj" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img  src={phot.message} alt="rr" />
+         ))}
+         {/* <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img  src={phot.message} alt="rr" />
+        <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
         </SwiperSlide>
-         {/* <SwiperSlide>
-          <img   src={phot.message} alt="rr" />
-        </SwiperSlide>
-     
-        <SwiperSlide>
-          <img src={phot.message} alt="rr" />
-        </SwiperSlide> */}
-       
-        {/*<SwiperSlide>
-          <img   src={props.ff} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.gg} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={props.hh} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img  src={props.ii} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.jj} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.kk} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={props.ll} alt="rr" />
+        <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
         </SwiperSlide> */}
       </Swiper>
     </>

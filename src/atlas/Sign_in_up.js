@@ -1,38 +1,111 @@
-import React from "react";
 import * as Components from './Components';
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 function Sign_in_up() {
-
+    const [Name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [Role, setRole] = useState('');
     const [signIn, toggle] = React.useState(true);
+
+    
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        const registrationData = {Name, email, password,Role };
+    
+        try {
+          const response = await fetch('/api/register', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(registrationData),
+          });
+    
+          if (response.ok) {
+            // Registration was successful
+            console.log('Registration successful');
+            // You can redirect the user or display a success message
+          } else {
+            // Handle registration errors
+            console.error('Registration failed');
+          }
+        } catch (error) {
+          console.error('An error occurred:', error);
+        }
+      };
+
+
+  const [authenticated, setAuthenticated] = useState(false);
+  const onClick = async (e) => {
+    e.preventDefault();
+
+    const loginData = { email, password };
+
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData),
+      });
+
+      if (response.ok) {
+        // Authentication was successful
+        setAuthenticated(true);
+        console.log('Authentication successful');
+      } else {
+        // Authentication failed
+        setAuthenticated(false);
+        console.error('Authentication failed');
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  };
+
      return(
-      <div className="App">
+      <div className="App" >
        
          <Components.Container>
              <Components.SignUpContainer signinIn={signIn}>
-                 <Components.Form>
+                 <Components.Form onSubmit={handleSubmit}>
                      <Components.Title>Create Account<br/><br/></Components.Title>
-                     <Components.Input type='text' placeholder='Name' required />
+                     <Components.Input type='text' placeholder='Name'  value={Name}
+        onChange={(e) => setName(e.target.value)} required />
                      
-                     <Components.Input type='email' placeholder='Email' required/>
+                     <Components.Input type='email' placeholder='Email' value={email}
+        onChange={(e) => setEmail(e.target.value)} required/>
                      
-                     <Components.Input type='password' placeholder='Password' required />
-                     <Components.Select type='text'required>
+                     <Components.Input type='password' placeholder='Password' value={password}
+        onChange={(e) => setPassword(e.target.value)} required />
+                     <Components.Select type='text' placeholder='Role' value={Role}
+        onChange={(e) => setPassword(e.target.value)} required>
                      <Components.Option>Owner</Components.Option> 
                      <Components.Option>Renter</Components.Option> 
                      </Components.Select>
                     
-                     <Components.Button>Sign Up</Components.Button>
+                     <Components.Button type="submit">Sign Up</Components.Button>
                  </Components.Form>
              </Components.SignUpContainer>
 
              <Components.SignInContainer signinIn={signIn}>
-                  <Components.Form>
+             {authenticated ? (
+        <p>You are authenticated. Show authenticated content here.</p>
+      ) : (
+                  <Components.Form onSubmit={handleSubmit}>
                       <Components.Title>Sign in<br/><br/></Components.Title>
-                      <Components.Input type='email' placeholder='Email' required/>
-                      <Components.Input type='password' placeholder='Password' required/>
+                      <Components.Input type='email' placeholder='Email' value={email}
+            onChange={(e) => setEmail(e.target.value)} required/>
+                      <Components.Input type='password' placeholder='Password'  value={password}
+            onChange={(e) => setPassword(e.target.value)} required/>
                       <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
-                     <Link to="/"> <Components.Button>Sigin In</Components.Button></Link>
+                      <Components.Button type="click">Sigin In</Components.Button>
                   </Components.Form>
+                  )}
              </Components.SignInContainer>
 
              <Components.OverlayContainer signinIn={signIn}>

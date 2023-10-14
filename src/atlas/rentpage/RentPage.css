@@ -1,6 +1,6 @@
 .rentpage-wrapper{
     padding-top: 10rem;
-    color: white;
+    color: black;
     font-size: larger;
     font-family:Inter;
   
@@ -39,14 +39,14 @@ h2{
     background: transparent;
 }
 .confirmBtn{
-    margin-left: 30rem;
+    margin-left: 15rem;
     display: flex;
     flex-direction: row;
     gap: 1rem;
     margin-top: 4rem;
 }
 .rentPageBox{
-    background:#425FBA;
+    background: #d9d9d9;
     padding: 4rem;
     margin-left: 33rem;
     width: 40rem;
@@ -61,12 +61,12 @@ h2{
   align-items: center;
   justify-content: center;
   height: 35rem;
-  width: 80rem;
+  width: 50rem;
     padding: 4rem;
-    background: #425FBA;
+    background: #d9d9d9;
     position: absolute;
-    left: 10rem;
-    top: 12rem;
+    left: 30rem;
+    top: 15rem;
     /* top: 25%;
     right: 25%; */
 }

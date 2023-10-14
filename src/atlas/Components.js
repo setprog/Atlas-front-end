@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-// import './component/login.css';
-export const Container = styled.div `
+
+export const Container = styled.div`
 margin-top: 100px;
 margin-left: 320px;
 margin-bottom: 100px;
@@ -14,7 +14,7 @@ height: 500px;
 max-width: 100%;
 min-height: 400px;
 `;
-export const SignUpContainer = styled.div `
+export const SignUpContainer = styled.div`
  position: absolute;
  top: 0;
  height: 100%;
