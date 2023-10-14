@@ -13,6 +13,8 @@ import { useState } from "react";
     function handleSelect(event){
          setValue(event.target.value)
     }
+
+    
     return(
         <div className="wana">
            {/* <input id="search" type="text" placeholder='choose a catagory'   ></input>  */}

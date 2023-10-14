@@ -1,5 +1,6 @@
 import * as Components from './Components';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 function Sign_in_up() {
     const [Name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -102,7 +103,7 @@ function Sign_in_up() {
                       <Components.Input type='password' placeholder='Password'  value={password}
             onChange={(e) => setPassword(e.target.value)} required/>
                       <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
-                      <Components.Button type="click">Sigin In</Components.Button>
+                     <Link to="/"> <Components.Button type="click">Sigin In</Components.Button></Link>
                   </Components.Form>
                   )}
              </Components.SignInContainer>
