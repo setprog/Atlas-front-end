@@ -87,7 +87,6 @@ function Sign_in_up() {
                      <Components.Option>Owner</Components.Option> 
                      <Components.Option>Renter</Components.Option> 
                      </Components.Select>
-                    
                      <Components.Button type="submit">Sign Up</Components.Button>
                  </Components.Form>
              </Components.SignUpContainer>
