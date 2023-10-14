@@ -77,9 +77,8 @@ function AddPro(){
         <div className="detail-info-container">
           <form onSubmit={handleSubmit}>
             <div className="divs">
-            <label>Category:
-            {/* <input type="text" name="category" value={category} onChange={(e) => onInputChange(e)} required /> */}
-              <select value={category} style={{ height: '30px' }} name="category" onChange={(e) => onInputChange(e)} required>
+              <div className="div">Category:</div>
+              <div className="div"><select value={category} style={{ height: '30px' }} name="category" onChange={(e) => onInputChange(e)} required>
                 <option value="">Select Category</option>
                 <option value="Electronics">Electronics</option>
                 <option value="Clothing">Clothing</option>
@@ -87,41 +86,42 @@ function AddPro(){
                 <option value="Books">Books</option>
                 <option value="Machinery">Machinery</option>
                 <option value="Event Equipment">Event Equipment</option>
-              </select>
-              </label>
+              </select></div>
+            
             </div>
             <div className="divs">
             <div className="div"><label>Product:</label></div> 
-            <div className="div"><input type="text" style={{ height: '30px' }} value={product} name="product" onChange={(e) => onInputChange(e)} required /></div>
+            <div className="div"><input type="text" style={{ height: '30px' ,width:'350px'}} value={product} name="product" onChange={(e) => onInputChange(e)} required /></div>
            
             </div>
+           
             <div className="divs">
            <div className="div"><label>Model:</label></div> 
-            <div className="div"><input type="number" style={{ height: '30px' }} name="quantity" value={quantity} onChange={(e) => onInputChange(e)} required /></div>
+            <div className="div"><input type="number" style={{ height: '30px' ,width:'350px'}} name="quantity" value={quantity} onChange={(e) => onInputChange(e)} required /></div>
             
             </div>
             <div className="divs">
             <div className="div"><label>Price:</label></div> 
-            <div className="div"><input type="number" style={{ height: '30px' }}  name="price" value={price} onChange={(e) => onInputChange(e)} required /></div>
+            <div className="div"><input type="number" style={{ height: '30px',width:'350px' }}  name="price" value={price} onChange={(e) => onInputChange(e)} required /></div>
               
             
             </div>
             <div className="divs">
 
             <div className="div"><label>Start Date:</label></div> 
-            <div className="div"><input type="date" style={{ height: '30px' }} name="startdate" value={startdate} onChange={(e) => onInputChange(e)} required /></div>
+            <div className="div"><input type="date" style={{ height: '30px',width:'350px' }} name="startdate" value={startdate} onChange={(e) => onInputChange(e)} required /></div>
               
             </div>
             <div className="divs">
 
             <div className="div"><label>End Date:</label></div> 
-            <div className="div"><input type="date" style={{ height: '30px' }} name="enddate" value={enddate} onChange={(e) => onInputChange(e)} required /></div>
+            <div className="div"><input type="date" style={{ height: '30px' ,width:'350px'}} name="enddate" value={enddate} onChange={(e) => onInputChange(e)} required /></div>
               
              
             </div>
             <div className="divs">
             <div className="div"><label>Location:</label></div> 
-            <div className="div"><input type="text" style={{ height: '30px' }} name="location" value={location} onChange={(e) => onInputChange(e)} required /></div>
+            <div className="div"><input type="text" style={{ height: '30px',width:'350px' }} name="location" value={location} onChange={(e) => onInputChange(e)} required /></div>
               
             </div>
             <div className="divs">

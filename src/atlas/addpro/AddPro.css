@@ -34,28 +34,21 @@
   flex-shrink: 0;
 } */
 
-.divs{
+.divs {
   align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  padding-left: 1rem;
-  
-  
-  gap: 3rem;
-  /* background: red; */
-
+  margin-bottom: 10px;
+  display: flex;flex-direction: row;
+  gap: 2rem;
 }
 label {
-  display:block;
+  display:inline-block;
+  margin-bottom: 5px;
+}
+.image-input{
+  height: 7rem;
   
 }
-/* .image-input{
- max-width: 34rem; height: 7rem;
-
-  background: red;
-} */
-/* input[type="text"],
+input[type="text"],
 input[type="number"],
 input[type="date"]
  {
@@ -65,8 +58,8 @@ input[type="date"]
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background: #8a1c1c;
-} */
+
+}
 .addpro-container{
   align-items: center;
   justify-content: center;
@@ -78,7 +71,7 @@ input[type="date"]
   color: #425FBA;
   font-size: 17px;
   font-family: Inter;
-  
+  /* background: red; */
   align-items: center;
   justify-content: center;
   padding: 1rem;
@@ -90,26 +83,25 @@ input[type="date"]
   width: 50rem; 
 }
 .detail-info-container{
- /* padding: 7rem 29rem 6rem 7rem; */
-  margin-left: 2rem;
-  font-size: 23px;
+  color: #425FBA;
+  font-size: 17px;
+  font-weight: bold;
   font-family: Inter;
   /* background: red; */
-
+  align-items: center;
   justify-content: center;
-  /* padding: -11rem; */
+  padding: 2rem;
   border-radius: 2rem;
   border: 3px solid grey;
   margin-top: 1rem;
   display: flex;
-  align-items: center;
-  
+  flex-direction: column;
   width: 50rem;
   
 }
 
 button[type="submit"] {
- text-align: center;
+  padding: 8px 16px;
   background-color: #425FBA;
   color: #fff;
   border: none;
