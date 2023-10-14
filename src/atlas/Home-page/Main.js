@@ -51,7 +51,7 @@ export default function Main(){
 
     return(
         <div className="main">
-    <h1> The sharing economy is the 
+    <h1 id> The sharing economy is the 
                future of rentals.</h1>
                <div className="ssearch-bar" >
        <div className="ddropdown">

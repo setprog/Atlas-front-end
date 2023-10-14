@@ -11,8 +11,8 @@ export default function Header(){
     }
     return(
         <div  className="header">
-            <h1>ATLAS</h1>
-            <div className="menu">
+            <h1 id="drgt">ATLAS</h1>
+            <div className="arau">
               <h6><a href =" ">Home</a></h6>
               <h6><Link to ="/form">Add to cart</Link></h6>
               <h6><a href =" ">Book now</a></h6>
