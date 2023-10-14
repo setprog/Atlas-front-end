@@ -40,14 +40,14 @@
 }
 label {
   display:inline-block;
-  margin-bottom: 2rem;
+  
 }
-.image-input{
+/* .image-input{
  max-width: 34rem; height: 7rem;
 
   background: red;
-}
-/* input[type="text"],
+} */
+input[type="text"],
 input[type="number"],
 input[type="date"]
  {
@@ -58,7 +58,7 @@ input[type="date"]
   border: 1px solid #ccc;
   border-radius: 10px;
   background: #8a1c1c;
-} */
+}
 .addpro-container{
   align-items: center;
   justify-content: center;
@@ -70,7 +70,7 @@ input[type="date"]
   color: #425FBA;
   font-size: 17px;
   font-family: Inter;
-  /* background: red; */
+  
   align-items: center;
   justify-content: center;
   padding: 1rem;
@@ -82,18 +82,19 @@ input[type="date"]
   width: 50rem; 
 }
 .detail-info-container{
-  color: #425FBA;
+  
+  margin-left: 2rem;
   font-size: 23px;
   font-family: Inter;
-  /* background: red; */
+  background: red;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: -11rem;
   border-radius: 2rem;
   border: 3px solid grey;
   margin-top: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 50rem;
   
 }
