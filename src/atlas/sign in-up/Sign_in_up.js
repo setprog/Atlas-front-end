@@ -1,5 +1,6 @@
 import React from "react";
 import * as Components from './Components';
+import { Link } from "react-router-dom";
 function Sign_in_up() {
 
     const [signIn, toggle] = React.useState(true);
@@ -30,7 +31,7 @@ function Sign_in_up() {
                       <Components.Input type='email' placeholder='Email' required/>
                       <Components.Input type='password' placeholder='Password' required/>
                       <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
-                      <Components.Button>Sigin In</Components.Button>
+                     <Link to="/"> <Components.Button>Sigin In</Components.Button></Link>
                   </Components.Form>
              </Components.SignInContainer>
 

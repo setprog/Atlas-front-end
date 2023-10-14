@@ -25,7 +25,9 @@ import Home from "./atlas/Comp/Home"
 import Renter from "./atlas/Comp/Renter"
 import Owner  from "./atlas/Comp/Owner"
 import About from "./atlas/Comp/About"
-
+import Edit_info from "./atlas/editP/Edit_Info";
+import Sign_in_up from "./atlas/Sign_in_up"
+import Category from "./atlas/Comp/Category";
 function App() {
  
   
@@ -40,9 +42,14 @@ function App() {
        
                <Route exact path='/' element={ <>
                 <Apphome/></>}  ></Route>
+                <Route exact path='/editp' element={ <>
+                <EditP/></>}  ></Route>
 
                <Route exact path='/rentpage' element={<>
               <UserNav/> <RentPage/></> }></Route>
+
+              <Route exact path='/signin' element={<>
+               <Sign_in_up/></> }></Route>
 
               <Route exact path='/spec' element={<>
               <Appspecific/></> }></Route>
@@ -66,6 +73,7 @@ function App() {
               <UserNav/> <ViewUser/></> }></Route>
 
               <Route exact path="/edituser/:id" element={<> <UserNav/> <EditUser /></>} />
+              <Route exact path="/editinfo/:id" element={<> <UserNav/> <Edit_info/></>} />
 
               <Route exact path='/user' element={ <>
             <UserNav/>  <User/></>} >  </Route>
@@ -84,6 +92,7 @@ function App() {
       <Route path='about' element={<><Nav/><About/></>}></Route>
       <Route path='renter' element={<><Nav/><Renter/></>}></Route> 
       <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
+      <Route path='Category' element={<><Nav/><Category/></>}></Route>
           
     
     

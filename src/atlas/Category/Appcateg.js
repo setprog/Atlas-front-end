@@ -30,7 +30,7 @@ export default function App() {
       quant="4"
       categ="Car"
     />
-    <>
+    <div className='background'>
       <Swiper
         slidesPerView={3}
         centeredSlides={false}
@@ -164,7 +164,7 @@ export default function App() {
         </SwiperSlide>
         </div>
       </Swiper>
-    </>
+    </div>
    
     </div>
   );

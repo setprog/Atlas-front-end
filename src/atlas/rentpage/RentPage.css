@@ -1,5 +1,17 @@
 .rentpage-wrapper{
-    padding: 17rem;
+    padding-top: 10rem;
+    color: white;
+    font-size: larger;
+    font-family:Inter;
+  
+}
+@font-face {
+    font-family: Inter;
+    src: url(/public/Inter-VariableFont_slnt,wght.ttf);
+}
+@font-face {
+    font-family: GoblinOne;
+    src: url(/public/GoblinOne-Regular.ttf);
 }
 .getwrapper{
     padding: 7rem;
@@ -16,6 +28,33 @@
 
 
 }
+.rentMeButton{
+    align-items: center;
+    margin-left: 35rem;
+}
+h2{
+    color: black;
+    text-align: center;
+    font-family: Goblin;
+    background: transparent;
+}
+.confirmBtn{
+    margin-left: 30rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+.rentPageBox{
+    background:#425FBA;
+    padding: 4rem;
+    margin-left: 33rem;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 5rem;
+    align-items: center;
+    justify-content: center;
+}
 .getcontainer{
   border-radius: 12rem;
   text-align: center;
@@ -23,10 +62,11 @@
   justify-content: center;
   height: 35rem;
   width: 80rem;
-    /* padding: 7rem; */
+    padding: 4rem;
     background: #425FBA;
     position: absolute;
     left: 10rem;
+    top: 12rem;
     /* top: 25%;
     right: 25%; */
 }

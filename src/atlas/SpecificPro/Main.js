@@ -7,8 +7,36 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import st from './stt.png'
 import { Link } from "react-router-dom";
-export default function Main(props){
+import { useState } from "react";
+import { useEffect } from "react";
 
+export default function Main(props){
+ 
+     const [ result , setresult] = useState([])
+     useEffect (()=>{
+      fetch('https://fakestoreapi.com/products/1')
+            .then(res=>res.json())
+            .then(data=>setresult(data))
+            .then(json=>console.log(json))
+     },[])
+     const [ phot , setphot] = useState([])
+     useEffect (()=>{
+      fetch('https://dog.ceo/api/breeds/image/random/3')
+      // https://dog.ceo/api/breeds/image/random/3
+
+            .then(res=>res.json())
+            .then(data=>{setphot(data.message)
+            console.log("data", data);})
+            .then(json=>console.log(json))
+     },[])
+    const shownextimage = () => {
+            fetch('https://dog.ceo/api/breeds/image/random')
+      // https://dog.ceo/api/breeds/image/random/3
+
+            .then(res=>res.json())
+            .then(data=>setphot(data))
+            .then(json=>console.log(json))
+    }
     return(
       <div id="maii"> 
        {/* <div id="cust_Rev">
@@ -19,67 +47,48 @@ export default function Main(props){
         
         <div id="mm">
         <>
+          
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        loop={true}
+        loop
         pagination={{
           clickable: true,
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        // onSlideChange={shownextimage}
       >
-        <SwiperSlide>
-          <img  src={props.aa} alt="rr" />
+  
+  {phot?.map((image, index) => (
+        <SwiperSlide key={index}>
+          <img className="Fetched_image" src={image} alt="cvjhj" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.bb} alt="rr" />
+         ))}
+         {/* <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <img   src={props.cc} alt="rr" />
+        <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
+        </SwiperSlide>
+        <SwiperSlide >
+          <img src={phot.message} alt="cvjhj" />
         </SwiperSlide> */}
-        <SwiperSlide>
-          <img src={props.dd} alt="rr" />
-        </SwiperSlide>
-        {/* <SwiperSlide>
-          <img  src={props.ee} alt="rr" />
-        </SwiperSlide> */}
-        <SwiperSlide>
-          <img   src={props.ff} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.gg} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={props.hh} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img  src={props.ii} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.jj} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img   src={props.kk} alt="rr" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={props.ll} alt="rr" />
-        </SwiperSlide>
       </Swiper>
     </>
     
         </div>
         <div id="nn">
-    <h1>Brand : {props.bra}</h1>
-    <h2>Model : {props.mod}</h2>
+    <h1>Brand : {result.category} </h1>
+    <h2>Model : {result.category}</h2>
     
-    <h3>min booking period : dd/mm/yyyy</h3>
-    <h3>max booking period : dd/mm/yyyy</h3>
+    <h3>min booking period : {result.price}</h3>
+    <h3>max booking period : {result.price}</h3>
 
-    <h3>Location : {props.loc}</h3>
-    <h3>Price : {props.pri}</h3>
-    <div id="form">
+    <h3>Location : {result.category}</h3>
+    <h3>Price : {result.price}</h3>
+    <div id="ffform">
     <h2>Please specify Rental Dates</h2> 
     <div id="calender">
    

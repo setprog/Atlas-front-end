@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #F5F5F5;
-    ;
+    /* overflow-x: clip; */
 }
 
 .App {
@@ -25,10 +25,15 @@ body {
 .borderRed {
   border: 4px solid rgb(180, 161, 161)
 }
-.sidebar {
+.befsidebar {
   position: fixed;
-  left: 0;
-  top: 100;
+  left: 60px;
+  top: 130px;
+ 
+ 
+
+
+ 
 }
 
 /* Header*/
@@ -81,17 +86,18 @@ body {
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(130px, auto);
 
-  .box {
+  .boxb {
     padding: 20px;
     border-radius: 10px;
     /*border:1px solid black; */
     margin-top: -70px;
   }
 
-  .box0 {
+  .box0b {
     width: 150px;
     margin-left: 520px;
     max-height: 40px;
+    margin-top: 10px;
 
   }
 
@@ -105,19 +111,30 @@ body {
 }
 
 /*GRID */
+
 .grid-conatianer {
   display: grid;
-  gap: 20px;
+  gap: 15px;
   grid-template-columns: 1fr 1fr 1fr ;
   grid-auto-rows: minmax(130px, auto);
-  margin-left: 500px;
+  margin-left: 400px;
+  top: 100px;
+  .grid-con{
+    top: 300px;
+  }
   
+.boxb{
+  margin-left: 100px;
+  top:100px
+}
+.box2b{
+  width: 1000px;
+}
 
-
-  .box {
+  .boxb {
     padding: 3px;
     border-radius: 10px;
-    /* border: 1px solid black; */
+   
     flex-direction: column;
 
 
@@ -125,62 +142,68 @@ body {
 
  
 
-  .box2,
-  .box5,
-  .box8 {
+  .box2b,
+  .box5b,
+  .box8b {
+    margin-left: 300px;
+  }
+
+  .box3b,
+  .box6b {
     margin-left: 30px;
   }
 
-  .box3,
-  .box6 {
-    margin-left: 25px;
-  }
-
-  .box2,
-  .box3,
-  .box4 {
-    width: 350px;
-    background-color: #D9D9D9;
+  .box2b,
+  .box3b,
+  .box4b {
+    width: 550px;
+    background-color: red;
     margin-top: -90px;
-    max-height: 150px;
+    max-height: 500px;
   }
 
-  .box5,
-  .box6,
-  .box7 {
+  .box5b,
+  .box6b,
+  .box7b {
     max-height: 110px;
     width: 350px;
-    
-     background-color: #D9D9D9; 
+    background-color: #D9D9D9; 
     margin-top: -65px;
     
   }
-
-  .box8 {
+ 
+  .box8b {
     grid-column: span 3;
     grid-row: span 2;
-    margin-top: -190px;
+    margin-top: -290px;
     width: 1135px;
     background-color: #D9D9D9;
     max-height: 255px;
+    margin-left: -100px;
 
   }
 
-  .box9 {
+  .box9b {
 
     grid-column: span 1;
     grid-row: span 1;
     margin-left: 50px;
-    margin-top: -105px;
+    margin-top: -90px;
     width: 200px;
     max-height: 10px;
   }
 }
+
+#recently{
+  font-size: x-large;
+  font-weight: bold;
+}
 .top-box {
     background-color: #D9D9D9;
-    width: 250px;
-    height: 70px;
-    margin-top: 15px;
+    width: 325px;
+    height: 190px;
+    margin-top: 25px;
+    margin-left: 3px;
   
   }
   
@@ -210,19 +233,20 @@ body {
   #top-footer {
     display: flex;
     justify-content: center;
-    margin-left: -15px;
+    margin-left: -1px;
     margin-top: 30px;
     background-color: #D9D9D9;
   }
   
   #top-footer1 {
     background-color: #D9D9D9;
-    margin-right: 70px;
+    margin-right: 90px;
   }
   
   #top-footer p {
     background-color: #D9D9D9;
-    margin-left: 30px;
+    margin-left: -30px;
+    margin-top: 20px;
   }
   
   #title {
@@ -233,16 +257,17 @@ body {
   
   .report{
     display:flex;
-    margin-top: -20px;
+    margin-top: 5px;
     background-color: #D9D9D9;
-    height: 110px;
+    height: 150px;
+    width: 330px;
   }
   #report-img{
         width: 100px;
          background-color: #D9D9D9; 
         height: 90px;
         margin-left: 30px;
-        margin-top: 10px;
+        margin-top: 15px;
   }
   .skill{
     width: 100px;
@@ -253,6 +278,7 @@ body {
     /* margin-top: 100px; */
     margin-left: 90px;
     border-radius: 100px;
+    margin-top: 20px;
   
   }
   .outer{
@@ -302,6 +328,12 @@ body {
   }
   .booking-table {
     border-collapse: collapse;
+    margin-left: -650px;
+    margin-top: 80px;
+    /* margin-top: 30px; */
+    background-color: #D9D9D9;
+    max-width: 20rem;
+    
     
   
     
@@ -311,6 +343,7 @@ body {
   .booking-table td {
     padding-top: 10px;
     padding-bottom: 10px;
+    
    
   
   }
@@ -322,7 +355,7 @@ body {
   }
   
   .booking-table tr:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .status {
     padding: 6px 12px;
@@ -354,9 +387,7 @@ body {
     
   
   }
-  .page-link{
-    margin-left: 800px;
-  }
+  
   .page-links{
     left:0;
   }
@@ -403,14 +434,12 @@ body {
   .acc-in {
     display: flex;
     padding: 20px;
-  
-    background-color: #F0F4F3;
-    background-size: 300px 100px;
-    width: 300px;
-    position: relative;
-  
-  
-  
+   
+    background-color: white;
+    background-size: 300px 200px;
+    width: 250px;
+    position: relative; 
+    /* height: 100px; */
   }
   
   #acc-img {
@@ -424,12 +453,14 @@ body {
     font-weight: bold;
     font-size: 20px;
     background-color: white;
+    
   }
   
   #acc-in a:link,
   a:visited {
     color: black;
     text-decoration: none;
+    
   
   }
   
@@ -444,5 +475,94 @@ body {
     margin-left: 1rem;
   }
   .renter-side{
-    margin-left: 400px;
+    margin-left: 480px;
+    margin-top: 90px;
+    border: 2px solid;
+    width: 1000px;
   }
+  .category{
+    margin-left: 200px;
+    padding-top: 100px;
+    
+    
+  }
+  
+
+
+
+.ddb {
+    width: 1000;
+    height: 580px;
+    background-color: azure;
+    border-radius: 30px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 50px;
+   
+}
+
+/* .dd div {
+  width: 300px;
+  margin-top: 50px;
+ 
+} */
+
+#ddddb h5 {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#ddddb div {
+    margin-bottom: 50px;
+}
+
+#vhb {
+    margin-left: 5px;
+    margin-right: 25px;
+}
+
+#vhhhb {
+    margin-left: -20px;
+}
+
+#vhhb {
+    margin-left: -10px;
+}
+
+.ddb img {
+    width: 320px;
+    height: 200px;
+    border-radius: 25px;
+    
+}
+
+#dddb h5 {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.ddb #dddb {
+    width: 320px;
+    height: 230px;
+}
+
+.ddb a {
+    text-decoration: none;
+}
+
+#ddb img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mab {
+    margin-right: 20px;
+}

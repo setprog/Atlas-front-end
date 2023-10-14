@@ -3,11 +3,11 @@
     flex: 1;
     /* background: blue; */
     /* width: 5rem; */
-    margin-left: 20rem;
+    /* margin-left: 10rem; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     
 }
 
@@ -30,6 +30,13 @@ td {
     overflow-x: auto;
 } */
 
+.py-4{
+   
+    margin-left: 5rem;
+    /* margin-bottom: 5rem; */
+    /* background: red; */
+    width: 80rem;
+}
 .create-filteruser-name{
     display: flex;
     align-items: center;
@@ -130,7 +137,7 @@ td {
     font-weight: bold;
     font-family: Inter;
     text-align: center;
-    padding: 0.2rem;
+    padding: 0.2rem 0.2rem  0.2rem 1rem ;
     border-radius: 6px;
     border: 1px solid transparent;
     background: #425FBA;
@@ -223,17 +230,21 @@ td{
     font-weight: bold;
     font-size: large;
 }
-.action-button-delete{
+.sub-admin-action-button-delete{
     color: white;
+    width: 6rem;
+    height: 2.4rem;
     background: red;
-    margin-right: 1rem;
-    padding: 0.2rem 1rem 0.2rem 1rem;
+    text-align: center;
+    margin-top: -2rem;
+    margin-left: 15rem;
+    padding: 0.2rem 0.2rem 1rem 1rem;
     border-radius: 6px;
     border: none;
     font-size: 21px;
     font-weight: bold;
     font-family: Inter;
-    text-align: center;
+    /* text-align: center; */
 }
 .action-button-delete:hover{
     background: transparent;
@@ -267,31 +278,34 @@ td{
     font-size: 25px;
 }
 .main-bottom{
-    margin-top: 9rem;
-    margin-bottom: 15rem;
+    margin-top: 21rem;
+    /* margin-bottom: 65rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     /* gap: 0.5rem; */
+    /* background: red; */
     background: #FFFFFF;
     /* border-radius: 13px; */
    
     /* padding: 3rem; */
-    width: 658px;
+    width: 640px;
     height: 270px;
     margin-left: 30rem;
 }
 .main-bottom h3{
     font-weight: light;
-    margin-top: -2rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    /* padding: 0.3rem 0 1rem 4rem; */
     color: #001C30;
     font-size: 30px;
     font-family: Inter;
 }
 .main-bottom button{
-    width: 525px;
-
+    width: 425px;
+height: 3rem;
     /* border-radius: 10px; */
     border: 1px solid gray;
     text-align: center;
@@ -299,10 +313,11 @@ td{
     font-size: 25px;
     background: #C7CAF3;
     font-weight: bold;
-    
+    /* gap: 1rem; */
     color: rgb(43, 39, 39);
-    padding: 0.3rem 0.6rem;
-    margin-bottom: 0.5rem;
+    padding: 0.3rem 0 1rem 4rem;
+    margin-top: 1rem;
+    margin-bottom: 0.1rem;
     
 }.admin-icon{
     font-size: 1.3rem !important;
@@ -430,8 +445,9 @@ ol{
 .sidebar {
     padding: 2rem;
     flex: 1;
-    width: -50%;
+    width: 7%;
     position: fixed;
+    top: 1rem;
     height: 100%;
     border-right: 2px solid #e5e5e5;
     z-index: 3;
@@ -442,15 +458,31 @@ ol{
   }
   .active-page {
    
+    align-items: center;
+    justify-content: center;
+    padding:0.3rem;
+   
+    width: max-content;
+    border-radius: 45%;
     background:#425FBA;
     color: black;
-    margin-left: 1rem;
-    border-radius: 45%;
+    margin-left: 4rem;
+    /* margin-left: 1rem;
+    border-radius: 45%; */
   }
-  .page_number{
+  .page-container{
+    display: flex;
+    flex-direction: row; 
+/* background: red; */
+margin-top: -4rem; }
+  .pagenumber{
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    width: max-content;
     background-color: rgb(29, 26, 26);
     color: white;
-    margin-left: 1rem;
+    
     border-radius: 45%;
    
   }

@@ -18,8 +18,8 @@ export default function Header(){
               <h6><a href =" ">Book now</a></h6>
               <h6><a href =" ">About Us</a></h6>
             </div>
-              <div className="sign">
-                <button id="i" onClick={handleClickOpen}>Sign in</button>
+              <div className="home_sign">
+               <Link to="/signin"> <button id="home_i" onClick={handleClickOpen}>Sign in</button></Link>
                <Link to="/dash"> <button id="ii">Admin</button></Link>
                 <div>
         {popup?
