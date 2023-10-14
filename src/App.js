@@ -26,8 +26,8 @@ import Renter from "./atlas/Comp/Renter"
 import Owner  from "./atlas/Comp/Owner"
 import About from "./atlas/Comp/About"
 import Edit_info from "./atlas/editP/Edit_Info";
-import Sign_in_up from "./atlas/Sign_in_up"
-// import Admin_signin from "./atlas/Admin_signin"
+import Sign_in_up from "./atlas/sign in-up/Sign_in_up"
+import Admin_signin from "./atlas/Admin_signin"
 import Category from "./atlas/Comp/Category";
 
 function App() {
