@@ -58,7 +58,7 @@ function Home() {
         <div className="box box9">
           <p id="recently">Recent Bookings</p>
         </div>
-        <div className="box box8">
+        <div className="box box10">
           <Table />
         </div>
       </div>

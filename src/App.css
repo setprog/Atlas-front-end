@@ -88,7 +88,7 @@ body {
 }
 .top-box {
     background-color: #D9D9D9;
-    width: 325px;
+    width: 230px;
     height: 190px;
     margin-top: 25px;
     margin-left: 3px;
@@ -147,16 +147,18 @@ body {
     display:flex;
     margin-top: 5px;
     background-color: #D9D9D9;
+    background-color: 1px solid black;
     height: 150px;
-    width: 330px;
+    width: 280px;
   }
   #report-img{
-        width: 100px;
+        width: 50px;
          background-color: #D9D9D9; 
         height: 90px;
         margin-left: 30px;
         margin-top: 15px;
   }
+
   .skill{
     width: 100px;
     height: 100px;
@@ -164,7 +166,7 @@ body {
     position: relative;
     
     /* margin-top: 100px; */
-    margin-left: 90px;
+    margin-left: 50px;
     border-radius: 100px;
     margin-top: 20px;
   
@@ -202,7 +204,7 @@ body {
     background-color: #D9D9D9;
   }
   
-  .gr{
+  /* .gr{
     position: absolute;
     margin-left: -209;
     margin-top: -71;
@@ -213,11 +215,11 @@ body {
     filter: blur(200px);
     flex: 1;
   
-  }
+  } */
   .booking-table {
     border-collapse: collapse;
-    margin-left: -650px;
-    margin-top: 80px;
+    /* margin-left: -10px; */
+    /* margin-top: 20px; */
     /* margin-top: 30px; */
     background-color: #D9D9D9;
     max-width: 20rem;
