@@ -38,10 +38,10 @@ function LandLord() {
         <div className="land-card-wrapper">
         <div className="land-card-container">
             <div className="land-card-image">
-                <h4>gdf</h4>
+                <h4>gg</h4>
             </div>
             <div className="land-card-desc">
-                <span style={{fontSize:"18px", color:"orange"}}>$<span>{product.email}</span></span>
+                <span style={{fontSize:"18px", color:"orange"}}>$<span>{product.username}</span></span>
                 <span>{product.username}</span>
                
 
