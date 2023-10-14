@@ -18,16 +18,25 @@ export default function Main(props){
             .then(res=>res.json())
             .then(data=>setresult(data))
             .then(json=>console.log(json))
-     })
+     },[])
      const [ phot , setphot] = useState([])
      useEffect (()=>{
-      fetch('https://dog.ceo/api/breeds/image/random')
+      fetch('https://dog.ceo/api/breeds/image/random/3')
+      // https://dog.ceo/api/breeds/image/random/3
+
+            .then(res=>res.json())
+            .then(data=>{setphot(data.message)
+            console.log("data", data);})
+            .then(json=>console.log(json))
+     },[])
+    const shownextimage = () => {
+            fetch('https://dog.ceo/api/breeds/image/random')
       // https://dog.ceo/api/breeds/image/random/3
 
             .then(res=>res.json())
             .then(data=>setphot(data))
             .then(json=>console.log(json))
-     })
+    }
     return(
       <div id="maii"> 
        {/* <div id="cust_Rev">
@@ -42,22 +51,22 @@ export default function Main(props){
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        
-        loop={true}
+        loop
         pagination={{
           clickable: true,
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        // onSlideChange={shownextimage}
       >
   
-  {/* {phot.map((image, index) => (
+  {phot?.map((image, index) => (
         <SwiperSlide key={index}>
-          <img src={image.message} alt="cvjhj" />
+          <img className="Fetched_image" src={image} alt="cvjhj" />
         </SwiperSlide>
-         ))} */}
-         <SwiperSlide >
+         ))}
+         {/* <SwiperSlide >
           <img src={phot.message} alt="cvjhj" />
         </SwiperSlide>
         <SwiperSlide >
@@ -65,7 +74,7 @@ export default function Main(props){
         </SwiperSlide>
         <SwiperSlide >
           <img src={phot.message} alt="cvjhj" />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
     
