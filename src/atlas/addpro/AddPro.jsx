@@ -3,34 +3,83 @@ import './AddPro.css';
 import { FaPhone, FaInstagram, FaEnvelope } from 'react-icons/fa';
 // import ReactDOM from 'react-dom';
 function AddPro(){
-  const[category,setCategory]=useState('');
-  const[product,setProduct]=useState('');
-  const[price,setPrice]=useState('');
-  const[date,setDate]=useState('');
-  const[location,setLocation]=useState('');
+  // const[category,setCategory]=useState('');
+  // const[product,setProduct]=useState('');
+  // const[price,setPrice]=useState('');
+  // const[startdate,setStartDate]=useState('');
+  // const[enddate,setEndDate]=useState('');
+  // const[location,setLocation]=useState('');
+  // const[image,setImage]=useState('');
+  // const[quantity,setQuantity]=useState('');
+
+
+  const [addProduct, setAddProduct] = useState({
+    
+    category: " ",
+    // title:" ",
+    quantity: "",
+    price:" ",
+    location:"",
+    startdate:"",
+    enddate:"",
+    product:"",
+   
+  });
   const[image,setImage]=useState('');
+  // const onImageInputChange=(e)=>{
+  //   setImage
+  // }
+
+  const {  category, quantity,location,startdate,enddate,product,price } = addProduct;
+  const onInputChange = (e) => {
+    setAddProduct({ ...addProduct, [e.target.name]: e.target.value });
+  };
   const handleSubmit = (e)=>{
     e.preventDefault();
-    console.log('Form submitted');
-    console.log('Category:',category);
-    console.log('Product:',product);
-    console.log('Price:',price);
-    console.log('Date:',date);
-    console.log('Location:',location);
-    console.log('Image:',image);
+
+
+    fetch('https://fakestoreapi.com/products',{
+      method:"POST",
+      body:JSON.stringify(
+          {
+              title: 'test product',
+              price: 13.5,
+              description: 'lorem ipsum set',
+              image: 'https://i.pravatar.cc',
+              category: 'electronic'
+          }
+      )
+  })
+      .then(res=>res.json())
+      .then(json=>console.log(json))
+
+      // await axios.post('https://fakestoreapi.com/products', addProduct);
+    // navigate("/addpro");
+
+    // console.log('Form submitted');
+    // console.log('Category:',category);
+    // console.log('Product:',product);
+    // console.log('Price:',price);
+    // console.log('Quantity:',quantity);
+    // console.log('StartDate:',startdate);
+    // console.log('StartDate:',enddate);
+    // console.log('Location:',location);
+    // console.log('Image:',image);
   }
+ 
   return (
     <div className="container">
       <header className="header">
         
       </header>
   
-      <div className="grid-container">
-        <div className="box box1 smaller-box">
+      <div className="addpro-container">
+        <div className="detail-info-container">
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="divs">
             <label>Category:
-              <select value={category} onChange={(e) => setCategory(e.target.value)} required>
+            {/* <input type="text" name="category" value={category} onChange={(e) => onInputChange(e)} required /> */}
+              <select value={category} style={{ height: '30px' }} name="category" onChange={(e) => onInputChange(e)} required>
                 <option value="">Select Category</option>
                 <option value="Electronics">Electronics</option>
                 <option value="Clothing">Clothing</option>
@@ -41,42 +90,57 @@ function AddPro(){
               </select>
               </label>
             </div>
-            <div className="form-group">
+            <div className="divs">
             <label>Product:
-              <input type="text" value={product} onChange={(e) => setProduct(e.target.value)} required />
+              <input type="text" style={{ height: '30px' }} value={product} name="product" onChange={(e) => onInputChange(e)} required />
               </label>
             </div>
-            <div className="form-group">
-            <label>Price:
-            <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} required />
+            <div className="divs">
+            <label>Model:
+            <input type="number" style={{ height: '30px' }} name="quantity" value={quantity} onChange={(e) => onInputChange(e)} required />
             </label>
             </div>
-            <div className="form-group">
-              <label>Date:
-              <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+            <div className="divs">
+            <label>Price:
+            <input type="number" style={{ height: '30px' }}  name="price" value={price} onChange={(e) => onInputChange(e)} required />
+            </label>
+            </div>
+            <div className="divs">
+              <label>Start Date:
+              <input type="date" style={{ height: '30px' }} name="startdate" value={startdate} onChange={(e) => onInputChange(e)} required />
               </label>
             </div>
-            <div className="form-group">
-              <label>Location:
-              <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} required />
+            <div className="divs">
+              <label>End Date:
+              <input type="date" style={{ height: '30px' }} name="enddate" value={enddate} onChange={(e) => onInputChange(e)} required />
               </label>
+            </div>
+            <div className="divs">
+              <label>Location:
+              <input type="text" style={{ height: '30px' }} name="location" value={location} onChange={(e) => onInputChange(e)} required />
+              </label>
+            </div>
+            <div className="divs">
+              <button className="add-pro-submit-btn" type='submit'>
+                Submit
+              </button>
             </div>
           </form>
         </div>
   
-        <div className="box box2 smaller-box">
-          <div className="form-group">
+        <div className="image-upload-container">
+          <div className="divs">
             <label>Image:
-            <input type="file" onChange={(e) => setImage(URL.createObjectURL(e.target.files[0]))} required />
+            <input type="file" placeholder='upload your image here' className='image-input' onChange={(e) => setImage(URL.createObjectURL(e.target.files[0]))} required style={{ height: '50px' }} />
             </label>
           </div>
           {image && (
-            <div className="form-group">
+            <div className="divs">
               <img src={image} alt="Selected" className="selected-image" />
             </div>
           )}
-          <div className="form-group">
-            <button type="submit">Upload Image</button>
+          <div className="divs">
+            <button type="submit">Upload</button>
           </div>
         </div>
       </div>
