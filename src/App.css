@@ -107,13 +107,14 @@ body {
 
 /*GRID */
 
-.grid-conatianer {
+/* .grid-conatianer {
     display: grid;
     gap: 15px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: minmax(130px, auto);
     margin-left: 400px;
     top: 100px;
+}
     .grid-con {
         top: 300px;
     }
@@ -170,8 +171,8 @@ body {
         margin-top: -90px;
         width: 200px;
         max-height: 10px;
-    }
-}
+    } */
+
 
 #recently {
     font-size: x-large;
@@ -241,7 +242,7 @@ body {
     background-color: #D9D9D9;
     background-color: 1px solid black;
     height: 150px;
-    width: 330px;
+    width: 290px;
 }
 
 #report-img {
