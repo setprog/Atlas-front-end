@@ -420,50 +420,51 @@ let navigate=useNavigate
 )}
                       
                     </div>
-                    <div style={{ float: "right" }}>
+                 {totalPages !==0 && <div style={{ float: "right" }}>
                      
-                          <Button
-                            type="button"
-                            variant="outline-info"
-                            disabled={currentPage === 1 ? true : false}
-                            onClick={firstPage}
-                          >
-                            First
-                          </Button>
-                          <Button
-                            type="button"
-                            variant="outline-info"
-                            disabled={currentPage === 1 ? true : false}
-                            onClick={prevPage}
-                          >
-                             Prev
-                          </Button>
-                      
-                        {/* <div
-                          className={"page-num bg-dark"}
-                          name="currentPage"
-                          value={currentPage}
-                          onChange={changePage}
-                        /> */}
-                    
-                          <Button
-                            type="button"
-                            variant="outline-info"
-                            disabled={currentPage === totalPages ? true : false}
-                            onClick={nextPage}
-                          >
-                             Next
-                          </Button>
-                          <Button
-                            type="button"
-                            variant="outline-info"
-                            disabled={currentPage === totalPages ? true : false}
-                            onClick={lastPage}
-                          >
-                             Last
-                          </Button>
-                       
-                    </div>
+                     <Button
+                       type="button"
+                       variant="outline-info"
+                       disabled={currentPage === 1 ? true : false}
+                       onClick={firstPage}
+                     >
+                       First
+                     </Button>
+                     <Button
+                       type="button"
+                       variant="outline-info"
+                       disabled={currentPage === 1 ? true : false}
+                       onClick={prevPage}
+                     >
+                        Prev
+                     </Button>
+                 
+                   {/* <div
+                     className={"page-num bg-dark"}
+                     name="currentPage"
+                     value={currentPage}
+                     onChange={changePage}
+                   /> */}
+               
+                     <Button
+                       type="button"
+                       variant="outline-info"
+                       disabled={currentPage === totalPages ? true : false}
+                       onClick={nextPage}
+                     >
+                        Next
+                     </Button>
+                     <Button
+                       type="button"
+                       variant="outline-info"
+                       disabled={currentPage === totalPages ? true : false}
+                       onClick={lastPage}
+                     >
+                        Last
+                     </Button>
+                  
+               </div>}   
+                 
                   
       </div>
             
