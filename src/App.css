@@ -309,7 +309,6 @@ body {
 
 h4 {
     background-color: #D9D9D9;
-    <<<<<<< HEAD
 }
 
 
@@ -331,9 +330,7 @@ h4 {
   
   } */
 
-.booking-table {
-    =======
-}
+.booking-table {}
 
 .booking-table {
     border-collapse: collapse;

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,6 +23,8 @@ import Categ from './Categ';
 import Footer from './Footer';
 
 export default function App() {
+  // const[Rec , setRec] = useState([])
+  // useEffect
   return (
     <div>
     <Header />
@@ -63,7 +65,7 @@ export default function App() {
        location="Harer"
     />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
         <Categ 
        profile=" Dagi.W"
        image={tuc}
@@ -161,7 +163,7 @@ export default function App() {
        price="$200"
        location="Harer"
     />
-        </SwiperSlide>
+        </SwiperSlide> */}
         </div>
       </Swiper>
     </div>
