@@ -13,15 +13,16 @@ import { useState } from "react";
     function handleSelect(event){
          setValue(event.target.value)
     }
-
+const [filt , setFilt]=useState('')
+const amarach =[
+   {label : "price" , value :1},
+   {label : "brand" , value :2}
+]
     
     return(
         <div className="wana">
            {/* <input id="search" type="text" placeholder='choose a catagory'   ></input>  */}
            <h3>Showing {props.quant} results for {props.categ}</h3>
-           <div className="inp">
-            <input type="text" id="cat" placeholder="sort by"></input>
-            <input type="text" id="cat" placeholder="filter by"></input>
            <div id="cat_search"><h3>Choose Category</h3>
             <select onchange={handleSelect} id="categ_search">
      {options.map(option => (
@@ -29,6 +30,17 @@ import { useState } from "react";
      ))}
             </select>
             <p>{value}</p></div> 
+           <div className="inp">
+            {/* <input type="text" id="cat" placeholder="sort by"></input>
+            <input type="text" id="cat" placeholder="filter by"></input> */}
+           <h3 id="sort">Sort by</h3>
+            <select onchange={handleSelect} id="cat">
+               {amarach.map(option => (
+                  <option value={option.filt}>{option.label}</option>
+               ))}
+
+            </select>
+           
            </div>
         </div>
         

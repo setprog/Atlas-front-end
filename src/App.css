@@ -241,19 +241,6 @@ body {
     background-color: #D9D9D9;
     background-color: 1px solid black;
     height: 150px;
-<<<<<<< HEAD
-    width: 280px;
-  }
-  #report-img{
-        width: 50px;
-         background-color: #D9D9D9; 
-        height: 90px;
-        margin-left: 30px;
-        margin-top: 15px;
-  }
-
-  .skill{
-=======
     width: 330px;
 }
 
@@ -266,7 +253,6 @@ body {
 }
 
 .skill {
->>>>>>> 753e1b96a31869361b29d627d20ea69ae918c769
     width: 100px;
     height: 100px;
     /* background-color:  #D9D9D9;  */
@@ -304,13 +290,12 @@ body {
     size: 200px;
 }
 
-h2,
 h4 {
     background-color: #D9D9D9;
-<<<<<<< HEAD
-  }
-  
-  /* .gr{
+}
+
+
+/* .gr{
 =======
 }
 
@@ -328,12 +313,10 @@ h4 {
 <<<<<<< HEAD
   
   } */
-  .booking-table {
-=======
-}
+
+.booking-table {}
 
 .booking-table {
->>>>>>> 753e1b96a31869361b29d627d20ea69ae918c769
     border-collapse: collapse;
     /* margin-left: -10px; */
     /* margin-top: 20px; */
