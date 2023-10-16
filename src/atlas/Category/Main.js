@@ -3,6 +3,7 @@ import { useState } from "react";
  export default function Main(props){
    const [value ,setValue]=useState('')
       const options =[
+         {label: "Choose category"},
          {label: "Vehicle", value: 1},
          {label: "Machinery" , value: 2},
          {label: "Electronics" , value: 3},
@@ -13,10 +14,15 @@ import { useState } from "react";
     function handleSelect(event){
          setValue(event.target.value)
     }
-const [filt , setFilt]=useState('')
+const [Sort , setSort]=useState('')
 const amarach =[
+   {label : "sort by"},
    {label : "price" , value :1},
-   {label : "brand" , value :2}
+]
+const [Filt , setFilter]=useState('')
+const Filter =[
+   {label : "Filter by"},
+   {label : "Brand" , value :1},
 ]
     
     return(
@@ -33,14 +39,19 @@ const amarach =[
            <div className="inp">
             {/* <input type="text" id="cat" placeholder="sort by"></input>
             <input type="text" id="cat" placeholder="filter by"></input> */}
-           <h3 id="sort">Sort by</h3>
-            <select onchange={handleSelect} id="cat">
+           {/* <h3 id="sort">Sort by</h3> */}
+            <select onchange={handleSelect} id="cat" placeholder="sort by">
                {amarach.map(option => (
-                  <option value={option.filt}>{option.label}</option>
+                  <option value={option.Sort}>{option.label}</option>
                ))}
 
             </select>
-           
+            <select onchange={handleSelect} id="cat" placeholder="Filter by">
+               {Filter.map(option => (
+                  <option value={option.Filter}>{option.label}</option>
+               ))}
+
+            </select>
            </div>
         </div>
         

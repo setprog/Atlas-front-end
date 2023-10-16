@@ -13,7 +13,7 @@ export default function Header(){
               <h6><a href =" ">About Us</a></h6>
             </div>
               <div className="ssign" id="i">   
-              <a href=" ">  <button id="but" ><p>Profile</p> <img src={pro} alt="profile" /></button></a>   
+              <a href=" ">  <button id="but" ><p>Profile</p> <img src={pro} alt="profile" id="blshet"/></button></a>   
               </div>     
         </div>
 

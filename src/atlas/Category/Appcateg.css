@@ -94,6 +94,10 @@ body {
     margin-top: 20px;
 }
 
+#blshet {
+    width: 30px
+}
+
 .menu {
     margin-left: auto;
     margin-right: auto;
@@ -162,6 +166,8 @@ a :hover {
     border-radius: 10px;
     border-color: #001C30;
     margin-left: 200px;
+    background-color: white;
+    color: #001C30
 }
 
 #but p {
@@ -203,6 +209,7 @@ a :hover {
     height: 50px;
     margin-top: 40px;
     margin-left: 250px;
+    color: #001C30
 }
 
 .inp #sort {
@@ -259,7 +266,7 @@ a :hover {
     display: flex;
     flex-direction: row;
     border-radius: 50px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .background {
@@ -281,6 +288,8 @@ a :hover {
 
 .lll {
     background-color: white;
+    justify-content: space-between;
+    margin-top: -20px;
 }
 
 
@@ -336,7 +345,7 @@ a :hover {
 }
 
 .categ #price {
-    margin-top: -15px;
+    margin-top: -50px;
     margin-left: 0px;
     width: 0;
 }
@@ -354,8 +363,8 @@ a :hover {
     height: 200px;
 }
 
-.footer {
-    margin-top: 30px;
+.footerss {
+    margin-top: 70px;
     display: flex;
     flex-direction: row;
 }
@@ -385,17 +394,21 @@ a :hover {
 }
 
 .contact {
-    margin-top: -50px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
 }
 
 #contact {
-    margin-top: -20px;
+    margin-top: 20px;
 }
 
-#contact h5 {
-    margin-top: 0px;
+.contact h6 {
+    margin-top: 30px;
+}
+
+.contact #con {
+    margin-top: 15px;
 }
 
 #contact img {

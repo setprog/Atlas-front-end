@@ -125,7 +125,7 @@ button {
     border-radius: 50px;
 }
 
-.ddropdown {
+.dddropdown {
     position: relative;
     width: 30%;
     height: 100%;
@@ -357,17 +357,21 @@ hr {
 }
 
 .contact {
-    margin-top: -50px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
 }
 
 #contact {
-    margin-top: -20px;
+    margin-top: 20px;
 }
 
-#contact h5 {
-    margin-top: 0px;
+.contact h6 {
+    margin-top: 30px;
+}
+
+.contact #con {
+    margin-top: 15px;
 }
 
 #contact img {
@@ -385,6 +389,13 @@ hr {
 
 .contact h6 {
     font-size: 15px;
+}
+
+select {
+    background-color: #425FBA;
+    border: none;
+    color: white;
+    font-size: 20px;
 }
 
 .copyright {

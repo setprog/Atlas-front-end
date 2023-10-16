@@ -36,7 +36,7 @@ function Appspecific() {
     // kk={kkk}
     // ll={lll}
      />
-   
+   <Footer />
     </div>
   );
 }
