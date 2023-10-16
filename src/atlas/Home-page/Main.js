@@ -1,10 +1,24 @@
 
 import React from "react";
+import { useState } from "react";
 import phh from "./ph.png"
 import search from "./dropdown.png"
 import ser from "./search.png"
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 export default function Main(){
+   const [value ,setValue]=useState('')
+   const options =[
+      {label: "Choose category"},
+      {label: "Vehicle", value: 1},
+      {label: "Machinery" , value: 2},
+      {label: "Electronics" , value: 3},
+      {label: "Clothes" , value: 4},
+      {label: "Houses" , value: 5},
+      {label: "Event Equipment " , value: 6}
+   ] 
+ function handleSelect(event){
+      setValue(event.target.value)
+ }
    //   let dropdownBtn = document.getElementById("drop-text");
    //   let list = document.getElementById("list");
    //   let input = document.getElementById("search-input");
@@ -24,17 +38,17 @@ export default function Main(){
    //    //     list.classList.toggle("show")
    //  };
     
-   //   window.onclick = function(e){
-   //      if(e.target.id !== "drop-text" && 
-   //         e.target.id !== "span" &&
-   //         e.target.id !== "icon")
-   //          {
-   //              list.classList.remove("show")
-   //              icon.style.rotate= "0deg";
-   //      }
-   //   }
+   // //   window.onclick = function(e){
+   // //      if(e.target.id !== "drop-text" && 
+   // //         e.target.id !== "span" &&
+   // //         e.target.id !== "icon")
+   // //          {
+   // //              list.classList.remove("show")
+   // //              icon.style.rotate= "0deg";
+   // //      }
+   // //   }
    
-   //   // for(list of listItems){
+   //   for(list of listItems){
    //        list.onclick = function(e){
    //          span.innerText = e.target.innerText;
 
@@ -46,7 +60,7 @@ export default function Main(){
    //          }
 
    //           }; 
-   //         //}
+   //         }
 
 
     return(
@@ -54,19 +68,24 @@ export default function Main(){
     <h1 id> The sharing economy is the 
                future of rentals.</h1>
                <div className="ssearch-bar" >
-       <div className="ddropdown">
+       <div className="dddropdown">
         <div id="drop-text" className="ddropdown-text">
-        <span id="span">Category<img id="icon" src={search} alt=" search icon" /></span>
-        </div>
-        <ul id="list" className="dropdown-list">
+        {/* <span id="span">Category<img id="icon" src={search} alt=" search icon" /></span> */}
+        <select onchange={handleSelect} id="span">
+     {options.map(option => (
+      <option value={option.value}>{option.label}</option>
+     ))}
+            </select>
+         </div>
+        {/* <ul id="list" className="dropdown-list">
         <li className="dropdown-list-item">Machinery</li>
         <li className="dropdown-list-item">Vehicle</li>
         <li className="dropdown-list-item">Electronics</li>
         <li className="dropdown-list-item">Clothes</li>
         <li className="dropdown-list-item">Event Equipment</li>
         <li className="dropdown-list-item">Houses</li>
-       </ul>
-       </div>
+       </ul> */}
+       </div> 
         
         <div className="ssearch-box">
      <input type="text" id="ssearch-input" placeholder="search anything..."></input>
@@ -79,5 +98,6 @@ export default function Main(){
            </div> 
         <hr />
       </div> 
+      
       )      
 }

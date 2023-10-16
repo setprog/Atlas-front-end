@@ -1,5 +1,5 @@
-
-import React from 'react';
+import { useState } from 'react';
+import React, { useEffect } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,10 +19,18 @@ import tuc from './tucson.jpg'
 import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
 import Header from "./Header";
 import Main from './Main';
+import { Link } from 'react-router-dom';
 import Categ from './Categ';
 import Footer from './Footer';
 
 export default function App() {
+  const[Rec , setRec] = useState([])
+  useEffect(()=>{
+    fetch('https://fakestoreapi.com/products?limit=5')
+            .then(res=>res.json())
+            .then(data=>setRec(data))
+            .then(json=>console.log(json))
+  },[])
   return (
     <div>
     <Header />
@@ -54,16 +62,22 @@ export default function App() {
         className="mySwiper"
       >
       <div  id="sec">
-        <SwiperSlide>
-        <Categ  
-       profile=" Dagi.W"
-       image={mar}
-       model="Tucson"
-       price="$200"
-       location="Harer"
-    />
+      {Rec?.map((list, index) => (
+        <SwiperSlide key={index}>
+          
+       <div className="lll"> 
+       <div className="categ">
+            <h4 id="pro">{list.category}</h4>
+           <Link to='/spec'> <img src={list.image} alt="pic"/></Link>
+            <h3 id="model">{list.category}</h3>
+            <h4 id="price">{list.price}</h4>
+            <h5>{list.category}</h5>
+        </div> 
+        </div>
+         
         </SwiperSlide>
-        <SwiperSlide>
+         ))}
+        {/* <SwiperSlide>
         <Categ 
        profile=" Dagi.W"
        image={tuc}
@@ -161,11 +175,11 @@ export default function App() {
        price="$200"
        location="Harer"
     />
-        </SwiperSlide>
+        </SwiperSlide> */}
         </div>
       </Swiper>
     </div>
-   
+   <Footer />
     </div>
   );
 }

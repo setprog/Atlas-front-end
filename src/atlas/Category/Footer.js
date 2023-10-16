@@ -7,7 +7,7 @@ import mail from "./gmail.png"
 export default function Footer(){
     return(
         <div>
-        <div className="footer">
+        <div className="footerss">
             <div id="gg">
                 <a href=" ">About us</a>
                 <a href=" ">Help Center</a>
