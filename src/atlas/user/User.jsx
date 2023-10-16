@@ -22,20 +22,29 @@ function User() {
   };
   const handleUsernameFilterChange = (e) => {
     setUsernameFilter(e.target.value);
+    searchUsers(e.target.value);
   };
 
   const filteredSubadmins = users.filter((user) => {
     const statusMatch =
       statusFilter === 'all' || user.status === statusFilter;
-      const usernameMatch =
-      usernameFilter === '' || user.username.toLowerCase().startsWith(usernameFilter.toLowerCase());
+      // const usernameMatch =
+      // usernameFilter === '' || user.username.toLowerCase().startsWith(usernameFilter.toLowerCase());
       const roleMatch =
       roleFilter === 'all' || user.position === roleFilter;
-    return statusMatch && usernameMatch && roleMatch;
+
+    return statusMatch && roleMatch;
+    // return statusMatch && usernameMatch && roleMatch;
   });
   // const [users, setUsers] = useState([]);
 
-   
+  const [searchedUsers, setSearchedUsers] = useState([]);
+  
+  const searchUsers = (searchTerm) => {
+    setSearchedUsers(users.filter(user => user.username.toLowerCase().includes(searchTerm.toLowerCase())));
+    console.log(searchTerm,"====" , searchedUsers);
+  }
+
   // Pagination
   const pageSize = 4;
   const totalPages = Math.ceil(filteredSubadmins.length / pageSize);
@@ -238,8 +247,8 @@ let navigate=useNavigate
         </tr>
       </thead>
       <tbody >
-        {visibleSubadmins.map(user => (
-          <tr key={user.id}>
+        {usernameFilter !== "" && searchedUsers.map(user => (
+          <tr key={user.id} style={{backgroundColor: "red"}}>
             <td style={{ backgroundColor: "transparent"}}>
               <div className='d-flex align-items-center'>
                 <img
@@ -264,6 +273,52 @@ let navigate=useNavigate
                 Active
               </span> */}
               {/* <p className='active-status'>{user.status} </p> */}
+              <p className='active-status'>Active </p>
+            </td>
+            <td style={{ backgroundColor: "transparent"}}>Assistant </td>
+            <td style={{ backgroundColor: "transparent"}}>
+            <Link
+                    className="action-button"
+                    to={`/view/${user.id}`}
+                  >
+                    View
+                  </Link>
+                  <Link
+                    className="action-button"
+                    to={`/edituser/${user.id}`}
+                  >
+                    Edit
+                  </Link>
+                  <button
+                    className="sub-admin-action-button-delete"
+                    onClick={(e) => deleteUser(user.id)}
+                  >
+                    Delete
+                  </button>
+            </td>
+          </tr>
+        ))}
+        { usernameFilter === "" &&visibleSubadmins.map(user => (
+          <tr key={user.id}>
+            <td style={{ backgroundColor: "transparent"}}>
+              <div className='d-flex align-items-center'>
+                <img
+                  src="/assets/book.png"
+                  alt=""
+                  style={{ width: '45px', height: '45px' }}
+                  className='rounded-circle'
+                />
+                <div className='ms-3'>
+                  <p className='fw-bold mb-1'>{user.username}</p>
+                  <p className='text-muted mb-0'>{user.email}</p>
+                </div>
+              </div>
+            </td>
+            <td style={{ backgroundColor: "transparent"}}>
+              <p className='user-info'>{user.phone}</p>
+              <p className='user-info'>{user.username}</p>
+            </td>
+            <td style={{ backgroundColor: "transparent"}}>
               <p className='active-status'>Active </p>
             </td>
             <td style={{ backgroundColor: "transparent"}}>Assistant </td>
