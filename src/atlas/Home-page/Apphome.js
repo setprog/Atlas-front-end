@@ -10,7 +10,7 @@ function Apphome() {
       <Header />
       <Main />
      <Main2 />
-    
+    <Footer />
     </div>
   );
 }

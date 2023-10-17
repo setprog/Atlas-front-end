@@ -107,6 +107,7 @@ body {
 
 /*GRID */
 
+
 /* .grid-conatianer {
     display: grid;
     gap: 15px;
@@ -173,7 +174,6 @@ body {
         max-height: 10px;
     } */
 
-
 #recently {
     font-size: x-large;
     font-weight: bold;
@@ -218,7 +218,7 @@ body {
     display: flex;
     justify-content: center;
     margin-left: -1px;
-    margin-top: 20px;
+    margin-top: -2px;
     background-color: #D9D9D9;
 }
 
@@ -249,9 +249,23 @@ body {
     height: 150px;
     width: 290px;
 }
-.cid{
-  width: auto;
+
+.cid {
+    width: auto;
 }
+
+#report-img {
+    width: 50px;
+    background-color: #D9D9D9;
+    height: 90px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.skill {
+    =======width: 330px;
+}
+
 #report-img {
     width: 100px;
     background-color: #D9D9D9;
@@ -299,9 +313,13 @@ body {
     size: 200px;
 }
 
-h2,
 h4 {
     background-color: #D9D9D9;
+}
+
+
+/* .gr{
+=======
 }
 
 .gr {
@@ -314,7 +332,11 @@ h4 {
     background: blue;
     filter: blur(200px);
     flex: 1;
-}
+<<<<<<< HEAD
+  
+  } */
+
+.booking-table {}
 
 .booking-table {
     border-collapse: collapse;
@@ -322,7 +344,7 @@ h4 {
     /* margin-top: 20px; */
     /* margin-top: 30px; */
     background-color: #D9D9D9;
-    max-width: 20rem;
+   min-width: 20rem;
 }
 
 .booking-table th,

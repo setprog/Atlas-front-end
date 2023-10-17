@@ -29,6 +29,7 @@ import Edit_info from "./atlas/editP/Edit_Info";
 import Sign_in_up from "./atlas/Sign_in_up"
 import Admin_signin from "./atlas/Admin_signin"
 import Category from "./atlas/Comp/Category";
+import EditRenterProfile from "./atlas/edit-renter/EditRenterProfile"
 
 function App() {
  
@@ -48,8 +49,9 @@ function App() {
                 <EditP/></>}  ></Route>
                <Route exact path="/adminsignin" element={ <> <Admin_signin /></>} ></Route>
                <Route exact path='/rentpage' element={<>
-              <UserNav/> <RentPage/></> }></Route>
-
+               <RentPage/></> }></Route>
+              <Route exact path='/editrenterp' element={<>
+               <EditRenterProfile/></> }></Route>
               <Route exact path='/signin' element={<>
                <Sign_in_up/></> }></Route>
 
