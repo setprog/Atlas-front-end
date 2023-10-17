@@ -191,10 +191,15 @@ body {
     font-size: large;
     background-color: #D9D9D9;
 }
+/* .number h2{
+ margin-left: -4rem;
+  color: red;
+} */
 
 #top h2 {
-    margin-left: 40px;
+    padding-left: -0px;
     background-color: #D9D9D9;
+    left: 0;
 }
 
 #top h3 {
@@ -268,6 +273,7 @@ body {
     margin-left: 30px;
     margin-top: 15px;
 }
+
 
 .skill {
     width: 100px;

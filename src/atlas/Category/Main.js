@@ -23,7 +23,9 @@ const amarach =[
 const [Filt , setFilter]=useState('')
 const Filter =[
    {label : "Filter by"},
-   {label : "Brand" , value :1},
+   {label : "CHR" , value :1},
+   {label : "Rava" , value :1},
+   {label : "Tucson" , value :1},
 ]
    
     return(

@@ -30,7 +30,14 @@ import Sign_in_up from "./atlas/Sign_in_up"
 import Admin_signin from "./atlas/Admin_signin"
 import Category from "./atlas/Comp/Category";
 import EditRenterProfile from "./atlas/edit-renter/EditRenterProfile"
-import Bef from "./Bef";
+import Machinery from "./atlas/Comp/Machinery";
+import Vechile from "./atlas/Comp/Vechile";
+import House from "./atlas/Comp/House";
+import Electronics from "./atlas/Comp/Electronics";
+import Decore from "./atlas/Comp/Decore";
+import Clothes from "./atlas/Comp/Clothes";
+
+import Filter from "./Filter"
 
 function App() {
  
@@ -70,8 +77,6 @@ function App() {
               
               <Route exact path="/addpro" element={<>
               <UserNav/> <AddPro/></> }></Route>
-              <Route exact path="/beff" element={<>
-              <Bef/></> }></Route>
               <Route exact path="/add" element={<>
               <UserNav/> <Add/></> }></Route>
 
@@ -93,12 +98,25 @@ function App() {
               
               <Route exact path="/booked" element={<>
               <UserNav/> <Booked/></> }></Route>
+              <Route exact path="/Machiner" element={<>
+              <UserNav/> <Machinery/></> }></Route>
+              <Route exact path="/vechile" element={<>
+              <UserNav/> <Vechile/></> }></Route>
+              <Route exact path="/electronis" element={<>
+              <UserNav/> <Electronics/></> }></Route>
+              <Route exact path="/clothes" element={<>
+              <UserNav/> <Clothes/></> }></Route>
+              <Route exact path="/decore" element={<>
+              <UserNav/> <Decore/></> }></Route>
+              <Route exact path="/house" element={<>
+              <UserNav/> <House/></> }></Route>
               
    <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
       <Route path='about' element={<><Nav/><About/></>}></Route>
       <Route path='renter' element={<><Nav/><Renter/></>}></Route> 
       <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
       <Route path='Category' element={<><Nav/><Category/></>}></Route>
+      
           
     
     
@@ -110,7 +128,7 @@ function App() {
      
     
   
-    
+  
    
       
     </div>
