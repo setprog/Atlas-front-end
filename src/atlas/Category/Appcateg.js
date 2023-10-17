@@ -31,6 +31,33 @@ export default function App() {
             .then(data=>setRec(data))
             .then(json=>console.log(json))
   },[])
+  // const filtersort = Rec.filter((a)=> a.price>0)
+  // .sort((a,b)=> a.price>b.price ? 1:-1)
+  // function Sort(){
+  //   <div  id="sec">
+  //     {filtersort?.map((list, index) => (
+  //       <SwiperSlide key={index}>
+          
+  //      <div className="lll"> 
+  //      <div className="categ">
+  //           <h4 id="pro">{list.category}</h4>
+  //          <Link to='/spec'> <img src={list.image} alt="pic"/></Link>
+  //           <h3 id="model">{list.category}</h3>
+  //           <h4 id="price" onClick={Sort}>{list.price}</h4>
+  //           <h5>{list.category}</h5>
+  //       </div> 
+  //       </div>
+         
+  //       </SwiperSlide>
+  //        ))}
+  //        </div>
+  // }
+  const [sortedItems, setSortedItems] = useState([]);
+  useEffect(() => {
+    const filteredItems = Rec.filter((a) => a.price > 0);
+    const sortedItems = filteredItems.sort((a, b) => a.price > b.price ? 1 :- 1);
+    setSortedItems(sortedItems);
+  }, [Rec]);
   return (
     <div>
     <Header />
@@ -179,6 +206,9 @@ export default function App() {
         </div>
       </Swiper>
     </div>
+    <button onClick={() => setSortedItems([...sortedItems].reverse())}>
+          Sort
+        </button>
    <Footer />
     </div>
   );

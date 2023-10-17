@@ -30,6 +30,7 @@ import Sign_in_up from "./atlas/Sign_in_up"
 import Admin_signin from "./atlas/Admin_signin"
 import Category from "./atlas/Comp/Category";
 import EditRenterProfile from "./atlas/edit-renter/EditRenterProfile"
+import Bef from "./Bef";
 
 function App() {
  
@@ -69,7 +70,8 @@ function App() {
               
               <Route exact path="/addpro" element={<>
               <UserNav/> <AddPro/></> }></Route>
-
+              <Route exact path="/beff" element={<>
+              <Bef/></> }></Route>
               <Route exact path="/add" element={<>
               <UserNav/> <Add/></> }></Route>
 
@@ -88,7 +90,7 @@ function App() {
 
               <Route exact path="/rent" element={<>
               <UserNav/> <Rented/></> }></Route>
-
+              
               <Route exact path="/booked" element={<>
               <UserNav/> <Booked/></> }></Route>
               

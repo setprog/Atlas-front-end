@@ -209,7 +209,7 @@ a :hover {
     height: 50px;
     margin-top: 40px;
     margin-left: 250px;
-    color: #001C30
+    color: #001C30;
 }
 
 .inp #sort {
@@ -220,6 +220,10 @@ a :hover {
 #search {
     margin-top: -25px;
     background-color: #D9D9D9;
+}
+
+#brofile {
+    width: 30px;
 }
 
 ::placeholder {
