@@ -11,7 +11,7 @@ import {
   
 } from "react-bootstrap";
 
-export default function Vechile(){
+export default function Details(){
 
         // const [bookings, setBookings] = useState([
         //     { id: 1, email: 'JohnDoe.@gmail.com', subject: 'Sofa',status:"Done", date: '2023-09-30', amount: "$500" },
@@ -408,10 +408,10 @@ export default function Vechile(){
                   <thead>
                     <tr>
                       <th  style={{ backgroundColor: "transparent"}} scope='col'>Name</th>
-                      <th style={{ backgroundColor: "transparent"}} scope='col'>Photo</th>
-                      <th style={{ backgroundColor: "transparent"}} scope='col'>Status</th>
+                      <th style={{ backgroundColor: "transparent"}} scope='col'>Phone</th>
+                      <th style={{ backgroundColor: "transparent"}} scope='col'>Email</th>
                       {/* <th style={{ backgroundColor: "transparent"}} scope='col'>Position</th> */}
-                      {/* <th style={{ backgroundColor: "transparent"}} scope='col'>Detail  </th> */}
+                      <th style={{ backgroundColor: "transparent"}} scope='col'>Detail  </th>
                       {/* <th style={{ backgroundColor: "transparent"}} scope="col"> <Link to="/add"><span><button className="create-subAdmin">Create</button></span></Link> </th> */}
                     </tr>
                   </thead>
@@ -420,12 +420,6 @@ export default function Vechile(){
                     { usernameFilter === "" ?
                     currentUsers.map(user => (
                       <tr key={user.id}>
-                       
-                        <td style={{ backgroundColor: "transparent"}}>
-                          {/* <p className='user-info'>{user.phone}</p> */}
-                          <p className='user-info'>{user.username}</p>
-                        </td>
-                        <td style={{ backgroundColor: "transparent"}}>
                         <td style={{ backgroundColor: "transparent"}}>
                           <div className='d-flex align-items-center'>
                             <img
@@ -434,21 +428,27 @@ export default function Vechile(){
                               style={{ width: '45px', height: '45px' }}
                               className='rounded-circle'
                             />
-                           
-                           
+                            <div className='ms-3'>
+                              <p className='fw-bold mb-1'>{user.username}</p>
+                              <p className='text-muted mb-0'>{user.email}</p>
+                            </div>
                           </div>
                         </td>
-                          {/* <p className='active-status'>{user.email} </p> */}
+                        <td style={{ backgroundColor: "transparent"}}>
+                          <p className='user-info'>{user.phone}</p>
+                          <p className='user-info'>{user.username}</p>
+                        </td>
+                        <td style={{ backgroundColor: "transparent"}}>
+                          <p className='active-status'>{user.email} </p>
                         </td>
                         {/* <td style={{ backgroundColor: "transparent"}}>Assistant </td> */}
                         <td style={{ backgroundColor: "transparent"}}>
-                            <p>Booked</p>
-                        {/* <Link
+                        <Link
                                 className="action-button"
                                 to={`/view/${user.id}`}
                               >
                                 View
-                              </Link> */}
+                              </Link>
                               {/* <Link
                                 className="action-button"
                                 to={`/edituser/${user.id}`}

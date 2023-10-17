@@ -36,6 +36,7 @@ import House from "./atlas/Comp/House";
 import Electronics from "./atlas/Comp/Electronics";
 import Decore from "./atlas/Comp/Decore";
 import Clothes from "./atlas/Comp/Clothes";
+import Details from "./atlas/Comp/Details";
 
 function App() {
  
@@ -97,18 +98,21 @@ function App() {
 
               <Route exact path="/booked" element={<>
               <UserNav/> <Booked/></> }></Route>
+              <Route path='/Machinery' element={<><Machinery/></>}></Route>
+              <Route path='/vechile' element={<><Vechile/></>}></Route>
+              <Route path='/house' element={<><House/></>}></Route>
+              <Route path='/electronis' element={<><Electronics/></>}></Route>
+              <Route path='/decore' element={<><Decore/></>}></Route>
+              <Route path='/clothes' element={<><Clothes/></>}></Route>
+              <Route path="/details" element={<><Details/></>}></Route>
               
    <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
-      <Route path='about' element={<><Nav/><About/></>}></Route>
-      <Route path='renter' element={<><Nav/><Renter/></>}></Route> 
+      <Route path='/about' element={<><Nav/><About/></>}></Route>
+      <Route path='/renter' element={<><Nav/><Renter/></>}></Route> 
       <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
-      <Route path='Category' element={<><Nav/><Category/></>}></Route>
-      <Route path='/Machinery' element={<><Nav/><Machinery/></>}></Route>
-      <Route path='vechile' element={<><Nav/><Vechile/></>}></Route>
-      <Route path='house' element={<><Nav/><House/></>}></Route>
-      <Route path='electronis' element={<><Nav/><Electronics/></>}></Route>
-      <Route path='decore' element={<><Nav/><Decore/></>}></Route>
-      <Route path='clothes' element={<><Nav/><Clothes/></>}></Route>
+      <Route path='/Category' element={<><Nav/><Category/></>}></Route>
+     
+    
           
     
     

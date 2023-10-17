@@ -242,26 +242,9 @@ export default function Owner(){
               console.error(error);
             });
            
-            // setUsers(result.data);
-          };
-          // const seeMoreHandled= async()=>{
            
-          //  setShowAllUsers(true)
-          //  const result ='https://fakestoreapi.com/users';
-          //  axios.get(result)
-          //  .then(response => {
-          //    setUsers(response.data);
-          //  })
-          //  .catch(error => {
-          //    console.error(error);
-          //  });
-          // }
-        
-          // const cancelHandler=()=>{
-        
-          //  setShowAllUsers(false)
-          // loadUsers();
-          // }
+          };
+          
          
           if (loading) {
             return <div className="loading">Loading...<span>
@@ -411,7 +394,7 @@ export default function Owner(){
                       <th style={{ backgroundColor: "transparent"}} scope='col'>Phone</th>
                       <th style={{ backgroundColor: "transparent"}} scope='col'>Email</th>
                       {/* <th style={{ backgroundColor: "transparent"}} scope='col'>Position</th> */}
-                      <th style={{ backgroundColor: "transparent"}} scope='col'>Detail  </th>
+                      <th style={{ backgroundColor: "transparent"}} scope='col'>Dtail  </th>
                       {/* <th style={{ backgroundColor: "transparent"}} scope="col"> <Link to="/add"><span><button className="create-subAdmin">Create</button></span></Link> </th> */}
                     </tr>
                   </thead>
@@ -445,7 +428,7 @@ export default function Owner(){
                         <td style={{ backgroundColor: "transparent"}}>
                         <Link
                                 className="action-button"
-                                to={`/view/${user.id}`}
+                                to={"/details"}
                               >
                                 View
                               </Link>
