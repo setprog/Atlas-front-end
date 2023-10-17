@@ -13,109 +13,6 @@ import {
 
 export default function Renter(){
 
-        // const [bookings, setBookings] = useState([
-        //     { id: 1, email: 'JohnDoe.@gmail.com', subject: 'Sofa',status:"Done", date: '2023-09-30', amount: "$500" },
-        //     { id: 2, email: 'JohnDoe.@gmail.com', subject: 'Sofa',status:"Done", date: '2023-09-30', amount: "$500" },
-        //     { id: 2, email: 'JohnDoe.@gmail.com', subject: 'Sofa',status:"Done", date: '2023-09-30', amount: "$500" },
-        //     { id: 2, email: 'JohnDoe.@gmail.com', subject: 'Sofa',status:"Done", date: '2023-09-30', amount: "$500" },
-        //   ]);
-        // //   useEffect(() => {
-        // //     loadUsers();
-        // //   }, []);
-        
-        //   const loadUsers = async () => {
-        //     const response = await fetch("https://fakestoreapi.com/users");
-        //     const data = await response.json();
-        //     console.log(data);
-        //     setBookings(data);
-        //   };
-        
-        //   const toggleStatus = (index) => {
-        //     setBookings((prevBookings) => {
-        //       const updatedBookings = [...prevBookings];
-        //       const currentStatus = updatedBookings[index].status;
-        //       updatedBookings[index].status =
-        //         currentStatus === "Done" ? "In Progress" : "Done";
-        //       return updatedBookings;
-        //     });
-        //   };
-        //   const [currentPage, setCurrentPage] = useState(1);
-        //   const recordPerPage = 4;
-        //   const lastIndex = currentPage * recordPerPage;
-        //   const firstIndex = lastIndex - recordPerPage;
-        //   const records = bookings.slice(firstIndex, lastIndex);
-        //   const npage = Math.ceil(bookings.length / recordPerPage);
-        //   const numbers = [...Array(npage + 1)].slice(1);
-        
-        //   function prePage() {
-        //     if (currentPage !== firstIndex) {
-        //       setCurrentPage(currentPage - 1);
-        //     }
-        //   }
-        //   function nextPage() {
-        //     if (currentPage !== lastIndex) {
-        //       setCurrentPage(currentPage + 1);
-        //     }
-        //   }
-        
-        //   return (
-        //     <div className="renter-side">
-        //       <table className="booking-table">
-        //         <thead>
-        //           <tr>
-        //             {/* <th>ID</th> */}
-        //             <th>Email</th>
-        //             <th>Subject</th>
-        //             <th>Date</th>
-        //             <th>Status</th> {/* New column for the status */}
-        //             <th>Amount</th>
-        //           </tr>
-        //         </thead>
-        //         <tbody>
-        //           {bookings.map((booking, index) => (
-        //             <tr key={booking.id}>
-        //               <td>{booking.email}</td>
-        //               <td>{booking.subject}</td>
-        //               <td>{booking.date}</td>
-        
-        //               <td>
-        //                 <span
-        //                   className={`status ${booking.status
-        //                     ?.toLowerCase()
-        //                     .replace(" ", "-")}`}
-        //                   onClick={() => toggleStatus(index)}
-        //                 >
-        //                   {booking.status}
-        //                 </span>
-        //               </td>
-        //               <td>{booking.amount}</td>
-        //             </tr>
-        //           ))}
-        //         </tbody>
-        //       </table>
-        //       <nav className="nab">
-        //         <ul className="pagination">
-        //           <li className="page-item">
-        //             <a href="#" className="page-links" onClick={prePage}>
-        //               Prev
-        //             </a>
-        //           </li>
-        //           {/* {
-        //                 numbers.map((n,i)=> 
-        //                 <li className={`page-item ${currentPage === n?'active' :'' }`}key={i}>
-        //                     <a onClick={changeCPage}>{n}</a>
-         
-        //                 </li>
-        //                 )
-        //             } */}
-        //           <li className="page-item">
-        //             <a href="#" className="page-link" onClick={nextPage}>
-        //               Next
-        //             </a>
-        //           </li>
-        //         </ul>
-        //       </nav>
-        //     </div>
      
     
 
@@ -149,15 +46,14 @@ export default function Renter(){
           const filteredSubadmins = users.filter((user) => {
             const statusMatch =
               statusFilter === 'all' || user.status === statusFilter;
-              // const usernameMatch =
-              // usernameFilter === '' || user.username.toLowerCase().startsWith(usernameFilter.toLowerCase());
+             
               const roleMatch =
               roleFilter === 'all' || user.position === roleFilter;
         
             return statusMatch && roleMatch;
             // return statusMatch && usernameMatch && roleMatch;
           });
-          // const [users, setUsers] = useState([]);
+         
         
           const [searchedUsers, setSearchedUsers] = useState([]);
           
@@ -166,19 +62,6 @@ export default function Renter(){
             console.log(searchTerm,"====" , searchedUsers);
           }
         
-          // Pagination
-          // const pageSize = 4;
-          // const totalPages = Math.ceil(filteredSubadmins.length / pageSize);
-          // const startIndex = (currentPage - 1) * pageSize;
-          // const visibleSubadmins = filteredSubadmins.slice(
-          //   startIndex,
-          //   startIndex + pageSize
-          // );
-          
-        
-          // const handlePageChange = (page) => {
-          //   setCurrentPage(page);
-          // };
           
           const pageSize = 7;
         
@@ -241,27 +124,9 @@ export default function Renter(){
             .catch(error => {
               console.error(error);
             });
-           
-            // setUsers(result.data);
+          
           };
-          // const seeMoreHandled= async()=>{
-           
-          //  setShowAllUsers(true)
-          //  const result ='https://fakestoreapi.com/users';
-          //  axios.get(result)
-          //  .then(response => {
-          //    setUsers(response.data);
-          //  })
-          //  .catch(error => {
-          //    console.error(error);
-          //  });
-          // }
-        
-          // const cancelHandler=()=>{
-        
-          //  setShowAllUsers(false)
-          // loadUsers();
-          // }
+         
          
           if (loading) {
             return <div className="loading">Loading...<span>
@@ -289,80 +154,7 @@ export default function Renter(){
         
         
             <div className="user-wrraper">
-            {/* <div className="s">
-                    <section className="sidebar">
-                    <div className="logo-container">
-                      <h1 className="txt-header">Filter</h1>
-                    </div>
-                    
-                    <div >
-              <label className="txt">Filter by Status:</label>
-              <div className="radio_buttons">
-                <label>
-                  <input
-                    type="radio"
-                    value="all"
-                    checked={statusFilter === "all"}
-                    onChange={handleStatusFilterChange}
-                  />
-                  All
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="active"
-                    checked={statusFilter === "active"}
-                    onChange={handleStatusFilterChange}
-                  />
-                  Active
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="inactive"
-                    checked={statusFilter === "inactive"}
-                    onChange={handleStatusFilterChange}
-                  />
-                  Inactive
-                </label>
-              </div>
-            </div>
-            
-            <div >
-              <label className="txt">Filter by Role:</label>
-              <div className="radio_buttons">
-                <label>
-                  <input
-                    type="radio"
-                    value="all"
-                    checked={roleFilter === "all"}
-                    onChange={handleRoleFilterChange}
-                  />
-                  All
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="assistant"
-                    checked={roleFilter === "assistant"}
-                    onChange={handleRoleFilterChange}
-                  />
-                  Assistant
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="technique"
-                    checked={roleFilter === "technique"}
-                    onChange={handleRoleFilterChange}
-                  />
-                 Technicians
-                </label>
-              </div>
-            </div>
-                  </section>
-            
-                    </div> */}
+          
                <div className="user-container">
                
                   <div className="user-main">
@@ -394,9 +186,9 @@ export default function Renter(){
                           
                           
                            
-                          {/* <Link to="/create"><span><button>Create</button></span></Link> */}
+                         
                           <div className="main-head">
-                             {/* <span>User registration</span> */}
+                           
                              
                             
                           </div>
@@ -410,9 +202,7 @@ export default function Renter(){
                       <th  style={{ backgroundColor: "transparent"}} scope='col'>Name</th>
                       <th style={{ backgroundColor: "transparent"}} scope='col'>Phone</th>
                       <th style={{ backgroundColor: "transparent"}} scope='col'>Email</th>
-                      {/* <th style={{ backgroundColor: "transparent"}} scope='col'>Position</th> */}
-                      {/* <th style={{ backgroundColor: "transparent"}} scope='col'>Detail  </th> */}
-                      {/* <th style={{ backgroundColor: "transparent"}} scope="col"> <Link to="/add"><span><button className="create-subAdmin">Create</button></span></Link> </th> */}
+                      
                     </tr>
                   </thead>
                   <tbody >
@@ -443,24 +233,7 @@ export default function Renter(){
                         </td>
                         {/* <td style={{ backgroundColor: "transparent"}}>Assistant </td> */}
                         <td style={{ backgroundColor: "transparent"}}>
-                        {/* <Link
-                                className="action-button"
-                                to={`/view/${user.id}`}
-                              >
-                                View
-                              </Link> */}
-                              {/* <Link
-                                className="action-button"
-                                to={`/edituser/${user.id}`}
-                              >
-                                Edit
-                              </Link>
-                              <button
-                                className="sub-admin-action-button-delete"
-                                onClick={(e) => deleteUser(user.id)}
-                              >
-                                Delete
-                              </button> */}
+                        
                         </td>
                       </tr>
                     )): searchedCurrentUsers.map(user => (
@@ -484,34 +257,9 @@ export default function Renter(){
                           <p className='user-info'>{user.username}</p>
                         </td>
                         <td style={{ backgroundColor: "transparent"}}>
-                          {/* <span className={`badge ${user.status === 'Active' ? 'bg-success' : 'bg-primary'}`}> */}
-                          {/* <span className='active-status'>
-                            Active
-                          </span> */}
-                          {/* <p className='active-status'>{user.status} </p> */}
-                          <p className='active-status'>{user.email} </p>
+                         
                         </td>
-                        {/* <td style={{ backgroundColor: "transparent"}}>Assistant </td> */}
-                        {/* <td style={{ backgroundColor: "transparent"}}>
-                        <Link
-                                className="action-button"
-                                to={`/view/${user.id}`}
-                              >
-                                View
-                              </Link>
-                              <Link
-                                className="action-button"
-                                to={`/edituser/${user.id}`}
-                              >
-                                Edit
-                              </Link>
-                              <button
-                                className="sub-admin-action-button-delete"
-                                onClick={(e) => deleteUser(user.id)}
-                              >
-                                Delete
-                              </button>
-                        </td> */}
+                        
                       </tr>
                     ))}
                   </tbody>
@@ -546,12 +294,7 @@ export default function Renter(){
                                 Prev
                              </Button>
                          
-                           {/* <div
-                             className={"page-num bg-dark"}
-                             name="currentPage"
-                             value={currentPage}
-                             onChange={changePage}
-                           /> */}
+                           
                        
                              <Button
                                type="button"
@@ -576,7 +319,7 @@ export default function Renter(){
               </div>
                     
               
-              {/* <div class="user-card-container"> */}
+              
               <div class="user-card">
               {currentUsers.map(user=>{
                 return(<>
@@ -642,20 +385,7 @@ export default function Renter(){
             
             </div>
                    
-                    {/* <div className="page-container">
-                    {Array.from({ length: totalPages }, (_, index) => index + 1).map(
-                      (page) => (
-                        <button 
-                          key={page}
-                          onClick={() => handlePageChange(page)}
-                          className={currentPage === page ? 'active-page' : 'pagenumber'}
-                          disabled={currentPage === page}
-                        >
-                          {page}
-                        </button>
-                      )
-                    )}
-                  </div> */}
+                   
                  
                     
                   </div>
@@ -666,13 +396,7 @@ export default function Renter(){
             
                       </div>
                      
-                    {/* <div className="main-bottom">
-                         <h3>Report</h3>
-                       <button>User Registration Report</button>
-                        <button>User Activity Report</button>
-                        <button>User FeedBack Report</button>
-                    </div> */}
-            
+                   
                       
                      
                

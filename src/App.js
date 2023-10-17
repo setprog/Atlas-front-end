@@ -36,6 +36,7 @@ import House from "./atlas/Comp/House";
 import Electronics from "./atlas/Comp/Electronics";
 import Decore from "./atlas/Comp/Decore";
 import Clothes from "./atlas/Comp/Clothes";
+import Details from "./atlas/Comp/Details";
 
 import Filter from "./Filter"
 
@@ -111,13 +112,17 @@ function App() {
               <Route exact path="/house" element={<>
               <UserNav/> <House/></> }></Route>
               
+              <Route path="/details" element={<><Details/></>}></Route>
+              
    <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
-      <Route path='about' element={<><Nav/><About/></>}></Route>
-      <Route path='renter' element={<><Nav/><Renter/></>}></Route> 
+     
       <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
-      <Route path='Category' element={<><Nav/><Category/></>}></Route>
       
-          
+
+      <Route path='/Category' element={<><Nav/><Category/></>}></Route>
+     
+    
+
     
     
         </Routes>

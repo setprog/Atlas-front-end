@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 import Report from "./Report";
 import Table from "./Table";
 import owner2 from "./owner2.png";
+import owners from "./owners.png"
 import gmail from "./gmail.png";
 import Nav from "./Nav";
 import './Home.css'
@@ -22,7 +23,7 @@ function Home() {
           <Sidebar
             names="Total Owner"
             num="50"
-            image={owner2}
+            image={owners}
             foot="Today-"
             foot1="This Month-"
           />
