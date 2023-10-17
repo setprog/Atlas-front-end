@@ -30,6 +30,12 @@ import Sign_in_up from "./atlas/Sign_in_up"
 import Admin_signin from "./atlas/Admin_signin"
 import Category from "./atlas/Comp/Category";
 import EditRenterProfile from "./atlas/edit-renter/EditRenterProfile"
+import Machinery from "./atlas/Comp/Machinery";
+import Vechile from "./atlas/Comp/Vechile";
+import House from "./atlas/Comp/House";
+import Electronics from "./atlas/Comp/Electronics";
+import Decore from "./atlas/Comp/Decore";
+import Clothes from "./atlas/Comp/Clothes";
 
 function App() {
  
@@ -97,6 +103,12 @@ function App() {
       <Route path='renter' element={<><Nav/><Renter/></>}></Route> 
       <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
       <Route path='Category' element={<><Nav/><Category/></>}></Route>
+      <Route path='/Machinery' element={<><Nav/><Machinery/></>}></Route>
+      <Route path='vechile' element={<><Nav/><Vechile/></>}></Route>
+      <Route path='house' element={<><Nav/><House/></>}></Route>
+      <Route path='electronis' element={<><Nav/><Electronics/></>}></Route>
+      <Route path='decore' element={<><Nav/><Decore/></>}></Route>
+      <Route path='clothes' element={<><Nav/><Clothes/></>}></Route>
           
     
     
