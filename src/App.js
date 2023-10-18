@@ -98,13 +98,13 @@ function App() {
 
               <Route exact path="/booked" element={<>
               <UserNav/> <Booked/></> }></Route>
-              <Route path='/Machinery' element={<><Machinery/></>}></Route>
-              <Route path='/vechile' element={<><Vechile/></>}></Route>
-              <Route path='/house' element={<><House/></>}></Route>
-              <Route path='/electronis' element={<><Electronics/></>}></Route>
-              <Route path='/decore' element={<><Decore/></>}></Route>
-              <Route path='/clothes' element={<><Clothes/></>}></Route>
-              <Route path="/details" element={<><Details/></>}></Route>
+              <Route path='/Machinery' element={<><Machinery/> <Footer/></>}></Route>
+              <Route path='/vechile' element={<><Vechile/> <Footer/></>}></Route>
+              <Route path='/house' element={<><House/> <Footer/></>}></Route>
+              <Route path='/electronis' element={<><Electronics/> <Footer/></>}></Route>
+              <Route path='/decore' element={<><Decore/> <Footer/></>}></Route>
+              <Route path='/clothes' element={<><Clothes/> <Footer/></>}></Route>
+              <Route path="/details" element={<><Details/> <Footer/></>}></Route>
               
    <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
       <Route path='/about' element={<><Nav/><About/></>}></Route>
@@ -117,7 +117,7 @@ function App() {
     
     
         </Routes>
-        <Footer/>
+       
        </Router>
     
      

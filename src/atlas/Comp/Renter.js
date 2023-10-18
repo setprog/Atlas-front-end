@@ -10,6 +10,7 @@ import {
   Button,
   
 } from "react-bootstrap";
+import './renter.css'
 
 export default function Renter(){
 
@@ -63,7 +64,7 @@ export default function Renter(){
           }
         
           
-          const pageSize = 7;
+          const pageSize = 6;
         
           const lastIndex = currentPage * pageSize;
           const firstIndex = lastIndex - pageSize;
@@ -151,7 +152,7 @@ export default function Renter(){
           return (
         
         
-        
+        <div className='renter-table'>
         
             <div className="user-wrraper">
           
@@ -404,6 +405,7 @@ export default function Renter(){
                
               
               
+            </div>
             </div>
               
               );
