@@ -25,12 +25,14 @@ import Footer from './Footer';
 
 export default function App() {
   const[Rec , setRec] = useState([])
+    const [selectedPrice, setSelectedPrice] = useState('');
+   const [selectedBrand, setSelectedBrand] = useState('');
  
- 
-  const [selectedPrice, setSelectedPrice] = useState('');
+   const [clicked,setClicked]=useState(false)
+  
 
   useEffect(()=>{
-    fetch('https://fakestoreapi.com/products?limit=5')
+    fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(data=>setRec(data)
              
@@ -38,26 +40,7 @@ export default function App() {
             .then(json=>console.log(json))
   },[])
 
-  //   const brand = event.target.value;
-  //   setSelectedBrand(brand);
-  //   filterProducts(brand, selectedPrice);
-  // };
 
-  
-
-  // const filterProducts = (brand, price) => {
-  //   let filtered = Rec;
-
-  //   if (brand) {
-  //     filtered = filtered.filter(product => product.brand === brand);
-  //   }
-
-  //   if (price) {
-  //     filtered = filtered.filter(product => product.price === parseInt(price));
-  //   }
-
-  //   setFilteredProducts(filtered);
-  // };
   const [Filt , setFilter]=useState('')
 const Filter =[
    {label : "Filter by"},
@@ -89,12 +72,56 @@ function handleSelect(event){
   //        ))}
   //        </div>
   // }
+    const handlePriceFilterChange = event => {
+    const price = event.target.value;
+    setSelectedPrice(price);
+  };
+ 
+  const onclickHandler = () => {
+    const sortedItemsCopy = [...sortedItems].reverse();
+    setSortedItems(sortedItemsCopy);
+    setClicked(!clicked);
+  };
+
+ const handleBrandFilterChange = event => {
+    const brand = event.target.value;
+    setSelectedBrand(brand);
+   };
   const [sortedItems, setSortedItems] = useState([]);
+  // useEffect(() => {
+  //   const filteredItems = Rec.filter((a) => a.price > 0);
+  //   const sortedItems = filteredItems.sort((a, b) => a.price > b.price ? 1 :- 1);
+  //   setSortedItems(sortedItems);
+  // }, [Rec]);
   useEffect(() => {
-    const filteredItems = Rec.filter((a) => a.price > 0);
-    const sortedItems = filteredItems.sort((a, b) => a.price > b.price ? 1 :- 1);
+    const filteredItems = Rec.filter(a => a.price > 0);
+    const sortedItems = [...filteredItems].sort((a, b) =>
+      a.price > b.price ? 1 : -1
+    );
     setSortedItems(sortedItems);
   }, [Rec]);
+  const filterProductsByPrice = () => {
+    let filteredProducts = [...Rec];
+
+    if (selectedPrice !== '') {
+      filteredProducts = filteredProducts.filter(
+        product => product.price === parseFloat(selectedPrice)
+      );
+    }
+
+    if (selectedBrand !== '') {
+      filteredProducts = filteredProducts.filter(pro =>
+        pro.category.toLowerCase().includes(selectedBrand.toLowerCase())
+      );
+    }
+
+    if (clicked) {
+      filteredProducts = [...sortedItems];
+    }
+
+    return filteredProducts;
+  };
+
 
   return (
     <div>
@@ -130,7 +157,7 @@ function handleSelect(event){
           className="mySwiper"
         >
         <div  id="sec">
-        {sortedItems.map((list, index) => (
+        {filterProductsByPrice().map((list, index) => (
           <SwiperSlide key={index}>
             
          <div className="lll"> 
@@ -247,19 +274,204 @@ function handleSelect(event){
           </div>
         </Swiper>
       </div>
-      
+      <select value={selectedPrice} onChange={handlePriceFilterChange} id="cat" placeholder="Filter by price">
+        <option value="">All</option>
+         <option value="109.95">Price 109</option>
+         {/* <option value="22">Price 22</option> */}
+        
+     </select>
+    <select value={selectedBrand} onChange={handleBrandFilterChange} id="cat" placeholder="Filter by price">
+    <option value="">All</option>
+      <option value="electronics">electronics</option>
+         <option value="jewelery">jewelery</option>
+       {/* <option value="22">Price 22</option> */}
+        
+     </select>
     
      
-    <button onClick={() => setSortedItems([...sortedItems].reverse())}>
-          Sort
-        </button>
-        <select onchange={handleSelect} id="cat" placeholder="Filter by">
-               {Filter.map(option => (
-                  <option value={option.Filter}>{option.label}</option>
-               ))}
-
-            </select>
+     <button onClick={onclickHandler}>
+           Sort
+      </button>
+       
    <Footer />
     </div>
   );
 }
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css';
+// import 'swiper/css/scrollbar';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// import '../Category/Appcateg.css';
+// import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
+// import Header from "../Category/Header";
+// import Main from '../Category/Main';
+// import { Link } from 'react-router-dom';
+
+
+// export default function Appcateg() {
+//   const [Rec, setRec] = useState([]);
+//   const [selectedPrice, setSelectedPrice] = useState('');
+//   const [selectedBrand, setSelectedBrand] = useState('');
+//   const [clicked,SetClicked]=useState("false")
+// //   const [selectedOrder, setSelectedOrder] = useState('');
+//   useEffect(() => {
+//     fetch('https://fakestoreapi.com/products')
+//       .then(res => res.json())
+//       .then(data => setRec(data))
+//       .catch(error => console.log(error));
+//   }, []);
+//   const handlePriceFilterChange = event => {
+//     const price = event.target.value;
+//     setSelectedPrice(price);
+//   };
+
+//   const handleBrandFilterChange = event => {
+//     const brand = event.target.value;
+//     setSelectedBrand(brand);
+//   };
+//   const filterProductsByPrice = () =>
+//    {
+//     if (selectedPrice !== '') {
+//       const filteredProducts = Rec.filter(product => product.price === parseFloat(selectedPrice));
+//       return filteredProducts;
+//     } 
+//     else if(selectedBrand!==" "){
+//         const filteredPro = Rec.filter(pro => pro.category.toLowerCase().includes(selectedBrand.toLowerCase()));
+//         return filteredPro;   
+//     }
+//     // else if (selectedOrder !== "") {
+//     //     const filteredItems = Rec.filter((a) => a.price > 0);
+//     //     let sortedItems = [...filteredItems]; // Create a copy of the filtered items
+      
+//     //     if (selectedOrder === "asc") {
+//     //       sortedItems.sort((a, b) => {
+//     //         const priceA = parseFloat(a.price);
+//     //         const priceB = parseFloat(b.price);
+//     //         return priceA - priceB; // Ascending order
+//     //       });
+//     //     } else if (selectedOrder === "dsc") {
+//     //       sortedItems.sort((a, b) => {
+//     //         const priceA = parseFloat(a.price);
+//     //         const priceB = parseFloat(b.price);
+//     //         return priceB - priceA; // Descending order
+//     //       });
+//     //     }
+      
+//     //     return sortedItems;
+//     //   }
+//     else {
+//       return Rec;
+//     }
+//   };
+//   const [sortedItems, setSortedItems] = useState([]);
+//   const onclickHandler=()=>{
+//     setSortedItems([...sortedItems].reverse())
+//     SetClicked(!clicked);
+//   }
+//   useEffect(() => {
+//     const filteredItems = Rec.filter((a) => a.price > 0);
+//     const sortedItems = filteredItems.sort((a, b) => a.price > b.price ? 1 :- 1);
+//     setSortedItems(sortedItems);
+//   }, [Rec]);
+//   return (
+//     <div>
+//       <Header />
+//       <Main quant="4" categ="Car" />
+//       <div className='background'>
+//         <Swiper
+//           slidesPerView={3}
+//           centeredSlides={false}
+//           slidesPerGroupSkip={3}
+//           grabCursor={true}
+//           keyboard={{
+//             enabled: true,
+//           }}
+//           breakpoints={{
+//             769: {
+//               slidesPerView: 3,
+//               slidesPerGroup: 2,
+//             },
+//           }}
+//           scrollbar={true}
+//           navigation={true}
+//           pagination={{
+//             clickable: true,
+//           }}
+//           modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+//           className="mySwiper"
+//         >
+//           <div id="sec">
+          
+
+
+  
+  
+//     {clicked === 1 ? (
+//       sortedItems().map((list, index) => (
+//         <SwiperSlide key={index}>
+//           <div className="lll">
+//             <div className="categ">
+//               <h4 id="pro">{list.category}</h4>
+//               <Link to="/spec">
+//                 <img src={list.image} alt="pic" />
+//               </Link>
+//               <h3 id="model">{list.category}</h3>
+//               <h4 id="price">{list.price}</h4>
+//               <h5>{list.category}</h5>
+//             </div>
+//           </div>
+//         </SwiperSlide>
+//       ))
+//     ) : (
+//       filterProductsByPrice().map((list, index) => (
+//         <SwiperSlide key={index}>
+//           <div className="lll">
+//             <div className="categ">
+//               <h4 id="pro">{list.category}</h4>
+//               <Link to="/spec">
+//                 <img src={list.image} alt="pic" />
+//               </Link>
+//               <h3 id="model">{list.category}</h3>
+//               <h4 id="price">{list.price}</h4>
+//               <h5>{list.category}</h5>
+//             </div>
+//           </div>
+//         </SwiperSlide>
+//       ))
+//     )}
+//   </div>
+
+          
+         
+//         </Swiper>
+//       </div>
+//       <select value={selectedPrice} onChange={handlePriceFilterChange} id="cat" placeholder="Filter by price">
+//         <option value="">All</option>
+//         <option value="109.95">Price 109</option>
+//         {/* <option value="22">Price 22</option> */}
+        
+//       </select>
+//       <select value={selectedBrand} onChange={handleBrandFilterChange} id="cat" placeholder="Filter by price">
+//         <option value="">All</option>
+//         <option value="electronics">electronics</option>
+//         <option value="jewelery">jewelery</option>
+//         {/* <option value="22">Price 22</option> */}
+        
+//       </select>
+//       {/* <select  value={selectedOrder} onChange={handleSortChange}>
+//           <option value="">No Sorting</option>
+//           <option value="asc">Price: Low to High</option>
+//           <option value="dsc">Price: High to Low</option>
+//         </select> */}
+//         <button onClick={onclickHandler}>
+//            Sort
+//         </button>
+      
+//     </div>
+//   );
+// }

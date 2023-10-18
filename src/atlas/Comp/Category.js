@@ -15,38 +15,38 @@ function Category() {
  
     <div id="dddb">
     
-      <Link to="Machinery" > <img id="mab" src={machine} alt="machinery pic" /></Link> 
+      <Link to="/Machinery" > <img id="mab" src={machine} alt="machinery pic" /></Link> 
         <h5>Machinery</h5>
         
     </div>
    
     <div id="dddb">
-   <Link to="vechile">
+   <Link to="/vechile">
     <img id="vhb" src={car} alt="Vehicle pic" /></Link>
         <h5>Vehicle</h5>
   
         
     </div>
     <div id="dddb">
-    <Link to="electronis">
+    <Link to="/electronis">
         <img src={camera} alt="Electronics pic" /></Link>
         <h5>Electronics</h5>
         
     </div>
     <div id="ddddb">
-   <Link to="clothes">
+   <Link to="/clothes">
         <img src={clothes} alt="Clothes pic" /></Link>
         <h5>Clothes</h5>
         
     </div>
     <div id="ddddb">
-    <Link to="decore">
+    <Link to="/decore">
         <img id="vhhb" src={decore} alt="Event Equipment" /></Link>
         <h5>Event Equipment</h5>
         
     </div>
     <div id="ddddb">
-    <Link to="house">
+    <Link to="/house">
         <img src={home} id="vhhhb" alt="Houses pic" /></Link>
         <h5>Houses</h5>
         
