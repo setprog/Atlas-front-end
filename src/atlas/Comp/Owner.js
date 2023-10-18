@@ -10,6 +10,7 @@ import {
   Button,
   
 } from "react-bootstrap";
+import './renter.css'
 
 export default function Owner(){
 
@@ -180,7 +181,7 @@ export default function Owner(){
           //   setCurrentPage(page);
           // };
           
-          const pageSize = 7;
+          const pageSize = 6;
         
           const lastIndex = currentPage * pageSize;
           const firstIndex = lastIndex - pageSize;
@@ -269,7 +270,7 @@ export default function Owner(){
           return (
         
         
-        
+        <div className='t-table'>
         
             <div className="user-wrraper">
             {/* <div className="s">
@@ -387,7 +388,7 @@ export default function Owner(){
                           <div className="sub-container">
                   <div className="py-4">
                   
-              <table className="table"   >
+              <table className="t-table"   >
                   <thead>
                     <tr>
                       <th  style={{ backgroundColor: "transparent"}} scope='col'>Name</th>
@@ -625,20 +626,7 @@ export default function Owner(){
             
             </div>
                    
-                    {/* <div className="page-container">
-                    {Array.from({ length: totalPages }, (_, index) => index + 1).map(
-                      (page) => (
-                        <button 
-                          key={page}
-                          onClick={() => handlePageChange(page)}
-                          className={currentPage === page ? 'active-page' : 'pagenumber'}
-                          disabled={currentPage === page}
-                        >
-                          {page}
-                        </button>
-                      )
-                    )}
-                  </div> */}
+                   
                  
                     
                   </div>
@@ -649,12 +637,7 @@ export default function Owner(){
             
                       </div>
                      
-                    {/* <div className="main-bottom">
-                         <h3>Report</h3>
-                       <button>User Registration Report</button>
-                        <button>User Activity Report</button>
-                        <button>User FeedBack Report</button>
-                    </div> */}
+                    
             
                       
                      
@@ -662,7 +645,7 @@ export default function Owner(){
                
                
               
-              
+              </div>
             </div>
               
               );

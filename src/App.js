@@ -99,19 +99,12 @@ function App() {
               
               <Route exact path="/booked" element={<>
               <UserNav/> <Booked/></> }></Route>
-              <Route exact path="/Machiner" element={<>
-              <UserNav/> <Machinery/></> }></Route>
-              <Route exact path="/vechile" element={<>
-              <UserNav/> <Vechile/></> }></Route>
-              <Route exact path="/electronis" element={<>
-              <UserNav/> <Electronics/></> }></Route>
-              <Route exact path="/clothes" element={<>
-              <UserNav/> <Clothes/></> }></Route>
-              <Route exact path="/decore" element={<>
-              <UserNav/> <Decore/></> }></Route>
-              <Route exact path="/house" element={<>
-              <UserNav/> <House/></> }></Route>
-              
+              <Route path='/Machinery' element={<><Machinery/></>}></Route>
+              <Route path='/vechile' element={<><Vechile/></>}></Route>
+              <Route path='/house' element={<><House/></>}></Route>
+              <Route path='/electronis' element={<><Electronics/></>}></Route>
+              <Route path='/decore' element={<><Decore/></>}></Route>
+              <Route path='/clothes' element={<><Clothes/></>}></Route>
               <Route path="/details" element={<><Details/></>}></Route>
               
    <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
@@ -126,7 +119,7 @@ function App() {
     
     
         </Routes>
-        <Footer/>
+       
        </Router>
     
      

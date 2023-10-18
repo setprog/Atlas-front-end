@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Sidebar from "./Sidebar";
 import Report from "./Report";
 import Table from "./Table";
@@ -9,6 +9,8 @@ import Nav from "./Nav";
 import './Home.css'
 
 function Home() {
+  
+
   return (
     <div className="borderRed">
       <div className="gr"></div>
@@ -59,6 +61,7 @@ function Home() {
         <div className="box box9">
           <p id="recently">Recent Bookings</p>
         </div>
+
         <div className="box box10">
           <Table />
         </div>
