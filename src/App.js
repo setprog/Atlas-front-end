@@ -38,6 +38,8 @@ import Decore from "./atlas/Comp/Decore";
 import Clothes from "./atlas/Comp/Clothes";
 import Details from "./atlas/Comp/Details";
 
+import Filter from "./Filter"
+
 function App() {
  
   
@@ -76,7 +78,6 @@ function App() {
               
               <Route exact path="/addpro" element={<>
               <UserNav/> <AddPro/></> }></Route>
-
               <Route exact path="/add" element={<>
               <UserNav/> <Add/></> }></Route>
 
@@ -95,25 +96,26 @@ function App() {
 
               <Route exact path="/rent" element={<>
               <UserNav/> <Rented/></> }></Route>
-
+              
               <Route exact path="/booked" element={<>
               <UserNav/> <Booked/></> }></Route>
-              <Route path='/Machinery' element={<><Machinery/> <Footer/></>}></Route>
-              <Route path='/vechile' element={<><Vechile/> <Footer/></>}></Route>
-              <Route path='/house' element={<><House/> <Footer/></>}></Route>
-              <Route path='/electronis' element={<><Electronics/> <Footer/></>}></Route>
-              <Route path='/decore' element={<><Decore/> <Footer/></>}></Route>
-              <Route path='/clothes' element={<><Clothes/> <Footer/></>}></Route>
-              <Route path="/details" element={<><Details/> <Footer/></>}></Route>
+              <Route path='/Machinery' element={<><Machinery/></>}></Route>
+              <Route path='/vechile' element={<><Vechile/></>}></Route>
+              <Route path='/house' element={<><House/></>}></Route>
+              <Route path='/electronis' element={<><Electronics/></>}></Route>
+              <Route path='/decore' element={<><Decore/></>}></Route>
+              <Route path='/clothes' element={<><Clothes/></>}></Route>
+              <Route path="/details" element={<><Details/></>}></Route>
               
    <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
-      <Route path='/about' element={<><Nav/><About/></>}></Route>
-      <Route path='/renter' element={<><Nav/><Renter/></>}></Route> 
+     
       <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
+      
+
       <Route path='/Category' element={<><Nav/><Category/></>}></Route>
      
     
-          
+
     
     
         </Routes>
@@ -124,7 +126,7 @@ function App() {
      
     
   
-    
+  
    
       
     </div>

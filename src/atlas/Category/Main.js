@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
  export default function Main(props){
+   
    const [value ,setValue]=useState('')
       const options =[
          {label: "Choose category"},
@@ -22,9 +23,11 @@ const amarach =[
 const [Filt , setFilter]=useState('')
 const Filter =[
    {label : "Filter by"},
-   {label : "Brand" , value :1},
+   {label : "CHR" , value :1},
+   {label : "Rava" , value :1},
+   {label : "Tucson" , value :1},
 ]
-    
+   
     return(
         <div className="wana">
            {/* <input id="search" type="text" placeholder='choose a catagory'   ></input>  */}
@@ -36,11 +39,9 @@ const Filter =[
      ))}
             </select>
             <p>{value}</p></div> 
-           <div className="inp">
-            {/* <input type="text" id="cat" placeholder="sort by"></input>
-            <input type="text" id="cat" placeholder="filter by"></input> */}
-           {/* <h3 id="sort">Sort by</h3> */}
-            <select onchange={handleSelect} id="cat" placeholder="sort by">
+           {/* <div className="inp">
+            
+            <select onchange={handleSelect} id="cat" placeholder="sort by" >
                {amarach.map(option => (
                   <option value={option.Sort}>{option.label}</option>
                ))}
@@ -52,7 +53,7 @@ const Filter =[
                ))}
 
             </select>
-           </div>
+           </div> */}
         </div>
         
     )

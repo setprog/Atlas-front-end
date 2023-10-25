@@ -102,9 +102,9 @@ button {
     font-size: 64px;
 }
 
-.ssearch-box img {
+#bsbs {
     width: 40px;
-    margin-left: 10px;
+    margin-right: 300px;
     cursor: pointer;
 }
 
@@ -112,6 +112,10 @@ button {
     font-size: 30px;
     font-weight: 500;
     color: #425FBA;
+}
+
+.ssearch-box img {
+    width: 50px;
 }
 
 .ssearch-bar {
@@ -135,6 +139,29 @@ button {
     box-shadow: var(--shadow);
     cursor: pointer;
     display: flex;
+}
+
+#lilini {
+    display: flex;
+    flex-direction: row;
+    margin-left: 37%;
+    margin-top: 0px;
+}
+
+#lilini input {
+    margin-right: 25%;
+    width: 450px;
+}
+
+#klsls {
+    margin-left: 500px;
+    margin-top: -40px;
+}
+
+#lilini select {
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
 }
 
 .ddropdown img {
@@ -182,11 +209,12 @@ button {
 }
 
 .ssearch-box {
+    margin-top: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding-right: 1 rem;
     width: 90%;
-    height: 100px;
     color: #D9D9D9;
     margin-left: -150px;
 }
@@ -200,11 +228,15 @@ button {
 }
 
 .ssearch-box input {
+    width: 400px;
+    height: 50px;
     padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
     color: #425FBA;
     border: 0;
+    margin-top: -100px;
+    margin-left: 150px;
 }
 
 ul {
@@ -223,7 +255,7 @@ ul {
 
 #phh {
     width: 600px;
-    margin-right: 200px;
+    margin-right: 100px;
     height: 400px;
     margin-top: 50px;
     border-radius: 20px;
@@ -263,6 +295,13 @@ hr {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#span {
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 235px;
     margin-top: 30px;
 }
 
