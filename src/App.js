@@ -110,6 +110,7 @@ function App() {
    <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
      
       <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
+      <Route path='/renter' element={<><Nav/><Renter/></>}></Route>
       
 
       <Route path='/Category' element={<><Nav/><Category/></>}></Route>

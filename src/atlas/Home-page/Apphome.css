@@ -129,6 +129,11 @@ button {
     border-radius: 50px;
 }
 
+.dropbtn {
+    width: 100px;
+    margin-left: -500px;
+}
+
 .dddropdown {
     position: relative;
     width: 30%;
@@ -154,7 +159,7 @@ button {
 }
 
 #klsls {
-    margin-left: 500px;
+    margin-left: -50px;
     margin-top: -40px;
 }
 
@@ -219,6 +224,40 @@ button {
     margin-left: -150px;
 }
 
+.td {
+    position: relative;
+}
+
+.ddt {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 150px;
+    text-decoration: none;
+    margin-left: 460px;
+    margin-top: -40px;
+    border-radius: 15px;
+}
+
+.ttd {
+    margin-left: 450px;
+    width: 180px;
+    height: 60px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: -30px;
+}
+
+.glgl {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
 #ssearch-input {
     height: 70px;
     width: 400px;
@@ -229,14 +268,14 @@ button {
 
 .ssearch-box input {
     width: 400px;
-    height: 50px;
+    height: 60px;
     padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
     color: #425FBA;
     border: 0;
-    margin-top: -100px;
-    margin-left: 150px;
+    margin-top: -80px;
+    margin-left: -330px;
 }
 
 ul {

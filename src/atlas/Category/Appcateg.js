@@ -20,25 +20,53 @@ import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
 import Header from "./Header";
 import Main from './Main';
 import { Link } from 'react-router-dom';
-
+import { useLocation } from 'react-router-dom';
 import Footer from './Footer';
-
+import axios from 'axios';
 export default function App() {
   const[Rec , setRec] = useState([])
     const [selectedPrice, setSelectedPrice] = useState('');
    const [selectedBrand, setSelectedBrand] = useState('');
  
    const [clicked,setClicked]=useState(false)
-  
+  const location = useLocation();
+  const [selectedCategory, setSelectedCategory] = useState('');
+  useEffect(() => {
+    const category = new URLSearchParams(location.search).get('category');
+    setSelectedCategory(category);
+    fetchData(category);
+  }, [location.search]);
 
-  useEffect(()=>{
-    fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(data=>setRec(data)
+  const fetchData = async (category) => {
+    try {
+      let response;
+      if (category === 'vehicle') {
+        response = await axios.get('https://fakestoreapi.com/products'); // Replace with your actual vehicle API endpoint
+      } else if (category === 'electronics') {
+        response = await axios.get('https://fakestoreapi.com/products'); // Replace with your actual house API endpoint
+      }else if (category === 'machinery') {
+        response = await axios.get('https://fakestoreapi.com/products'); // Replace with your actual house API endpoint
+      }else if (category === 'clothes') {
+        response = await axios.get('https://fakestoreapi.com/products'); // Replace with your actual house API endpoint
+      }else if (category === 'event equipment') {
+        response = await axios.get('https://fakestoreapi.com/products'); // Replace with your actual house API endpoint
+      }else if (category === 'houses') {
+        response = await axios.get('https://fakestoreapi.com/products'); // Replace with your actual house API endpoint
+      }
+
+      setRec(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  // useEffect(()=>{
+  //   fetch('https://fakestoreapi.com/products')
+  //           .then(res=>res.json())
+  //           .then(data=>setRec(data)
              
-            )
-            .then(json=>console.log(json))
-  },[])
+  //           )
+  //           .then(json=>console.log(json))
+  // },[])
 
 
   const [Filt , setFilter]=useState('')
@@ -154,6 +182,7 @@ function handleSelect(event){
      <button onClick={onclickHandler}>
            Sort by Price
       </button>
+      <h1>Data of {selectedCategory}</h1>
     </div>
     
         <div className='background'>
@@ -180,6 +209,7 @@ function handleSelect(event){
           className="mySwiper"
         >
         <div  id="sec">
+          <h2>Data for {selectedCategory}</h2>
         {filterProductsByPrice().map((list, index) => (
           <SwiperSlide key={index}>
             
