@@ -277,6 +277,7 @@ let navigate=useNavigate
                 borderRadius: '4px',
                 border: '1px solid #ccc',
                 fontSize: '19px',
+                height:'20px'
               }}
             />
           </div></span>
