@@ -64,7 +64,7 @@ td {
 .filter-username{
     display: flex;
     gap: 1rem;
-    /* margin-left: 20rem; */
+    margin-left: 20rem;
     align-items: center;
     justify-content: center;
 }

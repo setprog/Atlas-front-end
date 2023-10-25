@@ -11,18 +11,24 @@ import {
   
 } from "react-bootstrap";
 import './renter.css'
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export default function Renter(){
 
      
     
 
-     const [currentPage, setCurrentPage] = useState(1);
+          const [currentPage, setCurrentPage] = useState(1);
           const [usernameFilter, setUsernameFilter] = useState('');
           const [users, setUsers] = useState([]);
           const [statusFilter, setStatusFilter] = useState('all');
           const [roleFilter, setRoleFilter] = useState('all');
           const [loading, setLoading] = useState(true);
+          const [startDate, setStartDate] = useState(null);
+          const [endDate, setEndDate] = useState(null);
+          const [filteredData, setFilteredData] = useState([]);
+          
         
         
          const changePage = (event) => {
@@ -114,9 +120,42 @@ export default function Renter(){
           useEffect(() => {
             loadUsers();
           }, []);
+
+          const dateUsers = async () => {
+            try {
+              const response = await fetch("https://fakestoreapi.com/carts");
+              const data = await response.json();
+              setUsers(data);
+              filterData(startDate, endDate, data);
+            } catch (error) {
+              console.error('Error loading users:', error);
+            }
+          };
+        
+          const handleStartDateChange = (date) => {
+            setStartDate(date);
+            filterData(date, endDate, users);
+          };
+        
+          const handleEndDateChange = (date) => {
+            setEndDate(date);
+            filterData(startDate, date, users);
+          };
+        
+          const filterData = (startDate, endDate, data) => {
+            if (startDate && endDate) {
+              const filtered = data.filter((user) => {
+                const itemDate = new Date(user.date);
+                return itemDate >= startDate && itemDate <= endDate;
+              });
+              setFilteredData(filtered);
+            } else {
+              setFilteredData(data);
+            }
+          };
         
           const loadUsers =async() => {
-            const result ='https://fakestoreapi.com/users';
+            const result ='https://fakestoreapi.com/carts';
             await axios.get(result)
             .then(response => {
               setUsers(response.data);
@@ -125,6 +164,7 @@ export default function Renter(){
             .catch(error => {
               console.error(error);
             });
+            
           
           };
          
@@ -161,11 +201,12 @@ export default function Renter(){
                   <div className="user-main">
                   
                       <div className="main-top">
+                        <div className='both'>
                          
-                          <div className="create-filteruser-name">
+                          <div className="create-filteruser-name-b">
                           {/* <Link to="/add"><span><button className="create-subAdmin">Create</button> </span></Link> */}
-                          <span><div className="filter-username">
-                    <label className="username-filter-txt">Filter by Username:  </label>
+                          <span><div className="filter-username-b">
+                    <label className="username-filter-txt-b">Filter by Username:  </label>
                     <input 
                       type="text"
                       placeholder="   Search User-name"
@@ -177,12 +218,33 @@ export default function Renter(){
                         borderRadius: '4px',
                         border: '1px solid #ccc',
                         fontSize: '19px',
+                        height:'20px',
                       }}
                     />
                   </div></span>
                           </div>
                           
-                         
+                          <div className="date-picker-container">
+        <div className="date-picker-wrapper">
+          <p>Start Date:</p>
+          <DatePicker
+            selected={startDate}
+            onChange={handleStartDateChange}
+            dateFormat="dd-MM-yyyy"
+            placeholderText="Select start date"
+          />
+        </div>
+        <div className="date-picker-wrapper">
+          <p>End Date:</p>
+          <DatePicker
+            selected={endDate}
+            onChange={handleEndDateChange}
+            dateFormat="dd-MM-yyyy"
+            placeholderText="Select end date"
+          />
+        </div>
+      </div>
+      </div>
                           
                           
                           
@@ -197,7 +259,7 @@ export default function Renter(){
                           <div className="sub-container">
                   <div className="py-4">
                   
-              <table className="table"   >
+              {/* <table className="table"   >
                   <thead>
                     <tr>
                       <th  style={{ backgroundColor: "transparent"}} scope='col'>Name</th>
@@ -207,6 +269,7 @@ export default function Renter(){
                     </tr>
                   </thead>
                   <tbody >
+                    
                   
                     { usernameFilter === "" ?
                     currentUsers.map(user => (
@@ -232,7 +295,7 @@ export default function Renter(){
                         <td style={{ backgroundColor: "transparent"}}>
                           <p className='active-status'>{user.email} </p>
                         </td>
-                        {/* <td style={{ backgroundColor: "transparent"}}>Assistant </td> */}
+                       
                         <td style={{ backgroundColor: "transparent"}}>
                         
                         </td>
@@ -265,7 +328,74 @@ export default function Renter(){
                     ))}
                   </tbody>
                
-                </table>
+                </table> */}
+                {(startDate || endDate) && (
+        <div>
+          <p>
+            Selected Date Range: {startDate && startDate.toLocaleDateString()} -{' '}
+            {endDate && endDate.toLocaleDateString()}
+          </p>
+         
+          {filteredData.length > 0 ? (
+            <table className="booking-table">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Subject</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredData.map((booking) => (
+                  <tr key={booking.id}>
+                    <td>{booking.userId}</td>
+                    <td>{booking.subject}</td>
+                    <td>{booking.date}</td>
+                    <td>booked</td>
+                    <td>{booking.amount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <p>No bookings found for the selected date range.</p>
+          )}
+        </div>
+      )}
+      {!startDate && !endDate && (
+        <div>
+          
+          {users.length > 0 ? (
+            <table className="booking-table">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Subject</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((booking) => (
+                  <tr key={booking.id}>
+                    <td>{booking.userId}</td>
+                    <td>{booking.subject}</td>
+                    <td>{booking.date}</td>
+                    <td>booked</td>
+                    <td>{booking.amount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <p>No bookings available.</p>
+          )}
+        </div>
+      )}
+                
                 <div style={{ float: "left" }}>
                 {totalPages === 0 ? (
           <p>No record</p>
