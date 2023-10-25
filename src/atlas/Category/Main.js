@@ -39,10 +39,8 @@ const Filter =[
      ))}
             </select>
             <p>{value}</p></div> 
-           <div className="inp">
-            {/* <input type="text" id="cat" placeholder="sort by"></input>
-            <input type="text" id="cat" placeholder="filter by"></input> */}
-           {/* <h3 id="sort">Sort by</h3> */}
+           {/* <div className="inp">
+            
             <select onchange={handleSelect} id="cat" placeholder="sort by" >
                {amarach.map(option => (
                   <option value={option.Sort}>{option.label}</option>
@@ -55,7 +53,7 @@ const Filter =[
                ))}
 
             </select>
-           </div>
+           </div> */}
         </div>
         
     )

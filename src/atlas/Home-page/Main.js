@@ -2,11 +2,17 @@
 import React from "react";
 import { useState } from "react";
 import phh from "./ph.png"
+import { FaSearch } from "react-icons/fa";
 import search from "./dropdown.png"
 import ser from "./search.png"
+import SearchBar from "./SearchBar";
+import SearchResultsList from "./SearchResultsList";
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 export default function Main(){
    const [value ,setValue]=useState('')
+   const [input ,setInput]=useState('')
+   const [option, setOption] = useState("")
+   const [clicked,setClicked]=useState(false)
    const options =[
       {label: "Choose category"},
       {label: "Vehicle", value: 1},
@@ -15,10 +21,36 @@ export default function Main(){
       {label: "Clothes" , value: 4},
       {label: "Houses" , value: 5},
       {label: "Event Equipment " , value: 6}
-   ] 
- function handleSelect(event){
-      setValue(event.target.value)
+   ]
+   const [placeholder, setPlaceholder] = useState("Type to search");
+ const [nnn , setNnn]=useState("search anything...")
+ const anyth =()=>{
+  setNnn({setOption})
  }
+ function handleSelect(event){
+      setOption(event.target.value)
+ }
+ 
+ const handleSearch = () => {
+   console.log("value", value);
+   console.log("option", option);
+
+ }
+ const fetchData = (value) => {
+   fetch("https://jsonplaceholder.typicode.com/users")
+     .then((response) => response.json())
+     .then((json) => {
+       const results = json.filter((user) => {
+         return value && user.name && user.name.toLowerCase().includes(value);
+       });
+       setResults(results);
+     });
+ };
+ const handleChange = (value) => {
+   setInput(value);
+   fetchData(value);
+   setClicked(!clicked);
+ };
    //   let dropdownBtn = document.getElementById("drop-text");
    //   let list = document.getElementById("list");
    //   let input = document.getElementById("search-input");
@@ -62,18 +94,18 @@ export default function Main(){
    //           }; 
    //         }
 
-
+   const[results, setResults] = useState([]);
     return(
         <div className="main">
     <h1 id> The sharing economy is the 
                future of rentals.</h1>
-               <div className="ssearch-bar" >
-       <div className="dddropdown">
-        <div id="drop-text" className="ddropdown-text">
+               <div >
+       <div >
+        <div >
         {/* <span id="span">Category<img id="icon" src={search} alt=" search icon" /></span> */}
-        <select onchange={handleSelect} id="span">
+        <select onChange={(e) => setOption(e.target.value)} value={option} id="span" onClick={anyth}>
      {options.map(option => (
-      <option value={option.value}>{option.label}</option>
+      <option value={option.label}>{option.label}</option>
      ))}
             </select>
          </div>
@@ -88,8 +120,19 @@ export default function Main(){
        </div> 
         
         <div className="ssearch-box">
-     <input type="text" id="ssearch-input" placeholder="search anything..."></input>
-     <img src={ser} alt="search"></img>
+     {/* <input type="text" id="ssearch-input" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Search anything"></input>
+     <img src={ser} alt="search" onClick={handleSearch}/> */}
+      <input
+        type="text"
+        placeholder={placeholder}
+        name="input"
+        value={input}
+        onChange={(e) => handleChange(e.target.value)}
+      />
+      <div id="klsls"><FaSearch /></div>
+      {/* <SearchBar setResults={setResults}/> */}
+     { clicked && <SearchResultsList results={results}/>}
+   
         </div>
                </div>
            <div id="tt">
