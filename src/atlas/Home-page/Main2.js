@@ -18,42 +18,42 @@ for a specific event or project,but you don’t want to purchase them outright.T
  <div className="dd">
  
     <div id="ddd">
-    <a href=" ">
-        <img id="ma" src={machine} alt="machinery pic" />
-        <h5>Machinery</h5>
-        </a>
+    <Link to="/appcat?category=machinery">
+    <img id="vh" src={machine} alt="Machines pic" />
+        <h5>Machine</h5>
+    </Link>
     </div>
    
     <div id="ddd">
-    <Link to="/appcat">
+    <Link to="/appcat?category=vehicle">
     <img id="vh" src={vh} alt="Vehicle pic" />
         <h5>Vehicle</h5>
     </Link>
         
     </div>
     <div id="ddd">
-    <a href=" ">
-        <img src={ele} alt="Electronics pic" />
+    <Link to="/appcat?category=electronics">
+    <img id="vh" src={ele} alt="Electronics pic" />
         <h5>Electronics</h5>
-        </a>
+    </Link>
     </div>
     <div id="dddd">
-    <a href=" ">
-        <img src={cl} alt="Clothes pic" />
-        <h5>Clothes</h5>
-        </a>
+    <Link to="/appcat?category=clothes">
+    <img id="vh" src={cl} alt="clothes pic" />
+        <h5>Clothe</h5>
+    </Link>
     </div>
     <div id="dddd">
-    <a href=" ">
-        <img id="vhh" src={eve} alt="Event Equipment" />
+    <Link to="/appcat?category=event equipment">
+    <img id="vh" src={eve} alt="event equipment pic" />
         <h5>Event Equipment</h5>
-        </a>
+    </Link>
     </div>
     <div id="dddd">
-    <a href=" ">
-        <img src={ho} id="vhhh" alt="Houses pic" />
-        <h5>Houses</h5>
-        </a>
+    <Link to="/appcat?category=houses">
+    <img id="vh" src={ho} alt="Houses pic" />
+        <h5>House</h5>
+    </Link>
     </div>
  </div>
         </div>

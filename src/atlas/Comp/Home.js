@@ -1,13 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import Sidebar from "./Sidebar";
 import Report from "./Report";
 import Table from "./Table";
 import owner2 from "./owner2.png";
+import owners from "./owners.png"
 import gmail from "./gmail.png";
 import Nav from "./Nav";
 import './Home.css'
 
 function Home() {
+  
+
   return (
     <div className="borderRed">
       <div className="gr"></div>
@@ -22,7 +25,7 @@ function Home() {
           <Sidebar
             names="Total Owner"
             num="50"
-            image={owner2}
+            image={owners}
             foot="Today-"
             foot1="This Month-"
           />
@@ -58,6 +61,7 @@ function Home() {
         <div className="box box9">
           <p id="recently">Recent Bookings</p>
         </div>
+
         <div className="box box10">
           <Table />
         </div>

@@ -1,0 +1,16 @@
+ .results-list {
+     width: 400px;
+     position: relative;
+     margin-left: -270px;
+     margin-right: 50px;
+     background-color: white;
+     color: black;
+     display: flex;
+     flex-direction: column;
+     box-shadow: 0px 0px 0px #ddd;
+     border-radius: 10px;
+     margin-top: 1rem;
+     min-height: 7rem;
+     overflow-y: scroll;
+     z-index: 999;
+ }

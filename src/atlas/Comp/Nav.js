@@ -43,6 +43,7 @@ function Nav() {
           <Link to="/Category">Category</Link>
         </p>
       </span>
+      
     </div>
     </>
   );

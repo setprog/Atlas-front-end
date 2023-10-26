@@ -2,23 +2,57 @@
 import React from "react";
 import { useState } from "react";
 import phh from "./ph.png"
+import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import search from "./dropdown.png"
 import ser from "./search.png"
+import SearchBar from "./SearchBar";
+import SearchResultsList from "./SearchResultsList";
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 export default function Main(){
    const [value ,setValue]=useState('')
-   const options =[
-      {label: "Choose category"},
-      {label: "Vehicle", value: 1},
-      {label: "Machinery" , value: 2},
-      {label: "Electronics" , value: 3},
-      {label: "Clothes" , value: 4},
-      {label: "Houses" , value: 5},
-      {label: "Event Equipment " , value: 6}
-   ] 
- function handleSelect(event){
-      setValue(event.target.value)
+   const [input ,setInput]=useState('')
+   const [option, setOption] = useState("")
+   const [clicked,setClicked]=useState(false)
+  //  const options =[
+  //     {label: "Choose category"},
+  //     {label: "Vehicle", value: 1},
+  //     {label: "Machinery" , value: 2},
+  //     {label: "Electronics" , value: 3},
+  //     {label: "Clothes" , value: 4},
+  //     {label: "Houses" , value: 5},
+  //     {label: "Event Equipment " , value: 6}
+  //  ]
+   const [placeholder, setPlaceholder] = useState("Type to search");
+ const [nnn , setNnn]=useState("search anything...")
+ const anyth =()=>{
+  setNnn({setOption})
  }
+ function handleSelect(event){
+      setOption(event.target.value)
+ }
+ 
+ const handleSearch = () => {
+   console.log("value", value);
+   console.log("option", option);
+
+ }
+ const fetchData = (value) => {
+   fetch("https://jsonplaceholder.typicode.com/users")
+     .then((response) => response.json())
+     .then((json) => {
+       const results = json.filter((user) => {
+         return value && user.name && user.name.toLowerCase().includes(value);
+       });
+       setResults(results);
+     });
+ };
+ const handleChange = (value) => {
+   setInput(value);
+   fetchData(value);
+   setClicked(!clicked);
+ };
+
    //   let dropdownBtn = document.getElementById("drop-text");
    //   let list = document.getElementById("list");
    //   let input = document.getElementById("search-input");
@@ -61,21 +95,78 @@ export default function Main(){
 
    //           }; 
    //         }
-
-
+   const [clc,setClc] = useState(false);
+   const [selectedOption, setSelectedOption] = useState('Choose Category');
+ const categoryChoosehandler=()=>{
+   setClc(!clc);
+ }
+ const handleOptionClick = (option) => {
+  setSelectedOption(option);
+  setClc(false);
+};
+   const[results, setResults] = useState([]);
     return(
         <div className="main">
     <h1 id> The sharing economy is the 
                future of rentals.</h1>
-               <div className="ssearch-bar" >
-       <div className="dddropdown">
-        <div id="drop-text" className="ddropdown-text">
+               <div >
+       <div >
+        <div className="glgl">
+        <div className="td">
+          <button className="ttd" onClick={categoryChoosehandler}>
+            {selectedOption}
+          </button>
+          {clc && (
+            <div className="ddt">
+              <Link to="/appcat?category=houses" onClick={() => handleOptionClick('Houses')}>
+                Houses
+              </Link>
+              <Link to="/appcat?category=vehicle" onClick={() => handleOptionClick('Vehicle')}>
+                Vehicle
+              </Link>
+              <Link to="/appcat?category=machinery" onClick={() => handleOptionClick('Machinery')}>
+                Machinery
+              </Link>
+              <Link to="/appcat?category=event equipment" onClick={() => handleOptionClick('Event Equipment')}>
+                Event Equipment
+              </Link>
+              <Link to="/appcat?category=clothes" onClick={() => handleOptionClick('Clothes')}>
+                Clothes
+              </Link>
+              <Link to="/appcat?category=electronics" onClick={() => handleOptionClick('Electronics')}>
+                Electronics
+              </Link>
+            </div>
+          )}
+        </div>
+        <div className="ssearch-box">
+     {/* <input type="text" id="ssearch-input" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Search anything"></input>
+     <img src={ser} alt="search" onClick={handleSearch}/> */}
+      <input
+        type="text"
+        placeholder={placeholder}
+        name="input"
+        value={input}
+        onChange={(e) => handleChange(e.target.value)}
+      />
+      <div id="klsls"><FaSearch /></div>
+      {/* <SearchBar setResults={setResults}/> */}
+     { clicked && <SearchResultsList results={results}/>}
+   
+        </div>
         {/* <span id="span">Category<img id="icon" src={search} alt=" search icon" /></span> */}
-        <select onchange={handleSelect} id="span">
-     {options.map(option => (
-      <option value={option.value}>{option.label}</option>
-     ))}
-            </select>
+        {/* <select onChange={(e) => setOption(e.target.value)} value={option} id="span" onClick={anyth}>
+     <option value=" ">Choose category</option>
+     <option value="machinery" >Machinery</option>
+     <option value="clothes">Clothes</option>
+     <option value="vehicle">Vehicle</option>
+     <option value="event equipments">Event Equipment</option>
+     <option value="electronics">Electronics</option>
+    <Link to="/appcat?category=houses" ><option value="houses">Houses</option></Link>  */}
+     {/* {options.map(option => (
+    <option value={option.label}>{option.label}</option>
+     ))} */}
+            {/* </select> */}
          </div>
         {/* <ul id="list" className="dropdown-list">
         <li className="dropdown-list-item">Machinery</li>
@@ -87,16 +178,14 @@ export default function Main(){
        </ul> */}
        </div> 
         
-        <div className="ssearch-box">
-     <input type="text" id="ssearch-input" placeholder="search anything..."></input>
-     <img src={ser} alt="search"></img>
-        </div>
+       
                </div>
            <div id="tt">
            <h1> Get What you need , When you need it, with our rental system.</h1>
             <img id="phh" src={phh} alt="photo" />
            </div> 
         <hr />
+        
       </div> 
       
       )      

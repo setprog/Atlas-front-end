@@ -10,9 +10,8 @@ import {
   Button,
   
 } from "react-bootstrap";
-import './renter.css'
 
-export default function Owner(){
+export default function Machinery(){
 
         // const [bookings, setBookings] = useState([
         //     { id: 1, email: 'JohnDoe.@gmail.com', subject: 'Sofa',status:"Done", date: '2023-09-30', amount: "$500" },
@@ -181,7 +180,7 @@ export default function Owner(){
           //   setCurrentPage(page);
           // };
           
-          const pageSize = 6;
+          const pageSize = 7;
         
           const lastIndex = currentPage * pageSize;
           const firstIndex = lastIndex - pageSize;
@@ -243,9 +242,26 @@ export default function Owner(){
               console.error(error);
             });
            
-           
+            // setUsers(result.data);
           };
-          
+          // const seeMoreHandled= async()=>{
+           
+          //  setShowAllUsers(true)
+          //  const result ='https://fakestoreapi.com/users';
+          //  axios.get(result)
+          //  .then(response => {
+          //    setUsers(response.data);
+          //  })
+          //  .catch(error => {
+          //    console.error(error);
+          //  });
+          // }
+        
+          // const cancelHandler=()=>{
+        
+          //  setShowAllUsers(false)
+          // loadUsers();
+          // }
          
           if (loading) {
             return <div className="loading">Loading...<span>
@@ -270,7 +286,7 @@ export default function Owner(){
           return (
         
         
-        <div className='t-table'>
+        
         
             <div className="user-wrraper">
             {/* <div className="s">
@@ -388,14 +404,14 @@ export default function Owner(){
                           <div className="sub-container">
                   <div className="py-4">
                   
-              <table className="t-table"   >
+              <table className="table"   >
                   <thead>
                     <tr>
                       <th  style={{ backgroundColor: "transparent"}} scope='col'>Name</th>
-                      <th style={{ backgroundColor: "transparent"}} scope='col'>Phone</th>
-                      <th style={{ backgroundColor: "transparent"}} scope='col'>Email</th>
+                      <th style={{ backgroundColor: "transparent"}} scope='col'>Photo</th>
+                      <th style={{ backgroundColor: "transparent"}} scope='col'>Status</th>
                       {/* <th style={{ backgroundColor: "transparent"}} scope='col'>Position</th> */}
-                      <th style={{ backgroundColor: "transparent"}} scope='col'>Dtail  </th>
+                      {/* <th style={{ backgroundColor: "transparent"}} scope='col'>Detail  </th> */}
                       {/* <th style={{ backgroundColor: "transparent"}} scope="col"> <Link to="/add"><span><button className="create-subAdmin">Create</button></span></Link> </th> */}
                     </tr>
                   </thead>
@@ -404,6 +420,12 @@ export default function Owner(){
                     { usernameFilter === "" ?
                     currentUsers.map(user => (
                       <tr key={user.id}>
+                       
+                        <td style={{ backgroundColor: "transparent"}}>
+                          {/* <p className='user-info'>{user.phone}</p> */}
+                          <p className='user-info'>{user.username}</p>
+                        </td>
+                        <td style={{ backgroundColor: "transparent"}}>
                         <td style={{ backgroundColor: "transparent"}}>
                           <div className='d-flex align-items-center'>
                             <img
@@ -412,27 +434,21 @@ export default function Owner(){
                               style={{ width: '45px', height: '45px' }}
                               className='rounded-circle'
                             />
-                            <div className='ms-3'>
-                              <p className='fw-bold mb-1'>{user.username}</p>
-                              <p className='text-muted mb-0'>{user.email}</p>
-                            </div>
+                           
+                           
                           </div>
                         </td>
-                        <td style={{ backgroundColor: "transparent"}}>
-                          <p className='user-info'>{user.phone}</p>
-                          <p className='user-info'>{user.username}</p>
-                        </td>
-                        <td style={{ backgroundColor: "transparent"}}>
-                          <p className='active-status'>{user.email} </p>
+                          {/* <p className='active-status'>{user.email} </p> */}
                         </td>
                         {/* <td style={{ backgroundColor: "transparent"}}>Assistant </td> */}
                         <td style={{ backgroundColor: "transparent"}}>
-                        <Link
+                            <p>Booked</p>
+                        {/* <Link
                                 className="action-button"
-                                to={"/details"}
+                                to={`/view/${user.id}`}
                               >
                                 View
-                              </Link>
+                              </Link> */}
                               {/* <Link
                                 className="action-button"
                                 to={`/edituser/${user.id}`}
@@ -626,7 +642,20 @@ export default function Owner(){
             
             </div>
                    
-                   
+                    {/* <div className="page-container">
+                    {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+                      (page) => (
+                        <button 
+                          key={page}
+                          onClick={() => handlePageChange(page)}
+                          className={currentPage === page ? 'active-page' : 'pagenumber'}
+                          disabled={currentPage === page}
+                        >
+                          {page}
+                        </button>
+                      )
+                    )}
+                  </div> */}
                  
                     
                   </div>
@@ -637,7 +666,12 @@ export default function Owner(){
             
                       </div>
                      
-                    
+                    {/* <div className="main-bottom">
+                         <h3>Report</h3>
+                       <button>User Registration Report</button>
+                        <button>User Activity Report</button>
+                        <button>User FeedBack Report</button>
+                    </div> */}
             
                       
                      
@@ -645,7 +679,7 @@ export default function Owner(){
                
                
               
-              </div>
+              
             </div>
               
               );

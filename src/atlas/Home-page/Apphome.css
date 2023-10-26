@@ -102,9 +102,9 @@ button {
     font-size: 64px;
 }
 
-.ssearch-box img {
+#bsbs {
     width: 40px;
-    margin-left: 10px;
+    margin-right: 300px;
     cursor: pointer;
 }
 
@@ -112,6 +112,10 @@ button {
     font-size: 30px;
     font-weight: 500;
     color: #425FBA;
+}
+
+.ssearch-box img {
+    width: 50px;
 }
 
 .ssearch-bar {
@@ -125,6 +129,11 @@ button {
     border-radius: 50px;
 }
 
+.dropbtn {
+    width: 100px;
+    margin-left: -500px;
+}
+
 .dddropdown {
     position: relative;
     width: 30%;
@@ -135,6 +144,29 @@ button {
     box-shadow: var(--shadow);
     cursor: pointer;
     display: flex;
+}
+
+#lilini {
+    display: flex;
+    flex-direction: row;
+    margin-left: 37%;
+    margin-top: 0px;
+}
+
+#lilini input {
+    margin-right: 25%;
+    width: 450px;
+}
+
+#klsls {
+    margin-left: -50px;
+    margin-top: -40px;
+}
+
+#lilini select {
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
 }
 
 .ddropdown img {
@@ -182,13 +214,48 @@ button {
 }
 
 .ssearch-box {
+    margin-top: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding-right: 1 rem;
     width: 90%;
-    height: 100px;
     color: #D9D9D9;
     margin-left: -150px;
+}
+
+.td {
+    position: relative;
+}
+
+.ddt {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 150px;
+    text-decoration: none;
+    margin-left: 460px;
+    margin-top: -40px;
+    border-radius: 15px;
+}
+
+.ttd {
+    margin-left: 450px;
+    width: 180px;
+    height: 60px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: -30px;
+}
+
+.glgl {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
 }
 
 #ssearch-input {
@@ -200,11 +267,15 @@ button {
 }
 
 .ssearch-box input {
+    width: 400px;
+    height: 60px;
     padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
     color: #425FBA;
     border: 0;
+    margin-top: -80px;
+    margin-left: -330px;
 }
 
 ul {
@@ -223,7 +294,7 @@ ul {
 
 #phh {
     width: 600px;
-    margin-right: 200px;
+    margin-right: 100px;
     height: 400px;
     margin-top: 50px;
     border-radius: 20px;
@@ -263,6 +334,13 @@ hr {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#span {
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 235px;
     margin-top: 30px;
 }
 

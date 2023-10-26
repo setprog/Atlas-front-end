@@ -209,7 +209,7 @@ a :hover {
     height: 50px;
     margin-top: 40px;
     margin-left: 250px;
-    color: #001C30
+    color: #001C30;
 }
 
 .inp #sort {
@@ -217,9 +217,32 @@ a :hover {
     margin-left: 100px;
 }
 
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#buttons select {
+    width: 250px;
+    height: 75px;
+}
+
+#buttons button {
+    width: 130px;
+    height: 45px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
 #search {
     margin-top: -25px;
     background-color: #D9D9D9;
+}
+
+#brofile {
+    width: 30px;
 }
 
 ::placeholder {
