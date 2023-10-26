@@ -424,7 +424,8 @@ let navigate=useNavigate
                      
                      <Button
                        type="button"
-                       variant="outline-info"
+                       style={{ backgroundColor: "#425FBA"}}
+                      //  variant="outline-info"
                        disabled={currentPage === 1 ? true : false}
                        onClick={firstPage}
                      >
@@ -432,7 +433,8 @@ let navigate=useNavigate
                      </Button>
                      <Button
                        type="button"
-                       variant="outline-info"
+                       style={{ backgroundColor: "#425FBA"}}
+                      //  variant="outline-info"
                        disabled={currentPage === 1 ? true : false}
                        onClick={prevPage}
                      >
@@ -448,7 +450,8 @@ let navigate=useNavigate
                
                      <Button
                        type="button"
-                       variant="outline-info"
+                       style={{ backgroundColor: "#425FBA"}}
+                      //  variant="outline-info"
                        disabled={currentPage === totalPages ? true : false}
                        onClick={nextPage}
                      >
@@ -456,7 +459,8 @@ let navigate=useNavigate
                      </Button>
                      <Button
                        type="button"
-                       variant="outline-info"
+                       style={{ backgroundColor: "#425FBA",color:"black"}}
+                      //  variant="outline-info"
                        disabled={currentPage === totalPages ? true : false}
                        onClick={lastPage}
                      >

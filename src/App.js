@@ -30,6 +30,8 @@ import Sign_in_up from "./atlas/Sign_in_up"
 import Admin_signin from "./atlas/Admin_signin"
 import Category from "./atlas/Comp/Category";
 import EditRenterProfile from "./atlas/edit-renter/EditRenterProfile"
+import CustomDatePicker from "./atlas/addpro/CustomDatePicker";
+// import Adds from "./atlas/addpro/Adds";
 
 function App() {
  
@@ -49,7 +51,7 @@ function App() {
                 <EditP/></>}  ></Route>
                <Route exact path="/adminsignin" element={ <> <Admin_signin /></>} ></Route>
                <Route exact path='/rentpage' element={<>
-               <RentPage/></> }></Route>
+               <CustomDatePicker/></> }></Route>
               <Route exact path='/editrenterp' element={<>
                <EditRenterProfile/></> }></Route>
               <Route exact path='/signin' element={<>
@@ -63,6 +65,7 @@ function App() {
 
               <Route exact path='/home' element={<>
                <Apphome/></> }></Route>
+               
 
               <Route exact path='/appcat' element={<>
               <Appcateg/></> }></Route>
