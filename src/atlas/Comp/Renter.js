@@ -16,7 +16,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 export default function Renter(){
 
-     
+    
     
 
           const [currentPage, setCurrentPage] = useState(1);

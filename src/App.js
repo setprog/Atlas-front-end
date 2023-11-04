@@ -107,20 +107,18 @@ function App() {
               <Route path='/clothes' element={<><Clothes/></>}></Route>
               <Route path="/details" element={<><Details/></>}></Route>
               
-   <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
-     
-      <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
-      
-
-      <Route path='/Category' element={<><Nav/><Category/></>}></Route>
-     
+        <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
+        <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
+        <Route path="/renter" elemetnt={<><Nav /><Renter/></>}></Route>
+        <Route path='/Category' element={<><Nav/><Category/></>}></Route>
+  
     
 
     
     
         </Routes>
-       
-       </Router>
+      
+        </Router>
     
      
      
