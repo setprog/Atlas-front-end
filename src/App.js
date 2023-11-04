@@ -30,6 +30,7 @@ import Sign_in_up from "./atlas/Sign_in_up"
 import Admin_signin from "./atlas/Admin_signin"
 import Category from "./atlas/Comp/Category";
 import EditRenterProfile from "./atlas/edit-renter/EditRenterProfile"
+
 import Machinery from "./atlas/Comp/Machinery";
 import Vechile from "./atlas/Comp/Vechile";
 import House from "./atlas/Comp/House";
@@ -38,7 +39,7 @@ import Decore from "./atlas/Comp/Decore";
 import Clothes from "./atlas/Comp/Clothes";
 import Details from "./atlas/Comp/Details";
 
-import Filter from "./Filter"
+
 
 function App() {
  
@@ -58,7 +59,7 @@ function App() {
                 <EditP/></>}  ></Route>
                <Route exact path="/adminsignin" element={ <> <Admin_signin /></>} ></Route>
                <Route exact path='/rentpage' element={<>
-               <RentPage/></> }></Route>
+               <CustomDatePicker/></> }></Route>
               <Route exact path='/editrenterp' element={<>
                <EditRenterProfile/></> }></Route>
               <Route exact path='/signin' element={<>
@@ -72,6 +73,7 @@ function App() {
 
               <Route exact path='/home' element={<>
                <Apphome/></> }></Route>
+               
 
               <Route exact path='/appcat' element={<>
               <Appcateg/></> }></Route>
@@ -107,11 +109,22 @@ function App() {
               <Route path='/clothes' element={<><Clothes/></>}></Route>
               <Route path="/details" element={<><Details/></>}></Route>
               
+<<<<<<< HEAD
         <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
         <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
         <Route path="/renter" elemetnt={<><Nav /><Renter/></>}></Route>
         <Route path='/Category' element={<><Nav/><Category/></>}></Route>
   
+=======
+   <Route path='/dash' element={<> <Nav/><Home/></>}></Route>
+     
+      <Route path='Owner' element={<><Nav/><Owner/></>}></Route>
+      <Route path='/renter' element={<><Nav/><Renter/></>}></Route>
+      
+
+      <Route path='/Category' element={<><Nav/><Category/></>}></Route>
+     
+>>>>>>> 6cab54df81c55df6dec28b575c245077649aae4e
     
 
     
